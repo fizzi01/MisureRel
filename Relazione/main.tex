@@ -3,9 +3,10 @@
 \documentclass[a4paper, 12pt, notitlepage]{report}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
+\usepackage{xfrac}
 
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[english,italian]{babel}
 \usepackage{verbatim}
 \usepackage{listings}
 
@@ -21,13 +22,14 @@
 \usepackage{fancyvrb}
 
 \usepackage{xargs}
-\usepackage[pdftex,dvipsnames]{xcolor}
+\usepackage[pdftex,dvipsnames,table,xcdraw]{xcolor}
 
 \usepackage{xcolor}
 
 \usepackage{graphicx} % graphics package
 \usepackage{subcaption}
 \graphicspath{ {./media/} } % images folder path
+
 
 \usepackage{geometry}
 \geometry{
@@ -150,15 +152,13 @@
 
     % Chapter 2
     \hypersetup{hidelinks}
-    \input{./chapters/mult_port.tex}
+    \input{./chapters/prima_prova.tex}
     
-    % Chapter 3
-    \hypersetup{hidelinks}
-    \input{./chapters/mult.tex}
+    %\hypersetup{hidelinks}
+    %\input{./chapters/mult.tex}
     
-    % Chapter 4
-    \hypersetup{hidelinks}
-    \input{./chapters/lcr.tex}
+    %\hypersetup{hidelinks}
+    %\input{./chapters/lcr.tex}
     
     
     % blank page
