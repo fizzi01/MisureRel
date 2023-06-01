@@ -48,6 +48,8 @@
         {}{}{}
 }
 
+\usepackage[section]{placeins} % utilizzare /FloatBarrier alla fine della definizione delle figure per non farle scivolare in altre sezioni o altro
+
 
 \renewcommand*\contentsname{Index}
 
@@ -159,7 +161,10 @@
     % Chapter 4
     \hypersetup{hidelinks}
     \input{./chapters/lcr.tex}
-    
+
+    % Chapter 5
+    \hypersetup{hidelinks}
+    \input{./chapters/Prova2.tex}
     
     % blank page
     \newpage
