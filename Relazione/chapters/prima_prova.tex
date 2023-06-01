@@ -1,0 +1,158 @@
+\chapter{Misure di Resistenza ed Impedenza con DMM e LCR}
+\label{chap:prima_prova}
+%HO SOLO COPIATO PER RIEMPIRE UN Po
+Questa prima esperienza di laboratorio ha come fine quello di prendere confidenza con l’uso di strumentazione di misura di base, con le corrette procedure di misura e, con la valutazione della relativa incertezza, nel caso di misure di resistenza ed impedenza. Come ben noto dalla teoria, il risultato di una misura si discosta sempre dal valore assunto in quel determinato stato dal misurando, a causa degli effetti dovuti a vari errori. Questi scostamenti rientrano tutti in un intervallo delimitato del valore dell’incertezza.
+Il risultato delle misure pertanto sar\`a completato con il relativo valore dell’incertezza associata. Questa incertezza sar\`a derivata da valutazioni di tipo A o di tipo B e dipender\`a dalla modalit\`a di esecuzione (misura diretta o indiretta). Nella misura diretta, l’incertezza valutata di tipo , si pu\`o valutare a partire dalle specifiche che il costruttore mette a disposizione per lo strumento, mentre per misure indirette, si pu\`o ricorrere all’incertezza combinata e alla teoria della propagazione, cos\`i come visto nella relativa parte teorica del corso.
+
+\section{Misure di resistenze con multimetro portatile}
+\label{sec:mult_port}
+
+%Per chi vuole inserire tabella usare: https://www.tablesgenerator.com/latex_tables#
+%Basta fare ctrl+v sulla tabella di google sheets e andare sul sito , premere File, e fare "Paste table data"
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\rowcolor[HTML]{6FA8DC} 
+Fondo scala 500$\Omega$ & Passo Q ($\Omega$) & Incertezza Uq ($\Omega$) & Incertezza \\ \hline
+1,62             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,62             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,60             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,60             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,62             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,60             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
+\end{tabular}
+\caption{Multimetro portatile 974A}
+\label{tab:mult_port}
+\end{table}
+
+
+
+
+%---------Multimetro da Banco---------%
+\section{Misure di resistenza con multimetro da banco}
+\label{sec:mult}
+
+\begin{table}[h] %la h serve per metterla esattamente dove la si sta mettendo nel file in Latex
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|cl|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+Misure ($\Omega$) & Valore di NULL - Cortocircuito (V) & Risultato & Fondo scala ($\Omega$) & Passo Q ($\Omega$) & Incertezza Uq ($\Omega$) & \multicolumn{2}{c|}{\cellcolor[HTML]{CFE2F3}Incertezza} \\ \hline
+1,648 & 0,133 & 1,515 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041515} \\ \hline
+1,614 & 0,133 & 1,481 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041481} \\ \hline
+1,627 & 0,133 & 1,494 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041494} \\ \hline
+1,614 & 0,133 & 1,481 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041481} \\ \hline
+1,432 & 0,133 & 1,299 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041299} \\ \hline
+1,466 & 0,133 & 1,333 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041333} \\ \hline
+1,441 & 0,133 & 1,308 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041308} \\ \hline
+1,468 & 0,133 & 1,335 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041335} \\ \hline
+1,475 & 0,133 & 1,342 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041342} \\ \hline
+1,493 & 0,133 & 1,36  & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,004136}  \\ \hline
+\end{tabular}
+}
+\caption{Multimetro 34401A (6$\sfrac{1}{2}$ cifre), 2 Morsetti}
+\label{tab:mult_2w}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|cl|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+\multicolumn{1}{|l|}{\cellcolor[HTML]{CFE2F3}Misure ($\Omega$)} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{CFE2F3}Valore di NULL (V) ??} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{CFE2F3}Risultato} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{CFE2F3}Fondo scala ($\Omega$)} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{CFE2F3}Passo Q ($\Omega$)} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{CFE2F3}Incertezza Uq ($\Omega$)} &
+  \multicolumn{2}{l|}{\cellcolor[HTML]{CFE2F3}Incertezza} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & \multicolumn{2}{c|}{0,0041474} \\ \hline
+\end{tabular}%
+}
+\caption{Multimetro 34401A (6$\sfrac{1}{2}$ cifre), 4 Morsetti}
+\label{tab:mult_4w}
+\end{table}
+
+
+
+
+
+
+%----------LCR-----------%
+\section{Misure con LCR-Meter}
+\label{sec:lcr}
+
+\subsection{Impedenze}
+\label{sub:z}
+
+ABDJHIAHSDHIAWSDH AOJDSOS AUDOJ AOSD
+
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+\textit{Frequenza {[}Hz{]}} & R {[}$\Omega${]} & X {[}m$\Omega${]} \\ \hline
+100Hz                       & 1,4630    & -0,04      \\ \hline
+120Hz                       & 1,4628    & -0,05      \\ \hline
+1kHz                        & 1,4625    & -0,52      \\ \hline
+10kHz                       & 1,4622    & -5,12      \\ \hline
+100kHz                      & 1,4635    & -51,50     \\ \hline
+\end{tabular}%
+}
+\caption{LCR, misura Impedenza, Tempo di misura: Long}
+\label{tab:lcr_z}
+\end{table}
+
+\begin{table}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+A      & B      & C & D {[}$\Omega${]} & E {[}$\Omega${]} & Zs {[}$\Omega${]} & Zx {[}$\Omega${]} & Uz (Ae) \\ \hline
+0,005  & 0,0009 & 1 & 0,01      & 2,80E+08  & 1          & 1,4630     & 0,0125  \\ \hline
+0,005  & 0,0009 & 1 & 0,01      & 2,80E+08  & 1          & 1,4628     & 0,0125  \\ \hline
+0,004  & 0,0003 & 1 & 0,0165    & 2,80E+07  & 1          & 1,4625     & 0,0155  \\ \hline
+0,004  & 0,0003 & 1 & 0,075     & 2,80E+06  & 1          & 1,4622     & 0,0555  \\ \hline
+0,0097 & 0,0011 & 1 & 0,75      & 2,80E+05  & 1          & 1,4635     & 0,5229  \\ \hline
+\end{tabular}%
+}
+\caption{Tabella di incertezza fornita dal costruttore, con Uz l'incertezza}
+\label{tab:lcr_z_sheet}
+\end{table}
+
+%-------------Capacità-----------%
+\subsection{Capacità}
+\label{sub:c}
+ADSHJJKASHDKAHDKJJAZDAS
+
+
+\begin{table}[ht]
+\centering
+\caption{LCR, misura della capacità}
+\label{tab:lcr_c}
+\end{table}
+
+
+
+
