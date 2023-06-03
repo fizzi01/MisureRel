@@ -1,0 +1,21 @@
+name: MasterDeployCI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3.5.2
+    - name: Creazione cartella release
+      run: rsync -arv --exclude='.DS_Store' --exclude='.gitignore' ./Relazione ./release
+    - name: Mi sposto nella cartella
+      run: |
+        cd release
+        ls -la
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.66.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_OWNER: FedIz
