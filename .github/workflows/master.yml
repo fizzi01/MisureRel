@@ -23,17 +23,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: FedIz
         RELEASE_BRANCHES: main
-        SOURCE: ./release
+        SOURCE: ./Relazione
     - name: "Build & test"
-      run: |
-          echo "done!"
-
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         automatic_release_tag: "latest"
         title: "Relazione"
-        files: |
-          *.zip
-          *.tar.gz
