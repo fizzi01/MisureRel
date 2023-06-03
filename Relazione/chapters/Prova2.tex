@@ -1,7 +1,7 @@
 \chapter{Compensazione in frequenza una sonda  e Caratterizzazione di un filtro RC}
 \label{chap:Prova2}
 \section*{Obbiettivo}
-L'obbiettivo della seconda esperienza di laboratorio è stato quello di effettuare la compensazione in frequenza di una sonda e poi di ricavare i diagrammi di Bode di un filtro passabasso passivo RC, i valori di \emph{attenuazione} e \emph{sfasamento} con le relative \emph{incertezze} mediante valutazioni di tipo B.
+L'obbiettivo della seconda esperienza di laboratorio è quello di effettuare la compensazione in frequenza di una sonda e poi di ricavare i diagrammi di Bode di un filtro passabasso passivo RC, i valori di \emph{attenuazione} e \emph{sfasamento} con le relative \emph{incertezze} mediante valutazioni di tipo B.
 
 \section{Compensazione in frequenza di una sonda}
 Le sonde costituiscono un componente fondamentale per poter prelevare un
@@ -14,7 +14,7 @@ segnale da osservare e da trasferire poi allo strumento.
     \label{fig:sonda}
 \end{figure}
 
-La sonda può essere schematizzata in maniera semplificata come un parallelo di una resistenza e una capacità variabile. L'oscilloscopio d'altra parte ha una certa capacità intrinseca in parallelo ad una resistenza di ingresso. Tale capacità in regime AC può essere un problema, in quanto all'aumentare della frequenza, inizia ad agire come un filtro passa-basso.
+La sonda può essere schematizzata in maniera semplificata come un parallelo di una resistenza e una capacità variabile. L'oscilloscopio d'altra parte ha una certa capacità intrinseca in parallelo ad una resistenza di ingresso. Tale capacità in regime AC può essere un problema, in quanto all'aumentare della frequenza inizia ad agire come un filtro passa-basso.
 
 Per questo motivo è necessario effettuare la \textbf{compensazione in frequenza della sonda}, cioè impostare il valore della capacità variabile della sonda per andare a compensare gli effeti della capacità di ingresso dell'oscilloscopio, quindi da rendere il sistema sonda+oscilloscopio indipendente dalla frequenza.
 
@@ -25,12 +25,15 @@ Poichè la sonda fornisce un'attenuazione pari a 10, premendo sul tasto 1 della 
 
 Fatto ciò abbiamo sistemato i valori di $K_v$ e $K_t$ per visualizzare circa 2 periodi e in modo ottimale sullo schermo l'onda quadra.
 
-Abbiamo infine utilizzato un cacciavite vicino al connettore o vicino alla corpo della sonda, per regolare la capacità variabile finchè il segnale visualizzato non è apparso quanto più rettangolare possibile, rispetto alla condizione iniziale in cui erano presenti delle sovra-elongazioni dovute alla sovracompensazione.
+Abbiamo infine utilizzato un cacciavite in prossimità del corpo della sonda, per regolare la capacità variabile, finchè il segnale visualizzato non è apparso quanto più rettangolare possibile rispetto alla condizione iniziale in cui erano presenti delle sovra-elongazioni dovute alla sovracompensazione.
 
 
 \clearpage
-\section{Filtro RC} \label{sec:filtroRC}
-Il filtro RC è un sistema che effettua sul suo segnale di ingresso una funzione di attenuazione in quanto passivo, cioè composto da componenti passivi quali un condensatore e un resistore in serie.
+\section{Caratterizzazione di un Filtro RC} \label{sec:filtroRC}
+Nel seguente paragrafo verrà descritto in breve il filtro RC e le sue caratteristiche. Seguirà una presentazione della strumentazione utilizzata, la descrizione della configurazione dei dispositivi e la procedura di misura.
+
+\subsection{Filtro RC}
+Il filtro RC è un sistema che effettua sul suo segnale di ingresso una funzione di attenuazione in quanto filtro passivo, cioè composto da componenti passivi quali un condensatore e un resistore in serie.
 
 \begin{figure}[h]
     \centering
@@ -40,13 +43,13 @@ Il filtro RC è un sistema che effettua sul suo segnale di ingresso una funzione
 \end{figure}
 \FloatBarrier
 
-Esso è un filtro passa basso che cioè permette il passaggio delle frequenze al di sotto di una \textbf{frequenza di taglio} e attenua quelle alte. In particolare, l'attenuazione $A$ del filtro RC è definita come:
+Esso è un filtro passa basso che cioè permette il passaggio delle frequenze al di sotto di una \textbf{frequenza di taglio} e attenua invece quelle alte. In particolare, l'attenuazione $A$ del filtro RC è definita come:
 
-\[A=\frac{1}{1+j\omega RC}\]
+\[A=\frac{V_o}{V_i}=\frac{1}{1+j\omega RC}\]
 
-La frequenza di taglio del filtro è definita come la frequenza alla quale la potenza del segnale in uscita dal filtro è pari alla metà della potenza del segnale in ingresso ad esso. Oppure è definita come la frequenza alla quale la tensione disponibile in uscita e $1/\sqrt{2}$ la tensione di ingresso disponibile in banda passante.
+La frequenza di taglio del filtro è definita come la frequenza alla quale la potenza del segnale in uscita dal filtro è pari alla metà della potenza del segnale in ingresso ad esso. Oppure è definita come la frequenza alla quale la tensione disponibile in uscita è $1/\sqrt{2}$ la tensione di ingresso disponibile in banda passante.
 
-La frequenza di taglio teorica si calcola uguagliando il modulo dell'attenuazione $A$ al valore $1/\sqrt{2}$
+La frequenza di taglio \emph{teorica} si calcola uguagliando il modulo dell'attenuazione $A$ al valore $1/\sqrt{2}$
 
 \[\frac{1}{\sqrt{1+(\omega RC)^2}} = \frac{1}{\sqrt{2}}\]
 \[1+(\omega RC)^2 = 2\] 
@@ -55,13 +58,13 @@ La frequenza di taglio teorica si calcola uguagliando il modulo dell'attenuazion
 Ricordando che $\omega = 2\pi f$, si ha che la frequenza di taglio è pari a 
 \[f=\frac{1}{2\pi RC}\]
 
-\section{Strumentazione utilizzata}
+\subsection{Strumentazione utilizzata}
 \subsection*{PCB}
-Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'esercitazione, sulla quale è stato realizzato un filtro RC, i cui valori di resistenza e capacità sono rispettivamente 10k$\Omega$ e 47nF.
+Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'esercitazione, sulla quale, mediante l'utilizzo di jumper come nella configurazione in Figura \ref{fig:pcb_rc}, è stato realizzato un filtro RC, i cui valori di resistenza e capacità sono rispettivamente 10k$\Omega$ e 47nF.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth, height=6cm]{PCB.png} 
+    \includegraphics[width=0.9\linewidth, height=8cm]{PCB.png} 
     \caption{PCB}
     \label{fig:pcb}
 \end{figure}
@@ -119,12 +122,12 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
     \end{figure}
     \FloatBarrier
 
-    \item Avviato il generatore di funzioni impostando una frequenza iniziale di 100kHz mediante il tasto "Freq" e impostato una forma d'onda sinusoidale di ampiezza pari a 5 V.
+    \item Avviato il generatore di funzioni impostando una frequenza iniziale di 100kHz mediante il tasto \emph{Freq} e impostato una forma d'onda sinusoidale di ampiezza pari a 5 V.
     
     \'E importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disattamento di impedenza tra l'oscilloscpio ed il generatore di funzioni. In particolare, in corrispondenza della tensione picco-picco di 5 V impostata per l'ingresso del filtro, verrà visualizzata una tensione picco-picco di 10 V sul display dell'oscilloscopio.
     \item Avviato l'oscilloscopio su cui visualizzare il segnale d'ingresso del filtro $V_i$ sul canale 1, e il segnale di uscita del filtro $V_o$ sul canale 2.
     Poichè abbiamo utilizzato cavi BNC-BNC e non sonde, abbiamo impostato il valore di \emph{Probe} a 1 mediante l'apposito pulsante posto sotto lo schermo.
-    Per migliorare la visualizzazione di entrambi i segnali, abbiamo premuto il pulsante Auto-Scale, che permette all'oscilloscopio di visualizzare entrambi i segnali, uno per ognuno della due metà dello schermo.
+    Per migliorare la visualizzazione di entrambi i segnali, abbiamo premuto il pulsante \emph{Auto-Scale}, che permette all'oscilloscopio di visualizzare entrambi i segnali, uno per ognuno della due metà dello schermo.
     
     Ai fini delle misurazioni da effettuare, abbiamo impostato entrambe le forme d'onda sulla linea di 0 V secondo la seguente procedura per entrambi i canali:
     \begin{enumerate}
@@ -140,21 +143,22 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
 \section{Misurazioni}
 
 \subsection{Calcolo della frequenza di taglio sperimentale}
-Come definito nel paragrafo introduttivo sul filtro RC (\ref{sec:filtroRC}), la frequenza di taglio teorica del filtro RC è pari a
+Come definito nel paragrafo introduttivo sul filtro RC (\ref{sec:filtroRC}), la frequenza di taglio teorica è pari a
 \[f=\frac{1}{2\pi RC}= \frac{1}{2\pi \cdot10^4 \cdot 47 \cdot10^{-9}} = 338,627 Hz\]
-Abbiamo dunque ricavato sperimentalmente la frequenza di taglio effettiva. Poichè il segnale in ingresso era pari a 5 V, visualizzati 10V sull'oscilloscopio, allora la frequenza di taglio è quella frequenza in corrisponda della quale l'uscita $V_{o}$ del filtro è pari $10/\sqrt{2} = 7,07 V$.
+Questa tuttavia non sarà mai pari a quella effettiva, pertanto abbiamo ricavato sperimentalmente la frequenza di taglio effettiva. Poichè il segnale in ingresso era pari a 5 V, visualizzati 10V sull'oscilloscopio, la frequenza di taglio è quella frequenza in corrispondenza della quale l'uscita $V_{o}$ del filtro è pari a 
+\[\frac{10}{\sqrt{2}} = 7,07 V\]
 
 Abbiamo allora premuto prima sul pulsante \emph{Cursors}, selezionato il cursore $V_1$ posizionandolo per mezzo della mapanopola ad un valore di 3,5 V, 
-e il cursore e $V_2$ posizionandolo ad un valore di -3,5 V. In questo modo la distanza tra i due cursori era pari a 7 V.
+e il cursore $V_2$ posizionandolo ad un valore di -3,5 V. In questo modo la distanza tra i due cursori era pari a 7 V.
 
 Andando quindi ad operare sul genereatore di funzioni, abbiamo modificato la frequenza del segnale in ingresso al filtro finché il segnale di uscita (canale 2) non appariva esattamente tangente ai due cursori precedentemente posizionati.
-La frequenza per cui tale condizione è stata soddisfatta corrisponde alla frequenza di taglio reale del filtro che è pari a 
+La frequenza per cui tale condizione è soddisfatta corrisponde alla frequenza di taglio reale del filtro che è pari a 
 \[f_{sperimentale} = 338,63Hz\]
 
 In base al datasheet del generatore di funzioni, il valore dell'incertezza relativa di caso peggiore per misure di frequenza è di 20 ppm (parti per milione), cioè 
 \[U_{r,f} = 20 ppm\]
-Mentre l'incertezza di caso peggiore è
-\[U_f = 338 Hz\cdot U_{r,f} = 338,63Hz \cdot 20 \cdot 10^{-6} = 6,773\cdot10^{-3}\]
+L'incertezza di caso peggiore sarà pari a
+\[U_f = 338 Hz\cdot U_{r,f} = 338,63Hz \cdot 20 \cdot 10^{-6} = 6,773\cdot10^{-3}Hz\]
 
 
 \subsection{Misure di tensione picco-picco e $\Delta t$}
@@ -167,8 +171,284 @@ Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
     \item Regolato il valore di $K_t$ mediante l'apposita manopola posta nella sezione orizzontale per migliorare la visualizzazione dei segnali.
     \item Premuto il pulsante \emph{Voltage}, situato nella sezione \emph{Measure} e selezionato per ognuno dei due segnali il tipo di misura, cioè tensione picco-picco $V_{p-p}$, mediante gli appositi pulsanti posizionati sotto lo schermo.
     In questo modo i valori di tensione picco-picco di entrambi i segnali vengono automaticamente calcolati dall'oscilloscpio e visualizzati nella parte inferiore dello schermo.
-    \item Premuto il pulsante \emph{Cursors} e selezionato i cursori verticali $t_1$ e $t_2$, dagli appositi pulsanti posti sotto lo schermo. Ciascun cursore , mediante la manopola presente sotto la sezione \emph{Measure}, è stato poi collocato in corrispondenza dei punti in cui il corrispondente segnale passava per lo zero. Il valore $\Delta t$ viene calcolato dall'oscilloscopio e visualizzato nella parte inferiore dello schermo. 
+    \item Premuto il pulsante \emph{Cursors} e selezionato i cursori verticali $t_1$ e $t_2$, dagli appositi pulsanti posti sotto lo schermo. Ciascun cursore , mediante la manopola presente sotto la sezione \emph{Measure}, è stato poi collocato in corrispondenza dei punti in cui il corrispondente segnale passava per lo zero. Il valore $\Delta t$  calcolato dall'oscilloscopio è poi visualizzato nella parte inferiore dello schermo. 
     
 \end{enumerate}
 
+% scrivere le formuke usate per ricavare incertezze ib ase ai datasheet
+% piccolo excursus su cosa sono quei valori
+% mettere tabelle di excel
+
+\clearpage
+\section{????}
+In questo paragrafo si effettuerà sulle misure ottenute la valutazione dell'incertezza di \textbf{tipo B}, basata sull'utilizzo di informazioni note a priori quali le specifiche metrologiche degli strumenti adoperati.
+
+\subsection{Misure Dirette}
+Le misure dirette effettuate durante l'esperienza di laboratorio sono le seguenti:
+\begin{itemize}
+    \item \textbf{tensione picco-picco V}
+    \item \textbf{distanza temporale $\Delta t$}  fra i segnali sinusoidali $V_i$ e $V_o$
+    \item \textbf{freqeunza f} dei segnali $V_i$ e $V_o$ 
+\end{itemize}
+
+\subsubsection{Incertezza associata alle misure di tensione picco-picco V}
+Dalle specifiche metrologiche di ampiezza dell'oscilloscopio, poichè abbiamo utilizzato i due cursori orizzontali per le misure, consideriamo la \textbf{Dual cursor accuracy}, pari a 
+\[vertical \ accuracy \pm 0.4\% \ of full scale\]
+
+dove \textbf{vertical accuracy} per l'oscilloscopio Agilent HP 54600B è pari a 1.9\%, mentre \textbf{full scale} è il fondo scala del dispositivo ed è pari a $y_{FS} = 8 \cdot k_v$, dove 8 sono le divisioni verticali e $k_v$ è la \emph{vertical sensitivity} espressa in V/div.
+
+La \emph{Dual cursor accuracy} sopra riportata deriva dalla formula generale dell'incertezza per una differenza 
+\[U(V_1 - V_2) = U_G|V_1 - V_2| + 2U_{inl} + 2U{q}\]
+
+Nel nostro caso, l'incertezza di non linearità integrale $U_{inl}$, è stata conglobata nel termine 1.9\% insieme a $U_G$ incertezza di guadagno. L'incertezza di quantizzazione $2U_q$ è invece pari al termine $\pm 0.4\% \cdot y_{FS}$. L'incertezza di offset $U_O$ non è presente poichè nel caso di differenze di misure l'errore di offset si compensa.
+
+Indicato quindi con $V$ il valore di tensione picco-picco letto, l'\textbf{incertezza di caso peggiore} associata a $V$ è data dalla seguente formula:
+
+\[U_V = \frac{1.9}{100} \cdot |V| + \frac{0.4}{100} \cdot 8 \cdot k_v\]
+
+Da questa formula è possibile poi ricavare l'\textbf{incertezza relativa di caso peggiore}:
+\[U_{r,V} = \frac{U_V}{V}\]
+
+Seguono due tabelle contenenti per ogni valore di frequenza: il valore di tensione letto, la vertical sensitivity all'atto della lettura, l'incertezza assoluta di caso peggiore e l'incertezza relativa di caso peggiore.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+        \textbf{f (Hz)} & \textbf{Vi (V)} & \textbf{Kvi (V/div)} & \textbf{U(Vi)} & \textbf{Ur(Vi)} \\ \hline
+        1 & 3,938 & 1 & 0,1068 & 0,02713 \\ \hline
+        2 & 6,468 & 1 & 0,1549 & 0,02395 \\ \hline
+        3 & 7,875 & 2 & 0,2136 & 0,02713 \\ \hline
+        6 & 9,375 & 2 & 0,2421 & 0,02583 \\ \hline
+        10 & 9,75 & 2 & 0,2493 & 0,02556 \\ \hline
+        18 & 10 & 2 & 0,2540 & 0,02540 \\ \hline
+        32 & 10,12 & 2 & 0,2563 & 0,02532 \\ \hline
+        56 & 10,25 & 2 & 0,2588 & 0,02524 \\ \hline
+        100 & 10,12 & 2 & 0,2563 & 0,02532 \\ \hline
+        180 & 10 & 2 & 0,2540 & 0,02540 \\ \hline
+        320 & 9,875 & 2 & 0,2516 & 0,02548 \\ \hline
+        560 & 9,75 & 2 & 0,2493 & 0,02556 \\ \hline
+        1000 & 8,875 & 2 & 0,2326 & 0,02621 \\ \hline
+        1800 & 9,625 & 2 & 0,2469 & 0,02565 \\ \hline
+        3200 & 9,875 & 2 & 0,2516 & 0,02548 \\ \hline
+        5600 & 9,875 & 2 & 0,2516 & 0,02548 \\ \hline
+        10000 & 9,875 & 2 & 0,2516 & 0,02548 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+        \textbf{f (Hz)} & \textbf{Vo (V)} & \textbf{Kvo (V/div)} & \textbf{U(Vo)} & \textbf{Ur(Vo)} \\ \hline
+        1 & 4 & 1 & 0,1080 & 0,02700 \\ \hline
+        2 & 6,531 & 1 & 0,1561 & 0,02390 \\ \hline
+        3 & 7,875 & 2 & 0,2136 & 0,02713 \\ \hline
+        6 & 9,25 & 2 & 0,2398 & 0,02592 \\ \hline
+        10 & 9,635 & 2 & 0,2471 & 0,02564 \\ \hline
+        18 & 9,875 & 2 & 0,2516 & 0,02548 \\ \hline
+        32 & 9,938 & 2 & 0,2528 & 0,02544 \\ \hline
+        56 & 10 & 2 & 0,2540 & 0,02540 \\ \hline
+        100 & 9,625 & 2 & 0,2469 & 0,02565 \\ \hline
+        180 & 8,75 & 2 & 0,2303 & 0,02631 \\ \hline
+        320 & 7,188 & 2 & 0,2006 & 0,02790 \\ \hline
+        560 & 5,125 & 2 & 0,1614 & 0,03149 \\ \hline
+        1000 & 2,859 & 0,50 & 0,0703 & 0,02460 \\ \hline
+        1800 & 1,797 & 0,50 & 0,0501 & 0,02790 \\ \hline
+        3200 & 1,05 & 0,20 & 0,0264 & 0,02510 \\ \hline
+        5600 & 0,606 & 0,10 & 0,0147 & 0,02428 \\ \hline
+        10000 & 0,342 & 0,05 & 0,0081 & 0,02368 \\ \hline
+    \end{tabular}
+\end{table}
+
+\FloatBarrier
+\clearpage
+
+\subsubsection{Incertezza temporale associata alle misure di distanza temporale $\Delta t$}
+Le specifiche metrologiche della base dei tempi dell'oscilloscopio forniscono la seguente espressione per la \textbf{Delta t accuracy}:
+
+\[\pm0.01\% \pm0.2\% \ of full scale \pm 200 \ ps\]
+
+Possiamo dare un'interpretazione dell'espressione a partire dalla formula dell'incertezza sulla differennza di misure di tempo:
+\[U(T_1 - T_2) = U_S |T_1 - T_2| + 2U_{tbd} + 2U_{T_c}\]
+
+$U_S$ incertezza sulla velocità di sweep, equivale al coefficiente $\pm0.01\%$.
+$2U_{tbd}$ incertezza di distorsione della base dei tempi è pari al valore $\pm200 \ ps$.
+$2U_{T_c}$ incertezza di risoluzione, equivale al termine $\pm0.2\% \ of full scale$, dove full scale è il valore di fondoscala pari a $\tau _{FS}  = 10 \cdot k_t$.
+Infine, poichè si parla di differenze di misure, l'incertezza di ritardo del trigger $U_D$ è trascurabile.
+
+Indicato con $\Delta t$ il valore di distanza temporale tra i segnali $V_i$ e $V_o$, l'\textbf{incertezza assoluta di caso peggiore} associata a $\Delta t$ è data dalla seguente formula:
+
+\[U_{\Delta t} = \frac{0.01}{100} \cdot |\Delta t| + \frac{0.2}{100} \cdot  10 \cdot k_t + 200 \ ps  \]
+
+Da questa formula è possibile poi ricavare l'\textbf{incertezza relativa di caso peggiore}:
+\[U_{r,\Delta t} = \frac{U_{\Delta t}}{\Delta t}\]
+
+Segue per ogni valore di frequenza: il valore di $\Delta t$ letto, il valore di $k_t$, l'incertezza (assoluta e relativa) di caso peggiore
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+        \textbf{f (Hz)} & \textbf{$\Delta t$ (µs)} & \textbf{Kt (µs/div)} & \textbf{U($\Delta t$)} & \textbf{Ur($\Delta t$)} \\ \hline
+        1 & 3200 & 500,00 & 0,00001032 & 0,00323 \\ \hline
+        2 & 2140 & 500,00 & 0,00001021 & 0,00477 \\ \hline
+        3 & 1550 & 200,00 & 0,00000416 & 0,00268 \\ \hline
+        6 & 684 & 100,00 & 0,00000207 & 0,00302 \\ \hline
+        10 & 592 & 100,00 & 0,00000206 & 0,00348 \\ \hline
+        18 & 500 & 100,00 & 0,00000205 & 0,00410 \\ \hline
+        32 & 480 & 100,00 & 0,00000205 & 0,00427 \\ \hline
+        56 & 464 & 100,00 & 0,00000205 & 0,00441 \\ \hline
+        100 & 448 & 200,00 & 0,00000405 & 0,00903 \\ \hline
+        180 & 424 & 100,00 & 0,00000204 & 0,00482 \\ \hline
+        320 & 370 & 50,00 & 0,00000104 & 0,00280 \\ \hline
+        560 & 276 & 50,00 & 0,00000103 & 0,00372 \\ \hline
+        1000 & 203 & 50,00 & 0,00000102 & 0,00503 \\ \hline
+        1800 & 128 & 20,00 & 0,00000041 & 0,00324 \\ \hline
+        3200 & 77 & 10,00 & 0,00000021 & 0,00269 \\ \hline
+        5600 & 43 & 10,00 & 0,00000020 & 0,00478 \\ \hline
+        10000 & 24 & 5,00 & 0,00000010 & 0,00421 \\ \hline
+    \end{tabular}
+\end{table}
+\FloatBarrier
+\clearpage
+
+\subsubsection{Incertezza associata alle misure di frequenza f}
+Le specifiche metrologiche del generatore di funzioni, forniscono il valore dell'\textbf{incertezza relativa di caso peggiore} per le misure di frequenza, pari a :
+
+\[U_{r,f} = 20 \ ppm\]
+
+Da questa espressione è possibile ricavare l'\textbf{incertezza assoluta di caso peggiore}:
+
+\[U_f = f \cdot U_{r,f}\]
+Di seguito i valori di incertezza per ogni valore di frequenza 
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+        \textbf{f (Hz)} & \textbf{U(f)} & \textbf{Ur(f) (ppm)} \\ \hline
+        1 & 0,00002 & 20 \\ \hline
+        2 & 0,00004 & 20 \\ \hline
+        3 & 0,00006 & 20 \\ \hline
+        6 & 0,00012 & 20 \\ \hline
+        10 & 0,0002 & 20 \\ \hline
+        18 & 0,00036 & 20 \\ \hline
+        32 & 0,00064 & 20 \\ \hline
+        56 & 0,00112 & 20 \\ \hline
+        100 & 0,002 & 20 \\ \hline
+        180 & 0,0036 & 20 \\ \hline
+        320 & 0,0064 & 20 \\ \hline
+        560 & 0,0112 & 20 \\ \hline
+        1000 & 0,02 & 20 \\ \hline
+        1800 & 0,036 & 20 \\ \hline
+        3200 & 0,064 & 20 \\ \hline
+        5600 & 0,112 & 20 \\ \hline
+        10000 & 0,2 & 20 \\ \hline
+    \end{tabular}
+\end{table}
+
+\FloatBarrier
+\clearpage
+
+\subsection{Misure Indirette}
+Le misure indirette eseguite sono:
+\begin{itemize}
+    \item \textbf{Attenuazione $A$}
+    \item \textbf{Sfasamento $\Delta \varphi$}
+\end{itemize}
+
+\subsubsection{Incertezza associata alle misure di attenuazione $A$}
+Ricordiamo che l'attenuazione $A$ del filtro RC è definita come
+\[A = \frac{V_o}{V_i}\]
+cioè è data dal rapporto di due misure dirette. Pertanto, per poter stimare l'incertezza di $A$, occorre ricorrere alla \textit{formula di propagazione delle incertezze di caso peggiore}:
+\[U = \sum_{n=1}^{N} \left|\frac{\partial f}{\partial y_i}\right| \cdot U_i\]
+
+Dall'applicazione di tale formula, nel caso di rapporto tra misure, si ha che l'\textbf{incertezza relativa} è data dalla \textbf{somma delle incertezze relative} delle singole misure dirette. Pertanto nel nostro caso essa è pari a:
+
+\[U_{r,A} = U_{r,V_o} + U_{r,V_i}\]
+
+da cui si ha\textbf{ l'incertezza assoluta di caso peggiore}:
+
+\[U_A = A \cdot U_{r,A}\]
+
+Solitamente i valori di attenuazione $A$ vengono riportati in dB(decibel) secondo la formula:
+
+\[A_{dB} = 20\cdot \log_{10} A\]
+
+Applicando la formula di propagazione dellle incertezze si ottiene l'espressione per l'\textbf{incertezza assoluta di caso peggiore} $U_{A_{db}}$:
+
+\[U_{A_{db}} = \frac{20}{\ln 10} \cdot U_{r,A}\]
+
+Segue la tabella riportante per ogni valore di frequenza: il valore calcolato di $A$ con relativa incertezza (assoluta e relativa) di caso peggiore e il valore in dB di $A$ con relativa incertezza assoluta di caso peggiore
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+        \textbf{FREQ (Hz)} & \textbf{A} & \textbf{U(A)} & \textbf{Ur(A)} & \textbf{A (dB)} & \textbf{U(A(dB))} & \textbf{Ur(A(dB))} \\ \hline
+        1 & 1,0157 & 0,05498 & 0,05413 & 0,1357 & 0,47013 & 3,4649 \\ \hline
+        2 & 1,0097 & 0,04831 & 0,04785 & 0,0842 & 0,41560 & 4,9362 \\ \hline
+        3 & 1,0000 & 0,05425 & 0,05425 & 0,0000 & 0,47124 & ~ \\ \hline
+        6 & 0,9867 & 0,05106 & 0,05175 & -0,1166 & 0,44946 & -3,8550 \\ \hline
+        10 & 0,9882 & 0,05060 & 0,05121 & -0,1031 & 0,44477 & -4,3158 \\ \hline
+        18 & 0,9875 & 0,05025 & 0,05088 & -0,1093 & 0,44195 & -4,0450 \\ \hline
+        32 & 0,9820 & 0,04985 & 0,05076 & -0,1576 & 0,44093 & -2,7972 \\ \hline
+        56 & 0,9756 & 0,04941 & 0,05064 & -0,2145 & 0,43989 & -2,0510 \\ \hline
+        100 & 0,9511 & 0,04848 & 0,05097 & -0,4356 & 0,44275 & -1,0164 \\ \hline
+        180 & 0,8750 & 0,04525 & 0,05171 & -1,1598 & 0,44918 & -0,3873 \\ \hline
+        320 & 0,7279 & 0,03886 & 0,05338 & -2,7586 & 0,46369 & -0,1681 \\ \hline
+        560 & 0,5256 & 0,02999 & 0,05705 & -5,5862 & 0,49555 & -0,0887 \\ \hline
+        1000 & 0,3221 & 0,01637 & 0,05081 & -9,8391 & 0,44131 & -0,0449 \\ \hline
+        1800 & 0,1867 & 0,01000 & 0,05355 & -14,5771 & 0,46516 & -0,0319 \\ \hline
+        3200 & 0,1063 & 0,00538 & 0,05058 & -19,4670 & 0,43930 & -0,0226 \\ \hline
+        5600 & 0,0614 & 0,00305 & 0,04976 & -24,2384 & 0,43221 & -0,0178 \\ \hline
+        10000 & 0,0347 & 0,00170 & 0,04916 & -29,2051 & 0,42697 & -0,0146 \\ \hline
+    \end{tabular}
+\end{table}
+
+\FloatBarrier
+\clearpage
+
+\subsubsection{Incertezza associata alle misure di sfasamento $\Delta \varphi$}
+
+Come l'attenuazione, anche lo sfasamento $\Delta \varphi$ è una misura indiretta, ottenuta dalla formula
+\[\Delta \varphi =  -2\pi \cdot f \cdot \Delta t  \]
+
+Pertanto è necessario ricorrere alla legge di propagazione delle incertezze, osservando che nel caso di prodotto di misure dirette, le \textbf{incertezze relative si sommano}, ovvero:
+\[U_{r,\Delta \varphi} = U_{r,f} + U_{r,\Delta t}\]
+
+Per le misure di sfasamento, abbiamo provveduto a calcolare anche l'incertezza standard. A partire dalla formula per il calcolo dell'incertezza standard, osservando che $f$ e $\Delta t$ sono \emph{scorrelate}, si ha la seguente espressione per \textbf{l'incertezza standard}:
+\[u_{\Delta \varphi} = \Delta\varphi \cdot \sqrt{\frac{U_{r,f}^2}{3}+ \frac{U_{r,\Delta t}^2}{3}}\]
+
+da cui\textbf{ l'incertezza standard relativa}:
+\[\sqrt{\frac{U_{r,f}^2}{3}+ \frac{U_{r,\Delta t}^2}{3}}\]
+
+Segue una tabella dove per i diversi valori di frequenza sono indicati i valori di $\Delta\varphi$, di incertezza (assoluta e relativa) di caso peggiore e di incertezza standard (assoluta e relativa).
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+        \textbf{f (Hz)} & \textbf{$\Delta\varphi$ (rad)} & \textbf{U($\Delta\varphi$)} & \textbf{Ur($\Delta\varphi$)} & \textbf{u($\Delta\varphi$)} & \textbf{ur($\Delta\varphi$)} \\ \hline
+        1 & -0,020106 & 0,00007 & 0,00325 & 0,00004 & 0,00186 \\ \hline
+        2 & -0,026892 & 0,00013 & 0,00479 & 0,00007 & 0,00276 \\ \hline
+        3 & -0,029217 & 0,00008 & 0,00270 & 0,00005 & 0,00155 \\ \hline
+        6 & -0,025786 & 0,00008 & 0,00304 & 0,00005 & 0,00175 \\ \hline
+        10 & -0,037196 & 0,00013 & 0,00350 & 0,00007 & 0,00201 \\ \hline
+        18 & -0,056549 & 0,00023 & 0,00412 & 0,00013 & 0,00237 \\ \hline
+        32 & -0,096510 & 0,00041 & 0,00429 & 0,00024 & 0,00246 \\ \hline
+        56 & -0,163262 & 0,00072 & 0,00443 & 0,00042 & 0,00255 \\ \hline
+        100 & -0,281487 & 0,00255 & 0,00905 & 0,00147 & 0,00521 \\ \hline
+        180 & -0,479533 & 0,00232 & 0,00484 & 0,00133 & 0,00278 \\ \hline
+        320 & -0,743929 & 0,00210 & 0,00282 & 0,00120 & 0,00162 \\ \hline
+        560 & -0,971129 & 0,00364 & 0,00374 & 0,00209 & 0,00215 \\ \hline
+        1000 & -1,275487 & 0,00644 & 0,00505 & 0,00370 & 0,00290 \\ \hline
+        1800 & -1,443122 & 0,00470 & 0,00326 & 0,00270 & 0,00187 \\ \hline
+        3200 & -1,556219 & 0,00421 & 0,00271 & 0,00241 & 0,00155 \\ \hline
+        5600 & -1,505954 & 0,00722 & 0,00480 & 0,00415 & 0,00276 \\ \hline
+        10000 & -1,533097 & 0,00648 & 0,00423 & 0,00372 & 0,00243 \\ \hline
+    \end{tabular}
+\end{table}
+\FloatBarrier
 \clearpage
