@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3.5.2
     - name: Creazione cartella release
-      run: rsync -arv --exclude='.DS_Store' --exclude='.gitignore' ./Relazione ./release
+      run: rsync -arv --exclude='.DS_Store' --exclude='.gitignore' ./Relazione/ ./release
     - name: Mi sposto nella cartella
       run: |
         cd release
@@ -22,3 +22,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: FedIz
+     
