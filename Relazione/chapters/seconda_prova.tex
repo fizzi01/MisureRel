@@ -1,5 +1,5 @@
-\chapter{Compensazione in frequenza una sonda  e Caratterizzazione di un filtro RC}
-\label{chap:Prova2}
+\chapter{Compensazione in frequenza di una sonda  e Caratterizzazione di un filtro RC}
+\label{chap:seconda_prova}
 \section*{Obbiettivo}
 L'obbiettivo della seconda esperienza di laboratorio è quello di effettuare la compensazione in frequenza di una sonda e poi di ricavare i diagrammi di Bode di un filtro passabasso passivo RC, i valori di \emph{attenuazione} e \emph{sfasamento} con le relative \emph{incertezze} mediante valutazioni di tipo B.
 
@@ -98,7 +98,7 @@ Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'eserc
 
 \subsection*{Cavi di connessione (BNC-BNC)}
 \clearpage
-\section{Configurazione della strumentazione per la misurazione}
+\subsection{Configurazione della strumentazione per la misurazione}
 Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tutte le strumentazioni a disposizione. Abbiamo dunque:
 
 \begin{itemize}
@@ -140,9 +140,10 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
 
 \clearpage
 
-\section{Misurazioni}
+\subsection{Misurazioni}
 
-\subsection{Calcolo della frequenza di taglio sperimentale}
+\subsubsection{Calcolo della frequenza di taglio sperimentale}
+
 Come definito nel paragrafo introduttivo sul filtro RC (\ref{sec:filtroRC}), la frequenza di taglio teorica è pari a
 \[f=\frac{1}{2\pi RC}= \frac{1}{2\pi \cdot10^4 \cdot 47 \cdot10^{-9}} = 338,627 Hz\]
 Questa tuttavia non sarà mai pari a quella effettiva, pertanto abbiamo ricavato sperimentalmente la frequenza di taglio effettiva. Poichè il segnale in ingresso era pari a 5 V, visualizzati 10V sull'oscilloscopio, la frequenza di taglio è quella frequenza in corrispondenza della quale l'uscita $V_{o}$ del filtro è pari a 
@@ -160,8 +161,8 @@ In base al datasheet del generatore di funzioni, il valore dell'incertezza relat
 L'incertezza di caso peggiore sarà pari a
 \[U_f = 338 Hz\cdot U_{r,f} = 338,63Hz \cdot 20 \cdot 10^{-6} = 6,773\cdot10^{-3}Hz\]
 
-
-\subsection{Misure di tensione picco-picco e $\Delta t$}
+\clearpage
+\subsubsection{Misure di tensione picco-picco e $\Delta t$}
 Per riuscire a ricavare i diagrammi di Bode dell'attenuazione A del filtro RC, è stato necessario ripetere la stessa procedura di misura, lasciando invariate le condizioni operative, per un totale di 17 diversi valori di frequenza.
 
 Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
@@ -180,10 +181,10 @@ Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
 % mettere tabelle di excel
 
 \clearpage
-\section{????}
+\subsection{Calcolo delle incertezze}
 In questo paragrafo si effettuerà sulle misure ottenute la valutazione dell'incertezza di \textbf{tipo B}, basata sull'utilizzo di informazioni note a priori quali le specifiche metrologiche degli strumenti adoperati.
 
-\subsection{Misure Dirette}
+\subsubsection{Misure Dirette}
 Le misure dirette effettuate durante l'esperienza di laboratorio sono le seguenti:
 \begin{itemize}
     \item \textbf{tensione picco-picco V}
@@ -191,7 +192,7 @@ Le misure dirette effettuate durante l'esperienza di laboratorio sono le seguent
     \item \textbf{freqeunza f} dei segnali $V_i$ e $V_o$ 
 \end{itemize}
 
-\subsubsection{Incertezza associata alle misure di tensione picco-picco V}
+\subsubsection*{Incertezza associata alle misure di tensione picco-picco V}
 Dalle specifiche metrologiche di ampiezza dell'oscilloscopio, poichè abbiamo utilizzato i due cursori orizzontali per le misure, consideriamo la \textbf{Dual cursor accuracy}, pari a 
 \[vertical \ accuracy \pm 0.4\% \ of full scale\]
 
@@ -264,7 +265,7 @@ Seguono due tabelle contenenti per ogni valore di frequenza: il valore di tensio
 \FloatBarrier
 \clearpage
 
-\subsubsection{Incertezza temporale associata alle misure di distanza temporale $\Delta t$}
+\subsubsection*{Incertezza temporale associata alle misure di distanza temporale $\Delta t$}
 Le specifiche metrologiche della base dei tempi dell'oscilloscopio forniscono la seguente espressione per la \textbf{Delta t accuracy}:
 
 \[\pm0.01\% \pm0.2\% \ of full scale \pm 200 \ ps\]
@@ -313,7 +314,7 @@ Segue per ogni valore di frequenza: il valore di $\Delta t$ letto, il valore di 
 \FloatBarrier
 \clearpage
 
-\subsubsection{Incertezza associata alle misure di frequenza f}
+\subsubsection*{Incertezza associata alle misure di frequenza f}
 Le specifiche metrologiche del generatore di funzioni, forniscono il valore dell'\textbf{incertezza relativa di caso peggiore} per le misure di frequenza, pari a :
 
 \[U_{r,f} = 20 \ ppm\]
@@ -351,14 +352,14 @@ Di seguito i valori di incertezza per ogni valore di frequenza
 \FloatBarrier
 \clearpage
 
-\subsection{Misure Indirette}
+\subsubsection{Misure Indirette}
 Le misure indirette eseguite sono:
 \begin{itemize}
     \item \textbf{Attenuazione $A$}
     \item \textbf{Sfasamento $\Delta \varphi$}
 \end{itemize}
 
-\subsubsection{Incertezza associata alle misure di attenuazione $A$}
+\subsubsection*{Incertezza associata alle misure di attenuazione $A$}
 Ricordiamo che l'attenuazione $A$ del filtro RC è definita come
 \[A = \frac{V_o}{V_i}\]
 cioè è data dal rapporto di due misure dirette. Pertanto, per poter stimare l'incertezza di $A$, occorre ricorrere alla \textit{formula di propagazione delle incertezze di caso peggiore}:
@@ -410,7 +411,7 @@ Segue la tabella riportante per ogni valore di frequenza: il valore calcolato di
 \FloatBarrier
 \clearpage
 
-\subsubsection{Incertezza associata alle misure di sfasamento $\Delta \varphi$}
+\subsubsection*{Incertezza associata alle misure di sfasamento $\Delta \varphi$}
 
 Come l'attenuazione, anche lo sfasamento $\Delta \varphi$ è una misura indiretta, ottenuta dalla formula
 \[\Delta \varphi =  -2\pi \cdot f \cdot \Delta t  \]
