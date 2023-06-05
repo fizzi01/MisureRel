@@ -8,7 +8,7 @@ Cosa fare?
 
 * Scaricate GitHub Desktop (o se volete usate il terminale) -> basta cliccare su "code" in verde in alto a destra e vi scaricare l'app e la collegate al nostro repository
 * Registratevi su https://it.overleaf.com
-* Su Git c'è la sezione *Release*, da li scaricate il Source Code.zip
+* Su Git c'è la sezione *Release*, da li scaricate il [Source Code.zip](https://github.com/fizzi01/MisureRel/releases/tag/latest)
 * E caricate la zip su Overleaf
 
 ### Per fare modifiche
