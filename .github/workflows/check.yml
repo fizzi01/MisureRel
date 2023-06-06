@@ -9,6 +9,7 @@ on:
       - 'Relazione'
 
 jobs:
+  permissions: write-all
   preparation:
     name: Controllo errori
     runs-on: ubuntu-latest
