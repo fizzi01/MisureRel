@@ -91,12 +91,14 @@ Attraverso una serie di passaggi otteniamo l'incertezza come:
 
 Dove, ipotizzando di unire l'incertezza di non linearità integrale nell'incertezza di portata, posso scrivere $U_g$ (incertezza di guadagno), $U_o$ (incertezza di portata dell'offset) e $U_q$ (incertezza di quantizzazione) come: 
 \begin{equation}
+\left\{\begin{array}{l}
     | \Delta G_x \cdot y_q | \leq U_G |y_q| \ , \ con \ U_g=0,06\% \\
 | O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q} \ , \ con \ U_{o+inl+q}=2LSB
 \end{array}\right.
 \end{equation}
 
-Quindi, chiamando Q, passo di quantizzazione e V_L valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
+Quindi, chiamando Q, passo di quantizzazione e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
+
 \begin{equation}
     U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot Q \equiv 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \equiv (0,972 + 20) m\Omega \equiv 0,03 \Omega
 \end{equation}
@@ -129,8 +131,9 @@ stimato in errore relativo mediante la seguente espressione:
      a \equiv 1 - \left| \frac{E_S}{R_{NOMINALE}}\right| \equiv 92\%
 \end{equation}
 
-\newline \newline
-\boldsymbol{La} \boldsymbol{nostra} \boldsymbol{prova} \newline
+
+\textbf{La nostra prova}
+
 
 \begin{figure}[h]
     \centering
