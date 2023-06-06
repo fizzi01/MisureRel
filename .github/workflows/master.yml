@@ -5,6 +5,11 @@ on:
       - closed
     branches:
       - main
+    paths-ignore:
+      - '.github/*'
+      - '*.yml'
+      - 'README.md'
+      - '.DS_Store'
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
