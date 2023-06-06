@@ -10,6 +10,7 @@ on:
 
 jobs:
   preparation:
+    name: Controllo errori
     runs-on: ubuntu-latest
     steps:
     - name: Preparo i file del PR
