@@ -5,6 +5,8 @@ on:
       - closed
     branches:
       - main
+    paths:
+      - 'Relazione/*'
     paths-ignore:
       - '.github/*'
       - '*.yml'
@@ -29,7 +31,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: FedIz
         RELEASE_BRANCHES: main
-        SOURCE: ./Relazione
+        SOURCE: ${{ github.workspace }}
     - name: "Build & test"
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
