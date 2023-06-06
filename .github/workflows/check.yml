@@ -9,10 +9,10 @@ on:
       - 'Relazione'
 
 jobs:
-  permissions: write-all
   preparation:
     name: Controllo errori
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
     - name: Preparo i file del PR
       uses: actions/checkout@v3.5.2
