@@ -22,8 +22,7 @@ L'amplificatore operazionale (OP-AMP) è un dispositivo attivo, dotato cioè di 
 \end{figure}
 \FloatBarrier
 \section{Caratterizzazione µA741 in catena chiusa}
-Dalle specifiche del µA741, si può osservare che questo circuito integrato richiede un’alimentazione duale compresa tra ±9V e ±15V. In questa prova, per l'integrato, attraverso l'alimentatore da banco HP E3631A , è stata impostata un'alimentazione di ±12V premendo su Output ON, poi  su +25V e successivamente effettuando la regolazione con la manopola presente sul generatore. Analogamente per -12V. 
-Si è poi premuto Output OFF per mantenere il valore di alimentazione in memoria. L'uscita COM dell'alimentatore da banco è stata collegata poi tramite un connettore al circuito integrato. Abbiamo poi premuto Output ON. 
+Dalle specifiche del µA741, si può osservare che questo circuito integrato richiede un’alimentazione duale compresa tra ±9V e ±15V.
 
 \subsubsection{Gain Bandwidth Product (GBWP) – Prodotto banda-guadagno}
 Il GBWP di un amplificatore operazionale è il prodotto tra il modulo del suo guadagno ad anello aperto e la frequenza di taglio a 3 dB. In pratica, è la frequenza a cui il guadagno di tensione ad anello aperto si riduce al valore unitario. Questo parametro (caratteristico per ciascun amplificatore), essendo costante a qualsiasi
@@ -40,12 +39,13 @@ Pertanto si può determinare la banda passante (B) e la frequenza di taglio teor
 \clearpage
 
 \subsection{Tensione di offset e compensazione}
-Idealmente, un amplificatore differenziale alimentato con una tensione duale e con ingressi collegati entrambi a massa, dovrebbe fornire in uscita una tensione pari a 0 V. In realtà, invece, esistono sempre delle dissimmetrie interne di funzionamento che danno origine ad una piccola tensione d’uscita, cioè la “tensione di offset”. Pertanto, data la non idealità dell'OP-AMP, i pin 1 e 5 devono essere regolati, facendo riferimento alla Figura \ref{fig:Piedinatura e schema interno del uA741}. Sperimentalmente, l’effetto dell’offset può essere osservato effettuando i seguenti passaggi:
+Idealmente, un amplificatore differenziale alimentato con una tensione duale e con ingressi collegati entrambi a massa, dovrebbe fornire in uscita una tensione pari a 0 V. In realtà, invece, esistono sempre delle dissimmetrie interne di funzionamento che danno origine ad una piccola tensione d’uscita, cioè la “tensione di offset”. Pertanto, data la non idealità dell'OP-AMP, i pin 1 e 5 devono essere regolati, facendo riferimento allo schema in Figura \ref{fig:Piedinatura e schema interno del uA741}. Sperimentalmente, l’effetto dell’offset può essere osservato effettuando i seguenti passaggi:
 
 \begin{enumerate}
-    \item Si alimenta l'operazionale e spegnendo il generatore di funzione a cui è collegato il circuito integrato non si fornisce alcun segnale agli ingressi;
+    \item Attraverso l'alimentatore da banco HP E3631A (Figura \ref{fig:HPE3631A}) , è stata impostata un'alimentazione di ±12V. Questa operazione, è stata effettuata premendo su Output ON, poi  su +25V e successivamente, effettuando la regolazione con la manopola presente sul generatore, viene impostato il valore +12V. Analogamente si procede nella stessa maniera per impostare il valore -12V, sfruttando il tasto -25V.  Si è poi premuto Output OFF per mantenere il valore di alimentazione in memoria. L'uscita COM dell'alimentatore da banco è stata collegata poi tramite un connettore BNC al circuito integrato. Infine si può premere nuovamente il tasto Output ON. 
+    \item Spegnendo il generatore di funzione a cui è collegato il circuito integrato non si fornisce alcun segnale agli ingressi;
     \item  Sull’oscilloscopio, si visualizza solo il canale al quale è collegato l’uscita dell’amplificatore operazionale.
-    \item  Il segnale è in continua, con sovrapposto un segnale di rumore (Figura \ref{fig:tensioneOffset}): per questo, è opportuno eseguire una misura mediata della tensione efficace (\textit{Misura RMS}), andando a selezionare prima il tasto \textit{Measure}.
+    \item  Il segnale visualizzato è in continua, con sovrapposto un segnale di rumore (Figura \ref{fig:tensioneOffset}): per questo, è opportuno eseguire una misura mediata della tensione efficace (\textit{Misura RMS}), andando a selezionare prima il tasto \textit{Measure} e successivamente il tasto \textit{RMS}.
     \item  Per compensare l’offset in modo da riportare a 0 V la tensione in uscita, è necessario collegare fra i due pin interessati (offset o balance), un trimmer il cui cursore risulti collegato alla tensione di alimentazione oppure a massa.
     \item Regolare tale trimmer fino a rilevare in uscita una tensione nulla (Figura \ref{fig:azzeramentoOffset}). 
 \end{enumerate}
@@ -75,7 +75,7 @@ Nel caso dell'esperienza, è stato fissato un valore pari a:
 Il circuito nella configurazione “a catena chiusa” è stato realizzato direttamente su un PCB (Printed Circuit Board) ossia una scheda elettronica, di cui la schematizzazione è in Figura \ref{fig:schemaCatenaChiusa}:
 \begin{figure}[h]
     \centering
-    %\includegraphics[width=1\linewidth]{circuitoIntegrato_uA741.png}
+    \includegraphics[width=1\linewidth]{media/schemaCircuitaleuA741.png}
     \caption{Schema circuitale della configurazione in catena chiusa}
     \label{fig:schemaCatenaChiusa}
 \end{figure}
@@ -91,13 +91,15 @@ Invece, la frequenza di taglio teorica \(f_{c_{teorica}}\), si ricava dalla rela
 
 \[f_{c_{teorica}}=\frac{GBWP}{|A|}=45,5kHz\]
 \subsection{Strumentazione}
+Di seguito è riportata la strumentazione utilizzata per la realizzazione del set-up di questa esperienza di laboratorio.
+
 \subsection*{\textbf{PCB}}
 
 \subsection*{\textbf{Oscilloscopio Agilent HP 54600B}}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth, height=7cm]{oscilloscopio.png}
-    \caption{Oscilloscopio}
+    \caption{Oscilloscopio Agilent HP 54600B}
     \label{fig:enter-label}
 \end{figure}
 \FloatBarrier
@@ -105,7 +107,7 @@ Invece, la frequenza di taglio teorica \(f_{c_{teorica}}\), si ricava dalla rela
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\linewidth, height=6cm]{generatore di funzioni.png}
-    \caption{Generatore di funzioni}
+    \caption{Generatore di funzioni HP 33120A}
     \label{fig:enter-label}
 \end{figure}
 \FloatBarrier
@@ -113,11 +115,18 @@ Invece, la frequenza di taglio teorica \(f_{c_{teorica}}\), si ricava dalla rela
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth, height=7cm]{alimentatore da banco.png}
-    \caption{Alimentatore da banco}
-    \label{fig:enter-label}
+    \caption{Alimentatore da banco HP E3631A}
+    \label{fig:HPE3631A}
 \end{figure}
 \FloatBarrier
 \subsection*{\textbf{Cavi di connessione BNC-BNC}}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{media/cavoBNC.png}
+    \caption{Cavo di connessione BNC-BNC}
+    \label{fig:enter-label}
+\end{figure}
+\FloatBarrier
 \clearpage
 
 \subsection{Configurazione della strumentazione per le misurazioni}
@@ -125,24 +134,32 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
 \begin{itemize}
     \item Collegato i cavi di connessione BNC-BNC secondo la seguente configurazione:
     \begin{itemize}
-        \item Uscita del generatore di funzioni all'ingresso (INPUT) del circuito integrato
+        \item Uscita del generatore di funzioni Agilent HP 54600B all'ingresso (INPUT) del circuito integrato
         \item  Segnale di ingresso all'operazionale (OUTPUT 1) è stato collegato al canale 1 dell'oscilloscopio
         \item  Segnale di uscita dall'operazionale (OUTPUT 2) è stato collegato al canale 2 dell'oscilloscopio
+        \item Uscita COM dell'alimentatore da banco HP E3631A all'ingresso, del circuito integrato, che si trova in altro a destra, facendo riferimento a Figura \ref{fig:pcb_bnc}
     \end{itemize}
-    \item Al fine di controllare il corretto funzionamento dell'amplificatore abbiamo si è impostato sul generatore un segnale di ingresso sinuisoidale alla frequenza di $100Hz$ e si è visto come il segnale d'uscita fosse sfasato ed amplificato di all'incirca $20dB$.  
+    \item Al fine di controllare il corretto funzionamento dell'amplificatore abbiamo si è impostato sul generatore un segnale di ingresso sinusoidale alla frequenza di $100Hz$ e si è visto come il segnale d'uscita fosse sfasato ed amplificato di all'incirca $20dB$.  
 \end{itemize}
-E' importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disattamento di impedenza tra l'oscilloscopio ed il generatore di funzioni.
+\begin{figure}[h]
+        \centering
+        \includegraphics{PCB_bnc.png}
+        \caption{Ingressi/Uscite del filtro RC}
+        \label{fig:pcb_bnc}
+    \end{figure}
+\FloatBarrier
+E' importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disadattamento di impedenza tra l'oscilloscopio ed il generatore di funzioni.
 \begin{itemize}
-    \item Avviato l'oscilloscopio su cui visualizzare il segnale d'ingresso del filtro $V_i$ sul canale 1, e il segnale di uscita del filtro $V_o$ sul canale 2.
+    \item Avviato l'oscilloscopio su cui visualizzare il segnale d'ingresso dell'operazionale $V_i$ sul canale 1, e il segnale di uscita dell'operazionale $V_o$ sul canale 2.
     Poichè abbiamo utilizzato cavi BNC-BNC e non sonde, abbiamo impostato il valore di \emph{Probe} a 1 mediante l'apposito pulsante posto sotto lo schermo.
     Per migliorare la visualizzazione di entrambi i segnali, abbiamo premuto il pulsante \emph{Auto-Scale}, che permette all'oscilloscopio di visualizzare entrambi i segnali, uno per ognuno della due metà dello schermo.
     
     Ai fini delle misurazioni da effettuare, abbiamo impostato entrambe le forme d'onda sulla linea di 0 V secondo la seguente procedura per entrambi i canali:
     \begin{enumerate}
         \item Selezione del singolo canale dal rispettivo pulsante della sezione verticale
-        \item Impostazione del \emph{Coupling} su Ground mediante il secondo pulsante posizionato sotto lo schermo
-        \item Utilizzo della manopola presente sotto la sezione Measure per spostare il riferimento del segnale sulla linea di 0 V
-        \item Impostazione del \emph{Coupling} su AC mediante il secondo pulsante posizionato sotto lo schermo  
+        \item Impostazione del \emph{Coupling} su \textit{Ground} mediante il secondo pulsante posizionato sotto lo schermo
+        \item Utilizzo della manopola presente sotto la sezione \textit{Measure} per spostare il riferimento del segnale sulla linea di 0 V
+        \item Impostazione del \emph{Coupling} su \textit{AC} mediante il secondo pulsante posizionato sotto lo schermo  
 \end{enumerate}
 \end{itemize}
 
@@ -174,8 +191,8 @@ Per riuscire a ricavare la risposta in frequenza del circuito, è stato necessar
 Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
 \begin{enumerate}
     \item Impostato il valore della frequenza del segnale di ingresso del filtro  sul generatore di funzioni, premendo prima il pulsante \emph{Freq} e poi impostando la frequenza desiderata.
-    \item Regolato i valori di $K_{V_i}$ e $K_{V_o}$ mediante le manopole poste nella parte superiore della sezione verticale, in modo tale che i segnali coprissero quanto più possibile lo schermo senza tagliare la forma d'onda. In questo modo le misure eseguite sono più accurate e viene ridotta l'incertezza di misura.
-    \item Premuto il pulsante \emph{Voltage}, situato nella sezione \emph{Measure} e selezionato per ognuno dei due segnali il tipo di misura, cioè tensione picco-picco $V_{p-p}$, mediante gli appositi pulsanti posizionati sotto lo schermo.
+    \item Regolato i valori di $K_{V_i}$ e $K_{V_o}$ mediante le manopole poste nella parte superiore della sezione verticale, in modo tale che i segnali si avvicinassero quanto più possibile al valore di fondo scala. In questo modo le misure eseguite sono più accurate e viene ridotta l'incertezza di misura.
+    \item Premuto il pulsante \emph{Voltage}, situato nella sezione \emph{Measure} e selezionato per ognuno dei due segnali il tipo di misura, cioè tensione picco-picco $V_{pp}$, mediante gli appositi pulsanti posizionati sotto lo schermo.
     In questo modo i valori di tensione picco-picco di entrambi i segnali $V_i$ e $V_o$ vengono automaticamente calcolati dall'oscilloscopio e visualizzati nella parte inferiore dello schermo.
 
 Di seguito una tabella con i risultati delle misurazioni effettuate:
