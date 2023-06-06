@@ -11,6 +11,7 @@ on:
       
 jobs:
   if_merged:
+    name: Creo il tag della versione
     if: github.event.pull_request.merged == true
     permissions: write-all
     runs-on: ubuntu-latest
