@@ -19,14 +19,17 @@ jobs:
         ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: 4
     - name: Inizio la compilazione
+      id: compilation
       uses: xu-cheng/latex-action@v2
       with:
         root_file: "*.tex"
         glob_root_file: true
         working_directory: "Relazione/"
         args: "-pdf -file-line-error -halt-on-error"
+    - name: check files
+      run: ls -la
     - name: Upload della preview
-      if: success()
+      if: steps.compilation.outcome == 'success'
       uses: actions/upload-artifact@v3
       with:
           name: Preview PDF
