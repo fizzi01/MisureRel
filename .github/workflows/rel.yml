@@ -24,6 +24,13 @@ jobs:
         path: 'Relazione/*'
         filename: 'release.zip'
         exclusions: '*.git* README.md .editorconfig'
+    - name: Download della preview
+      uses: actions/download-artifact@v3
+      id: download ${{steps.download.outputs.download-path}}
+      with:
+        name: Preview
+    - name: Download Path
+      run: echo 
     - name: Upload Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -33,3 +40,4 @@ jobs:
         title: "Release Relazione"
         files: |
           *.zip
+          *.pdf
