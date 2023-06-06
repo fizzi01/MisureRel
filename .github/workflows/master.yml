@@ -6,7 +6,8 @@ on:
     branches:
       - main
     paths:
-      - 'Relazione/*'
+      - 'Relazione/**'
+      - 'Relazione'
       
 jobs:
   if_merged:
