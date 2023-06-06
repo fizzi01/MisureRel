@@ -27,6 +27,7 @@ jobs:
         args: "-pdf -file-line-error -halt-on-error"
         post_compile: "latexmk -c"
   upload:
+      needs: preparation
       name: Upload PDF file
       runs-on: ubuntu-latest
       steps:
