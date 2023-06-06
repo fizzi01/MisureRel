@@ -21,7 +21,6 @@ jobs:
     - name: Mi sposto nella cartella
       run: |
         echo $GITHUB_WORKSPACE
-        cd release
         ls -la
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.66.0
@@ -29,7 +28,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: FedIz
         RELEASE_BRANCHES: main
-        SOURCE: release
+        SOURCE: release/
     - name: "Build & test"
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
