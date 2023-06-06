@@ -1,5 +1,7 @@
 # MisureRel
 
+TEST
+
 ## Download zip
 [Relazione download](https://github.com/fizzi01/MisureRel/releases/tag/latest)
 
