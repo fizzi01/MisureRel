@@ -12,6 +12,7 @@ jobs:
   preparation:
     name: Controllo errori
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
     - name: Preparo i file del PR
       uses: actions/checkout@v3.5.2
@@ -19,10 +20,24 @@ jobs:
         ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: 4
     - name: Inizio la compilazione
+      id: compilation
       uses: xu-cheng/latex-action@v2
       with:
         root_file: "*.tex"
         glob_root_file: true
         working_directory: "Relazione/"
         args: "-pdf -file-line-error -halt-on-error"
-        post_compile: "latexmk -c"
+    - name: check files
+      run: |
+        cd Relazione
+        ls -la
+    - name: Upload della preview
+      if: steps.compilation.outcome == 'success'
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        automatic_release_tag: "preview-latest"
+        title: "PDF compilato"
+        files: |
+          Relazione/*.pdf
