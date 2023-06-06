@@ -26,11 +26,11 @@ jobs:
         exclusions: '*.git* README.md .editorconfig'
     - name: Download della preview
       uses: actions/download-artifact@v3
-      id: download ${{steps.download.outputs.download-path}}
+      id: download
       with:
-        name: Preview
+        name: Preview PDF
     - name: Download Path
-      run: echo 
+      run: echo ${{steps.download.outputs.download-path}}
     - name: Upload Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
