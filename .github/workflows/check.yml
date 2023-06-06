@@ -38,6 +38,6 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         automatic_release_tag: "preview-latest"
-        title: "Relazione compilata"
+        title: "PDF compilato"
         files: |
-          *.pdf
+          Relazione/*.pdf
