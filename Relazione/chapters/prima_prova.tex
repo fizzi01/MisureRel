@@ -409,9 +409,10 @@ Il disegno illustrativo del montaggio dell’apparecchiature è il seguente:
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=6cm]{Relazione/media/LCR_meter.png}
+    \includegraphics[height=6cm]{media/LCR_meter.png}
     \label{fig:LCR_meter}
 \end{figure}
+\FloatBarrier
 
 \begin{itemize}
     \item AGILENT LCR-meter 4263B;
@@ -440,6 +441,7 @@ Per evitare gli errori di sfasamento causati dalla lunghezza del cavo, abbiamo i
     \caption{Pannello Frontale LCR}
     \label{fig:pannello_frontale_LCR}
 \end{figure}
+\FloatBarrier
 
 Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento impostando la frequenza massima dell'LCR. A questa frequenza, eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura.
 
@@ -477,19 +479,19 @@ Partiamo con i 100Hz, e misuriamo la resistenza (R) e reattanza (X, nel nostro c
 
 Se rappresentiamo le precedenti misure in modulo e fase avremo i seguenti grafici:
 %Mancano i due grafici relativi a questa tabella%
-\begin{figure}[ht]
-    \centering
-    \includegraphics[height=2cm]{Relazione/media/grafico_modulo.png}
-    \caption{Grafico del modulo}
-    \label{fig:grafico_modulo}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[height=2cm]{Relazione/media/grafico_fase.png}
-    \caption{Grafico della fase}
-    \label{fig:grafico_fase}
-\end{figure}
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics[height=2cm]{media/grafico_modulo.png}
+%    \caption{Grafico del modulo}
+%    \label{fig:grafico_modulo}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics[height=2cm]{media/grafico_fase.png}
+%    \caption{Grafico della fase}
+%    \label{fig:grafico_fase}
+%\end{figure}
 
 Dai grafici precedenti si può notare che alle alte frequenze è necessario considerare gli effetti parassiti della resistenza reale, che tendono ad aumentare il valore nominale della resistenza linearmente con la frequenza.
 
@@ -532,7 +534,7 @@ Con l'incertezza di quantizzazione $U_q$ pari a:
 
 
 
-%-------------Capacità----------- NON CAPISCO PERCHé LA METTE PRIMA DELLE TABELLE #*+ç-*°à°°àààAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%
+%-------------Capacità----------- %
 \subsection{Capacità}
 \label{sub:c}
 Come ultima parte della prova abbiamo misurato la capacità del condensatore.
@@ -556,6 +558,7 @@ Premiamo in successione "CP" (capacità), "RP" (resistenza parallela) e poi "D" 
 \caption{LCR, misura della capacità}
 \label{tab:lcr_c}
 \end{table}
+\FloatBarrier
 
 Per il calcolo dell’incertezza dobbiamo applicare le seguenti formule:
 
@@ -570,10 +573,11 @@ dove $|Z_X|$ è il valore dell'impedenza Z ottenuta convertendo il valore della 
 
 \begin{figure}[H]
     \centering
-    \includegraphics{Relazione/media/diagramma_conversione_Cp.png}
+    \includegraphics{media/diagramma_conversione_Cp.png}
     \caption{Diagramma di conversione}
     \label{fig:diag_conv_Cp}
 \end{figure}
+\FloatBarrier
 
 Consultando le tabelle di incertezza fornite dal costruttore avremo:
 
@@ -594,6 +598,7 @@ A      & B      & C & D {[}$\Omega${]} & E {[}$\Omega${]} & Zs {[}$\Omega${]} & 
 \caption{Tabella di incertezza fornita dal costruttore, con Uz l'incertezza}
 \label{tab:lcr_c_sheet}
 \end{table}
+\FloatBarrier
 
 L’incertezza della resistenza parallelo, invece, si calcola come:
 
@@ -633,5 +638,6 @@ RPx {[$\Omega$]} & De  & Dx  & U(Rp) \\ \hline
 \caption{LCR, misura della resistenza}
 \label{tab:lcr_c_RPx}
 \end{table}
+\FloatBarrier
 
 
