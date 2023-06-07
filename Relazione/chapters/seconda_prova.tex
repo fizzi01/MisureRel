@@ -1,12 +1,12 @@
 \chapter{Compensazione in frequenza di una sonda  e Caratterizzazione di un filtro RC}
 \label{chap:seconda_prova}
 
-\section*{Obbiettivo}
-L'obbiettivo della seconda esperienza di laboratorio è quello di effettuare la compensazione in frequenza di una sonda e poi di ricavare i diagrammi di Bode di un filtro passabasso passivo RC, i valori di \emph{attenuazione} e \emph{sfasamento} con le relative \emph{incertezze} mediante valutazioni di tipo B.
+\section*{Obiettivo}
+\label{sec:ob_second}
+L'obiettivo della seconda esperienza di laboratorio è quello di effettuare la compensazione in frequenza di una sonda e poi di ricavare i diagrammi di Bode di un filtro passabasso passivo RC, i valori di \emph{attenuazione} e \emph{sfasamento} con le relative \emph{incertezze} mediante valutazioni di tipo B.
 
 \section{Compensazione in frequenza di una sonda}
-Le sonde costituiscono un componente fondamentale per poter prelevare un
-segnale da osservare e da trasferire poi allo strumento.
+Le sonde costituiscono un componente fondamentale per poter prelevare un segnale da osservare e da trasferire poi allo strumento.
 
 \begin{figure}[h]
     \centering
@@ -21,6 +21,8 @@ Per questo motivo è necessario effettuare la \textbf{compensazione in frequenza
 
 \subsection*{}
 Per poter effettuare la compensazione, abbiamo collegato il connettore BNC della sonda al canale 1 dell'oscilloscopio. Abbiamo poi sollevato il cappuccio della sonda e l'abbiamo collegata all'occhiello presente nella parte inferiore del dispositivo, che risulta essere la sorgente di onda quadra di ampiezza 5V e frequenza 1.2KHz generata dall'oscilloscopio stesso.
+
+Abbiamo poi premuto il tasto \textbf{Autoscale} per visualizzare il segnale sullo schermo.
 
 Poichè la sonda fornisce un'attenuazione pari a 10, premendo sul tasto 1 della sezione verticale, è possibile impostare il valore di \emph{Probe} su 10, mediante il tasto presente sotto lo schermo, in modo che la lettura sia riferita all'attenuazione implicita della sonda.
 
@@ -82,9 +84,9 @@ Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'eserc
 \subsection*{Oscilloscopio Agilent Hp 54600B}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth, height=9cm]{oscill.png}
-    \caption{Oscilloscopio Agilent Hp 54600B}
-    \label{fig:oscill}
+    \includegraphics[width=0.8\linewidth, height=7cm]{oscilloscopio.png}
+    \caption{Oscilloscopio Agilent HP 54600B}
+    \label{fig:enter-label}
 \end{figure}
 \FloatBarrier
 
@@ -98,6 +100,13 @@ Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'eserc
 \FloatBarrier
 
 \subsection*{Cavi di connessione (BNC-BNC)}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{media/cavoBNC.png}
+    \caption{Cavo di connessione BNC-BNC}
+    \label{fig:enter-label}
+\end{figure}
+\FloatBarrier
 \clearpage
 
 \subsection{Configurazione della strumentazione per la misurazione}
@@ -182,9 +191,8 @@ Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
     
 \end{enumerate}
 
-% scrivere le formuke usate per ricavare incertezze ib ase ai datasheet
-% piccolo excursus su cosa sono quei valori
-% mettere tabelle di excel
+\footnote{Per misurazioni effettuate a frequenze molto basse, intorno ai pochi Hz, per visualizzare corretamente il segnale è stato utile premere il tasto \textbf{Mode} della sezione Trigger, e impostare tramite il tasto presente sotto lo schermo, la modalità \textbf{Normal}. }
+\footnote{Per misurazioni effettuate a frequenze molto elevate, per ridurre il rumore sul segnale è stato utile premere sul tasto \textbf{Display}, posto sopra la sezione verticale, per impostare tramite il pulsante apposito sotto lo schermo la modalità \textbf{Average}.}
 
 \clearpage
 
