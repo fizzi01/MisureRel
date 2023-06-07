@@ -3,8 +3,8 @@
 ## Download zip
 [Relazione download](https://github.com/fizzi01/MisureRel/releases/tag/latest)
 
-## Download PDF
-[Relazione download](https://github.com/fizzi01/MisureRel/releases/tag/PDF-latest)
+## Download PDF relazione
+[PDF download](https://github.com/fizzi01/MisureRel/releases/tag/PDF-latest)
 
 ## Cosa fare?
 ---------------------
