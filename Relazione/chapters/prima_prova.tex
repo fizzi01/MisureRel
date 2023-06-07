@@ -15,7 +15,7 @@ A tale scopo ci è stato dato un resistore dal valore nominale di 1,5 $\Omega$ (
     \caption{Tabella che raffigura il codice dei colori di un resistore}
     \label{fig:resistore}
 \end{figure}
-
+\FloatBarrier
 
 
 
@@ -39,6 +39,7 @@ A tale scopo ci è stato dato un resistore dal valore nominale di 1,5 $\Omega$ (
     \caption{Multimetro utilizzato (Hewlett Packard 974A)}
     \label{fig:multimetro_port}
 \end{figure}
+\FloatBarrier
 
 Il multimetro HP 974A è dotato di un display a 4 ½ cifre, il quale rappresenta uno strumento con 4 cifre principali e un'ulteriore cifra riservata per indicare il segno e, eventualmente, il valore della cifra più significativa della misurazione. Per calcolare la resistenza con un valore nominale dichiarato dal produttore pari a (1500 ± 7,5) m$\Omega$, abbiamo utilizzato il pulsante "RANGE" per impostare il valore di fondo scala, ovvero il limite superiore che il multimetro può "misurare", a 500 $\Omega$. Dato che lo strumento ha un campo di misura pari a 1/50000 del valore di fondo scala, il passo di quantizzazione, indicato come "Q", è pari a
 \begin{equation}
@@ -58,6 +59,7 @@ Procediamo con la valutazione dell'incertezza di \textbf{tipo B}, basata sull'ut
     \caption{Specifice di incertezza dello strumento utilizzato (Hewlett Packard 974A)}
     \label{fig:Incertezza_multimetro_port}
 \end{figure}
+\FloatBarrier
 
 Avendo impostato un valore di fondo scala pari a 500 $\Omega$ possiamo notare dalla precedente tabella un’incertezza pari a ±(0,06\% + 2) $\Omega$ , dove il primo termine è proporzionale alla lettura e il secondo alla portata. Si noti che per misure di ampiezza è possibile definire un modello semplificato di uno strumento per misure statiche, del tipo:
 
@@ -66,6 +68,7 @@ Avendo impostato un valore di fondo scala pari a 500 $\Omega$ possiamo notare da
     \includegraphics[height=3cm]{modello_semplificato.png}
     \label{fig:modello}
 \end{figure}
+\FloatBarrier
 
 Su cui definiamo un errore totale sulla misura del tipo:
 
@@ -121,6 +124,7 @@ Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandol
     \caption{Differenza dei due range}
     \label{fig:range}
 \end{figure}
+\FloatBarrier
 
 Effettivamente, la misura eseguita utilizzando il multimetro portatile fornisce una stima non corretta poiché include errori casuali a causa della singola misurazione anziché una media di più valori letti. Inoltre, lo strumento non consente la compensazione degli errori sistematici poiché non dispone di funzioni di calibrazione. Infine, non si è tenuto conto degli errori dovuti alle resistenze di contatto tra i cavi, i puntali e il resistore. Il contributo di tutti questi effetti influisce sul risultato finale della misura.
 
