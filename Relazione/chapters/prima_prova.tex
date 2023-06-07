@@ -55,7 +55,7 @@ Procediamo con la valutazione dell'incertezza di \textbf{tipo B}, basata sull'ut
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=5cm]{incertezza_port.png}
+    \includegraphics[height=4cm]{incertezza_port.png}
     \caption{Specifice di incertezza dello strumento utilizzato (Hewlett Packard 974A)}
     \label{fig:Incertezza_multimetro_port}
 \end{figure}
@@ -105,16 +105,20 @@ Dove, ipotizzando di unire l'incertezza di non linearità integrale nell'incerte
 
 Quindi, chiamando Q, passo di quantizzazione e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
 
-\begin{equation}
-    U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot Q \equiv 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \equiv (0,972 + 20) m\Omega \equiv 0,03 \Omega
-\end{equation}
-,sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) come:
-\begin{equation}
+\begin{equation*}
+\begin{array}{l}
+U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot Q \equiv 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \\ \\
+\equiv (0,972 + 20) m\Omega \equiv 0,03 \Omega
+\end{array}
+\end{equation*}
+
+sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) come:
+\begin{equation*}
     R_M \equiv(1,62 \pm 0,03) \Omega
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
     r(R) \equiv [1,59 \Omega \div 1,65 \Omega]
-\end{equation}
+\end{equation*}
 Va notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
 Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandola con la (2.9) che i due range di valori non sono compatibili.
 
@@ -231,7 +235,7 @@ Come prima operazione abbiamo cortocircuitato i morsetti, premendo il tasto null
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=10cm]{tabella_mult_banco.png}
+    \includegraphics[height=9cm]{tabella_mult_banco.png}
     \label{fig:tab_mult_banco}
 \end{figure}
 \FloatBarrier
