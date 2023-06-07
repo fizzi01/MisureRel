@@ -6,7 +6,7 @@
 ## Download PDF
 [Relazione download](https://github.com/fizzi01/MisureRel/releases/tag/PDF-latest)
 
-##Cosa fare?
+## Cosa fare?
 ---------------------
 
 * Scaricate GitHub Desktop (o se volete usate il terminale) -> basta cliccare su "code" in verde in alto a destra e vi scaricare l'app e la collegate al nostro repository
