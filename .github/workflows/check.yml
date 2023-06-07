@@ -44,7 +44,9 @@ jobs:
     
   log:
         needs: preparation
-        if: "always()&&needs.preparation.result == 'failure'"
+        if: |
+          always() && 
+          needs.preparation.result == 'failure'
         name: Carico la zip dei file problematici
         runs-on: ubuntu-latest
         permissions: write-all
