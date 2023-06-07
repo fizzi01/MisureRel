@@ -27,9 +27,6 @@ A tale scopo ci è stato dato un resistore dal valore nominale di 1,5 $\Omega$ (
 
 
 
-
-
-
 \section{Misure di resistenze con multimetro portatile}
 \label{sec:mult_port}
 
@@ -119,6 +116,7 @@ sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della res
 \begin{equation*}
     r(R) \equiv [1,59 \Omega \div 1,65 \Omega]
 \end{equation*}
+
 Va notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
 Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandola con la (2.9) che i due range di valori non sono compatibili.
 
@@ -451,13 +449,12 @@ Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento 
 
 
 
-
 \subsection{Impedenze}
 \label{sub:z}
 
 Tramite l'LCR-Meter abbiamo svolto l'ultima parte della nostra prima esperienza.
-Di solito, per effettuare misurazioni di impedenza, è necessario stabilire un piano di riferimento sull'ingresso del DUT (Device Under Test) nel pannello frontale. L'LCR ci permette di fare ciò fissando la lunghezza del cavo utilizzato. Tuttavia, è importante cercare di eliminare le impedenze residue causate dalla presenza del Test Fixture nel pannello frontale dello strumento.
 
+Di solito, per effettuare misurazioni di impedenza, è necessario stabilire un piano di riferimento sull'ingresso del DUT (Device Under Test) nel pannello frontale. L'LCR ci permette di fare ciò fissando la lunghezza del cavo utilizzato. Tuttavia, è importante cercare di eliminare le impedenze residue causate dalla presenza del Test Fixture nel pannello frontale dello strumento.
 
 Innanzitutto abbiamo calibrato lo strumento per compensare gli errori sistematici introdotti dallo strumento stesso, dando come riferimento due carichi noti (il circuito virtualmente chiuso e aperto), premendo sul tassto blu dello strumento e aspettando la dicitura "short correction complete".
 Per fare la prova, abbiamo avuto la possibilità di impostare vari valori di frequenza a partire da 100Hz, abbiamo impostato un tempo di misura medio ??? e impostato il modello capacità ideale con collegamento parallelo (premendo in successione i tasti CP-D e CP-RP).
@@ -511,7 +508,6 @@ Per il calcolo dell'incertezza delle misure di resistenza e reattanza riportate 
 
 dove $Z_X$ è il valore misurato dell’impedenza Z. L’incertezza di $|Z|$ è uguale a quella di 
 R e di X per cui, consultando le tabelle di incertezza fornite dal costruttore, avremo:
-
 
 
 %TABELLA INCERTEZZA IMPEDENZA%

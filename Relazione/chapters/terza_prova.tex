@@ -410,3 +410,24 @@ Segue la tabella riportante per ogni valore di frequenza: il valore calcolato di
         700000 & 0,906 & 0,000050 & 0,0000548 & -0,857 & 0,000476 & -0,0005554 \\ \hline
     \end{tabular}
 \end{table}
+
+\section{Diagramma di Bode del guadagno}
+Nella figura ~\ref{fig:Bode} è possibile vedere graficati i valori del guadagno A\textsubscript{dB} rispetto ai valori di frequenza in scala logaritmica, ossia il diagramma di Bode del guadagno dell'OP-AMP. 
+
+% Diagramma di Bode del guadagno dell'OP-AMP
+\begin{figure}
+    \centering
+    \resizebox{0.80\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Decadi di frequenza}, ylabel={A\textsubscript{dB}}, 
+            xtick={2,3,4,5,6,7}, xticklabels={$10^2$, $10^3$, $10^4$, $10^5$, $10^6$, $10^7$}]
+            \addplot[red, mark=*, only marks,  error bars/.cd, y fixed, y dir=both, y explicit] 
+            table[x=x, y=y,y error=error, col sep=comma] {media/bode/bode_adb_logf_u.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode del guadagno}
+    \label{fig:Bode}
+\end{figure}
+
