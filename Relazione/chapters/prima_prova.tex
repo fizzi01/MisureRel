@@ -2,9 +2,8 @@
 \label{chap:prima_prova}
 
 
-\section{obbiettivi}
-\label{sec:ob1}
-
+\section*{Obiettivo}
+\label{sec:ob_first}
 
 L'obiettivo primario di questa iniziale esperienza di laboratorio consiste nell'acquisire familiarità con l'utilizzo di strumentazione di base per le misurazioni, con le corrette procedure di misurazione e con la valutazione dell'incertezza associata, nel caso di misurazioni di resistenza e impedenza.
 \newline \newline
@@ -70,29 +69,33 @@ Avendo impostato un valore di fondo scala pari a 500 $\Omega$ possiamo notare da
 
 Su cui definiamo un errore totale sulla misura del tipo:
 
-\begin{figure} [h]
-    \centering
-    \includegraphics[height=2cm]{media/errore_port.png}
-    \label{fig:errore port}
-\end{figure}
+\begin{equation}
+    E_t(x) = \Delta Gx + O + inl(x) + e_q(g(x)) + N
+\end{equation}
+
+%\begin{figure} [h]
+%    \centering
+%    \includegraphics[height=2cm]{media/errore_port.png}
+%    \label{fig:errore port}
+%\end{figure}
 
 Attraverso una serie di passaggi otteniamo l'incertezza come:
 \begin{equation}
     |E_t| \equiv |y_q - x| \equiv | \Delta G_x + O + inl(x) + e_q(g(x)) | \leq 
 \end{equation}
-(applichiamo una disuguaglianza triangolare)
-\begin{equation}
-    \leq | \Delta G_x | + | O | + | inl(x) | + | e_q(g(x)) | \leq 
-\end{equation}
-(applichiamo una disuguaglianza errore-incertezza)
-\begin{equation}
+applichiamo una disuguaglianza triangolare
+\begin{equation*}
+    \leq | \Delta Gx | + | O | + | inl(x) | + | e_q(g(x)) | \leq 
+\end{equation*}
+applichiamo una disuguaglianza errore-incertezza
+\begin{equation*}
     \leq U_G|x| + U_o + U_{inl} + U_q \cong U_G|y_q| + U_o + U_{inl} +U_q \equiv U_{tot}
-\end{equation}
+\end{equation*}
 
 Dove, ipotizzando di unire l'incertezza di non linearità integrale nell'incertezza di portata, posso scrivere $U_g$ (incertezza di guadagno), $U_o$ (incertezza di portata dell'offset) e $U_q$ (incertezza di quantizzazione) come: 
 \begin{equation}
 \left\{\begin{array}{l}
-    | \Delta G_x \cdot y_q | \leq U_G |y_q| \ , \ con \ U_g=0,06\% \\
+    | \Delta G \cdot y_q | \leq U_G |y_q| \ , \ con \ U_g=0,06\% \\
 | O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q} \ , \ con \ U_{o+inl+q}=2LSB
 \end{array}\right.
 \end{equation}
@@ -109,7 +112,7 @@ Quindi, chiamando Q, passo di quantizzazione e $V_L$ valore letto (supponiamo di
 \begin{equation}
     r(R) \equiv [1,59 \Omega \div 1,65 \Omega]
 \end{equation}
-V\'a notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
+Va notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
 Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandola con la (2.9) che i due range di valori non sono compatibili.
 
 \begin{figure}[h]
@@ -132,43 +135,44 @@ stimato in errore relativo mediante la seguente espressione:
 \end{equation}
 
 
-\textbf{La nostra prova}
-
-
-\begin{figure}[h]
+\subsection*{La nostra prova}
+\label{sub:nosta_prova_first}
+\vspace{0.5cm}
+%\begin{wrapfigure}{l}{0.3\textwidth}
+\begin{figure}
     \centering
-    \includegraphics[height=6cm]{media/Gameboy_62.jpg}
+    \includegraphics[width=5cm]{Gameboy_62.jpg}
     \label{fig:mult_port_nostro}
 \end{figure}
+\FloatBarrier
+%\end{wrapfigure}
+    
 
 Quando usiamo il multimetro portatile abbiamo disposto i puntali in maniera pi\'u stabile possibile, applicando una buona pressione per ottenere una misurazione pi\'u fedele possibile,
 Abbiamo fatto 10 ripetizioni in modo da ricavare l'incertezza totale, con il contributo valutato di tipo B relativamente alla specifica di strumento utilizzato.
 
-%Per chi vuole inserire tabella usare: https://www.tablesgenerator.com/latex_tables#
-%Basta fare ctrl+v sulla tabella di google sheets e andare sul sito , premere File, e fare "Paste table data"
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\rowcolor[HTML]{6FA8DC} 
-Fondo scala 500$\Omega$ & Passo Q ($\Omega$) & Incertezza Uq ($\Omega$) & Incertezza \\ \hline
-1,62             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,62             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,60             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,60             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,62             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,60             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-1,61             & 1,00E-02    & 5,00E-03          & 2,10E-02   \\ \hline
-\end{tabular}
-\caption{Multimetro portatile 974A}
-\label{tab:mult_port}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+        \textbf{R}$\bm{[\Omega]}$ & \textbf{Q}$\bm{[\Omega]}$ & \textbf{Uq} $\bm{[\Omega]}$ & $\bm{U_r}$ \\ \hline
+        1,62 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,62 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,60 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,60 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,62 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,60 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+    \end{tabular}
+    \caption{Multimetro portatile 974A, fondo scala di 500 $\Omega$}
+    \label{tab:mult_port}
 \end{table}
+\FloatBarrier
 
-
+\vspace{4cm}
 %---------Multimetro da Banco---------%
 \section{Misure di resistenza con multimetro da banco}
 \label{sec:mult}
@@ -176,11 +180,11 @@ Fondo scala 500$\Omega$ & Passo Q ($\Omega$) & Incertezza Uq ($\Omega$) & Incert
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=2cm]{media/mult_banco.png}
+    \includegraphics[height=5cm]{media/mult_banco.png}
     \caption{Multimetro HP Hewlett Packard 34401A}
     \label{fig:mult_banco}
 \end{figure}
-
+\FloatBarrier
 
 Il multimetro HP34401A possiede un display a 6 ½ cifre. 
 Per il calcolo della resistenza di valore nominale pari a (1500 ± 7,5) m$\Omega$, impostiamo la portata dello strumento a 100,0000 $\Omega$, lo strumento a 6 ½ cifre ha un campo di misura 
@@ -225,9 +229,9 @@ Come prima operazione abbiamo cortocircuitato i morsetti, premendo il tasto null
 Avendo impostato un valore di fondo scala pari a 100,0000 $\Omega$, in un ambiente con una temperatura pari a (23 $\pm$ 5)°C, facciamo riferimento all'incertezza $\pm$(0,010 $\% \pm 0,004 \%$), con il primo termine proporzionale alla lettura e il secondo proporzionale alla portata.
 Ragionando come prima, ipotizzando di unire l'incertezza di non linearità integrale nell'incertezza di portata, posso scrivere $U_g$ (incertezza di guadagno), $U_o$ (incertezza di portata dell'offset) e $U_q$ (incertezza di quantizzazione) come: 
 \begin{equation}
-    \left\{ \begin{array}{rcl}
-| \Delta G \cdot y_q | \leq U_G |y_q| \ , \ con U_g=0,01\%
-\\ | O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q} \ , con \ U_{o+inl+q}=0,004\%
+\left\{\begin{array}{l}
+| \Delta G \cdot y_q | \leq U_G |y_q| \ , \ con U_g=0,01\% \\ 
+| O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q} \ , con \ U_{o+inl+q}=0,004\%
 \end{array}\right.
 \end{equation}
 Quindi, chiamando P, portata e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):

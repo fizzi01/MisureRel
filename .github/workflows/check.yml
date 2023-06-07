@@ -41,3 +41,22 @@ jobs:
         title: "PDF compilato"
         files: |
           Relazione/*.pdf
+    
+    log:
+        needs: preparation
+        if: needs.preparation.result == 'failure'
+        name: Carico la zip dei file problematici
+        runs-on: ubuntu-latest
+        permissions: write-all
+        steps:
+        - name: Preparo i file
+          uses: actions/checkout@v3.5.2
+          with:
+            ref: ${{ github.event.pull_request.head.sha }}
+            fetch-depth: 4
+        - name: Carico i file
+          uses: actions/upload-artifact@v3
+          with:
+             name: FILE_DA_FIXARE
+             path: Relazione/
+        
