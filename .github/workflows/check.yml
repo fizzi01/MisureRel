@@ -42,7 +42,7 @@ jobs:
         files: |
           Relazione/*.pdf
     
-    log:
+  log:
         needs: preparation
         if: needs.preparation.result == 'failure'
         name: Carico la zip dei file problematici
