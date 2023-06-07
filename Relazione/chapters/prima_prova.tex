@@ -27,9 +27,6 @@ A tale scopo ci è stato dato un resistore dal valore nominale di 1,5 $\Omega$ (
 
 
 
-
-
-
 \section{Misure di resistenze con multimetro portatile}
 \label{sec:mult_port}
 
@@ -55,7 +52,7 @@ Procediamo con la valutazione dell'incertezza di \textbf{tipo B}, basata sull'ut
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=5cm]{incertezza_port.png}
+    \includegraphics[height=4cm]{incertezza_port.png}
     \caption{Specifice di incertezza dello strumento utilizzato (Hewlett Packard 974A)}
     \label{fig:Incertezza_multimetro_port}
 \end{figure}
@@ -105,16 +102,21 @@ Dove, ipotizzando di unire l'incertezza di non linearità integrale nell'incerte
 
 Quindi, chiamando Q, passo di quantizzazione e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
 
-\begin{equation}
-    U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot Q \equiv 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \equiv (0,972 + 20) m\Omega \equiv 0,03 \Omega
-\end{equation}
-,sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) come:
-\begin{equation}
+\begin{equation*}
+\begin{array}{l}
+U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot Q \equiv 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \\ \\
+\equiv (0,972 + 20) m\Omega \equiv 0,03 \Omega
+\end{array}
+\end{equation*}
+
+sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) come:
+\begin{equation*}
     R_M \equiv(1,62 \pm 0,03) \Omega
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
     r(R) \equiv [1,59 \Omega \div 1,65 \Omega]
-\end{equation}
+\end{equation*}
+
 Va notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
 Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandola con la (2.9) che i due range di valori non sono compatibili.
 
@@ -231,7 +233,7 @@ Come prima operazione abbiamo cortocircuitato i morsetti, premendo il tasto null
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=10cm]{tabella_mult_banco.png}
+    \includegraphics[height=9cm]{tabella_mult_banco.png}
     \label{fig:tab_mult_banco}
 \end{figure}
 \FloatBarrier
@@ -400,13 +402,60 @@ AIUTOOOOOOOOOOOOOOO dovrebbero essere percentuali pi§ alte del multimetro da ba
 \section{Misure con LCR-Meter}
 \label{sec:lcr}
 
-COSè IL LCR METER (INTRODUZIONEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE) + FOTOOOOOOOOOOOOOOOOOOOOO
+\subsection{Strumentazione}
+\label{sub:strum}
+Lo scopo dell’esercitazione è quello di effettuare misure di impedenze per mezzo 
+dell’LCR-meter e di valutare l’incertezza di tali misure facendo uso delle specifiche 
+del costruttore, cioè eseguendo valutazioni dell’incertezza di tipo B.
+Il disegno illustrativo del montaggio dell’apparecchiature è il seguente:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[height=6cm]{media/LCR_meter.png}
+    \label{fig:LCR_meter}
+\end{figure}
+\FloatBarrier
+
+\begin{itemize}
+    \item AGILENT LCR-meter 4263B;
+    \item Kelvin clip leads di lunghezza pari a 1m;
+    \item Test fixture;
+    \item Resistenza con valore nominale pari a $(1000\pm50)m\Omega$;
+    \item Capacità con valore nominale pari a $(6800\pm340)pF$;
+\end{itemize}
+
+
+I seguenti strumenti consentono di determinare i parametri di induttanza, capacità, resistenza, fattore di merito e coefficiente di perdita per induttori, condensatori e resistori, utilizzando gli schemi equivalenti prefissati degli oggetti sottoposti ad analisi.
+
+L'oggetto in prova viene sottoposto a basse tensioni e correnti durante il test, con un livello di segnale che può essere regolato dall'operatore da alcuni millivolt a 1 volt efficace, quando si lavora a tensione fissa.
+
+Il tempo trascorso tra l'inizio di una misura e l'inizio della successiva è di circa qualche decina di millisecondi e varia in base all'incertezza richiesta. Più piccola è l'incertezza richiesta, maggiore sarà il tempo necessario per la misurazione. Un esempio di valore possibile è 25 ms (short).
+
+L'esercitazione è iniziata reimpostando il dispositivo ai suoi valori predefiniti e collegando il supporto di test al pannello frontale come illustrato nello schema di montaggio.
+
+L'esercitazione è iniziata con il ripristino dei valori predefiniti del dispositivo e il collegamento del supporto di test al pannello frontale come mostrato nello schema di montaggio. Successivamente, possiamo procedere con la calibrazione dello strumento al fine di ridurre al minimo gli errori sistemici che possono influire sulle misurazioni.
+
+Per evitare gli errori di sfasamento causati dalla lunghezza del cavo, abbiamo impostato la lunghezza del cavo a un metro utilizzando il comando corrispondente nel pannello frontale dell'LCR.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=2cm]{media/pannello_frontale_LCR.png}
+    \caption{Pannello Frontale LCR}
+    \label{fig:pannello_frontale_LCR}
+\end{figure}
+\FloatBarrier
+
+Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento impostando la frequenza massima dell'LCR. A questa frequenza, eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura.
+
 
 
 \subsection{Impedenze}
 \label{sub:z}
 
 Tramite l'LCR-Meter abbiamo svolto l'ultima parte della nostra prima esperienza.
+
+Di solito, per effettuare misurazioni di impedenza, è necessario stabilire un piano di riferimento sull'ingresso del DUT (Device Under Test) nel pannello frontale. L'LCR ci permette di fare ciò fissando la lunghezza del cavo utilizzato. Tuttavia, è importante cercare di eliminare le impedenze residue causate dalla presenza del Test Fixture nel pannello frontale dello strumento.
+
 Innanzitutto abbiamo calibrato lo strumento per compensare gli errori sistematici introdotti dallo strumento stesso, dando come riferimento due carichi noti (il circuito virtualmente chiuso e aperto), premendo sul tassto blu dello strumento e aspettando la dicitura "short correction complete".
 Per fare la prova, abbiamo avuto la possibilità di impostare vari valori di frequenza a partire da 100Hz, abbiamo impostato un tempo di misura medio ??? e impostato il modello capacità ideale con collegamento parallelo (premendo in successione i tasti CP-D e CP-RP).
 Partiamo con i 100Hz, e misuriamo la resistenza (R) e reattanza (X, nel nostro caso leggermente negativà perché prevale l'effetto induttivo). Abbiamo fatto così per ogni valore della frequenza presente nella seguente tabella.  
@@ -428,6 +477,39 @@ Partiamo con i 100Hz, e misuriamo la resistenza (R) e reattanza (X, nel nostro c
 \end{table}
 \FloatBarrier
 
+
+Se rappresentiamo le precedenti misure in modulo e fase avremo i seguenti grafici:
+%Mancano i due grafici relativi a questa tabella%
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics[height=2cm]{media/grafico_modulo.png}
+%    \caption{Grafico del modulo}
+%    \label{fig:grafico_modulo}
+%\end{figure}
+%
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics[height=2cm]{media/grafico_fase.png}
+%    \caption{Grafico della fase}
+%    \label{fig:grafico_fase}
+%\end{figure}
+
+Dai grafici precedenti si può notare che alle alte frequenze è necessario considerare gli effetti parassiti della resistenza reale, che tendono ad aumentare il valore nominale della resistenza linearmente con la frequenza.
+
+Il circuito equivalente prevede un'induttanza in serie alla resistenza e una capacità in parallelo alla serie RL. I valori delle impedenze parassite dipendono dalla tecnica di costruzione.
+
+Alle basse frequenze, l'effetto della capacità e dell'induttanza può essere trascurato in quanto la capacità si comporta come un circuito aperto e l'induttanza come un cortocircuito. Aumentando la frequenza, la capacità tende ad abbassare il valore della resistenza, mentre l'induttore tende ad aumentarlo fino a quando, alla frequenza $1/2\pi\sqrt{LC}$, la coppia LC entra in risonanza compensandosi reciprocamente.
+
+Per il calcolo dell'incertezza delle misure di resistenza e reattanza riportate nella tabella precedente, dobbiamo fare riferimento alle specifiche del costruttore. Per il calcolo dell'incertezza, è necessario applicare la seguente formula:
+
+\begin{equation}
+    A_e = A + \frac{BCZ_S}{|Z_X|} + \frac{D}{|Z_X|} + \frac{|Z_X|}{E} \hspace{0,8cm} con \hspace{0,2cm} |Z_X| \leq 100\Omega
+\end{equation}
+
+dove $Z_X$ è il valore misurato dell’impedenza Z. L’incertezza di $|Z|$ è uguale a quella di 
+R e di X per cui, consultando le tabelle di incertezza fornite dal costruttore, avremo:
+
+
 %TABELLA INCERTEZZA IMPEDENZA%
 \begin{table}[!ht]
 \centering
@@ -445,9 +527,14 @@ Partiamo con i 100Hz, e misuriamo la resistenza (R) e reattanza (X, nel nostro c
 \end{table}
 \FloatBarrier
 
+Con l'incertezza di quantizzazione $U_q$ pari a:
+\begin{equation}
+    U_q = \frac{Q}{CM} = 0,00005 \Omega
+\end{equation}
 
 
-%-------------Capacità----------- NON CAPISCO PERCHé LA METTE PRIMA DELLE TABELLE #*+ç-*°à°°àààAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%
+
+%-------------Capacità----------- %
 \subsection{Capacità}
 \label{sub:c}
 Come ultima parte della prova abbiamo misurato la capacità del condensatore.
@@ -456,10 +543,101 @@ Premiamo in successione "CP" (capacità), "RP" (resistenza parallela) e poi "D" 
 
 \begin{table}[ht]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+\textit{Frequenza} {[}Hz{]} & Cp {[F]} & Rp {[}$\Omega${]} & D  \\ \hline
+100Hz                       & 6,98E-09    & 1,27E+08     & 0,0018     \\ \hline
+120Hz                       & 6,88E-09    & 1,33E+08     & 0,0017      \\ \hline
+1kHz                        & 6,96E-09    & 5,42E+06     & 0,0039      \\ \hline
+10kHz                       & 6,89E-09    & 2,60E+05     & 0,0095      \\ \hline
+100kHz                      & 6,70E-09    & 1,87E+04     & 0,0147      \\ \hline
+\end{tabular}%
+}
 \caption{LCR, misura della capacità}
 \label{tab:lcr_c}
 \end{table}
+\FloatBarrier
 
+Per il calcolo dell’incertezza dobbiamo applicare le seguenti formule:
 
+\begin{equation}
+\begin{split}
+        A_e = A + \frac{BCZ_X}{|Z_S|} + \frac{D}{|Z_X|} + \frac{|Z_X|}{E} \hspace{0,8cm} con \hspace{0,2cm} |Z_X| > 100\Omega \\
+        A_e = A + \frac{BCZ_S}{|Z_X|} + \frac{D}{|Z_X|} + \frac{|Z_X|}{E} \hspace{0,8cm} con \hspace{0,2cm} |Z_X| \leq 100\Omega
+\end{split}
+\end{equation}
+
+dove $|Z_X|$ è il valore dell'impedenza Z ottenuta convertendo il valore della capacità parallelo (Cp) per mezzo del seguente diagramma di conversione:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{media/diagramma_conversione_Cp.png}
+    \caption{Diagramma di conversione}
+    \label{fig:diag_conv_Cp}
+\end{figure}
+\FloatBarrier
+
+Consultando le tabelle di incertezza fornite dal costruttore avremo:
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+A      & B      & C & D {[}$\Omega${]} & E {[}$\Omega${]} & Zs {[}$\Omega${]} & Zx {\tiny(Cp convertito)}  {[}$\Omega${]} & Uz (Ae) \\ \hline
+0,0048  & 0,00055 & 1 & 0,01      & 2,80E+08  & 100000          & 228054,8849     & 0,0069  \\ \hline
+0,0048  & 0,00055 & 1 & 0,01      & 2,80E+08  & 100000          & 192858,9781     & 0,0065  \\ \hline
+0,0011  & 0,0002 & 1 & 0,0165    & 2,80E+07  & 10000          & 22880,2391     & 0,0024  \\ \hline
+0,0016  & 0,0002 & 1 & 0,075     & 2,80E+06  & 1000          & 2311,4843     & 0,0029  \\ \hline
+0,0112 & 0,0011 & 1 & 0,75      & 2,80E+05  & 100          & 237,4632     & 0,0178  \\ \hline
+\end{tabular}%
+}
+\caption{Tabella di incertezza fornita dal costruttore, con Uz l'incertezza}
+\label{tab:lcr_c_sheet}
+\end{table}
+\FloatBarrier
+
+L’incertezza della resistenza parallelo, invece, si calcola come:
+
+\begin{equation}
+        U_{R_P} = \pm \frac{RP_X \times D_e}{D_X \mp D_e}  \\
+\end{equation}
+
+dove $RP_X$ indica il valore misurato della resistenza parallelo in $\Omega$, $D_e$ è l’incertezza di 
+$D$, mentre $D_X$ è il valore misurato di $D$.
+
+L’incertezza dell’angolo di perdita, $D_e$, si calcola come:
+
+\begin{equation}
+    D_e = \pm \frac{A_e}{100}
+\end{equation}
+
+Se il valore misurato di $D$ risulta ad essere maggiore di 0,1 , allora bisogna 
+moltiplicare $D_e$ per $(1+D_X)$. L’incertezza sulla resistenza parallelo si applica solo 
+quando il valore misurato di $D$ è minore di 0,1.
+
+Nella seguente tabella è riassunto quanto detto precedentemente:
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+\rowcolor[HTML]{CFE2F3} 
+RPx {[$\Omega$]} & De  & Dx  & U(Rp) \\ \hline
+1,27E+08                    & 0,00006868827448    & 0,0018     & 5,06E+06    \\ \hline
+1,33E+08                    & 0,00006549558296    & 0,0017    & 5,32E+06      \\ \hline
+5,42E+06                    & 0,00002375477324    & 0,0039     & 3,32E+04      \\ \hline
+2,60E+05                    & 0,00002920273675    & 0,0095     & 8,00E+02      \\ \hline
+1,87E+04                    & 0,0001781856214    & 0,0147     & 2,29E+02      \\ \hline
+\end{tabular}%
+}
+\caption{LCR, misura della resistenza}
+\label{tab:lcr_c_RPx}
+\end{table}
+\FloatBarrier
 
 

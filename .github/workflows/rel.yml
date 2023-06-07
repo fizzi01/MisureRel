@@ -1,26 +1,35 @@
-name: "tagged-release"
-
+name: Release Publish
 on:
-  push:
-    tags:
-      - "*"
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - 'Relazione/**'
+      - 'Relazione'
 
 jobs:
-  tagged-release:
-    name: "Tagged Release"
-    runs-on: "ubuntu-latest"
-
+  build:
+    name: Creo la Release
+    if: github.event.pull_request.merged == true
+    permissions: write-all
+    runs-on: ubuntu-latest
     steps:
-      # ...
-      - name: "Build & test"
-        run: |
-          echo "done!"
-
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          title: "Relazione"
-          files: |
-            *.zip
-            *.tar.gz
+    - uses: actions/checkout@master
+    - name: Creo la zip Release
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+        type: 'zip'
+        path: 'Relazione/*'
+        filename: 'release.zip'
+        exclusions: '*.git* README.md .editorconfig'
+    - name: Upload Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        automatic_release_tag: "latest"
+        title: "Release Relazione"
+        files: |
+          *.zip

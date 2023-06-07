@@ -1,33 +1,25 @@
-name: MasterDeployCI
+name: Preparing tag
 on:
   pull_request:
     types:
       - closed
     branches:
       - main
+    paths:
+      - 'Relazione/**'
+      - 'Relazione'
+      
 jobs:
   if_merged:
+    name: Creo il tag della versione
     if: github.event.pull_request.merged == true
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3.5.2
-    - name: Creazione cartella release
-      run: rsync -arv --exclude='.DS_Store' --exclude='.gitignore' ./Relazione/* ./release
-    - name: Mi sposto nella cartella
-      run: |
-        cd release
-        ls -la
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@1.66.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: FedIz
         RELEASE_BRANCHES: main
-        SOURCE: ./Relazione
-    - name: "Build & test"
-      uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        prerelease: false
-        automatic_release_tag: "latest"
-        title: "Relazione"
