@@ -491,5 +491,44 @@ Segue una tabella dove per i diversi valori di frequenza sono indicati i valori 
         10000 & -1,533097 & 0,00648 & 0,00423 & 0,00372 & 0,00243 \\ \hline
     \end{tabular}
 \end{table}
+
+\subsection{Diagrammi di Bode di modulo e fase}
+Nelle figure ~\ref{fig:amplitude} e \ref{fig:phase} è possibile vedere graficati i valori di A\textsubscript{dB} e $\Delta\varphi$ rispetto alle frequenze in scala logaritmica, ossia i diagrammi di Bode di modulo e fase. 
+
+% Diagramma di Bode del modulo
+\begin{figure}
+    \centering
+    \resizebox{0.80\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Decadi di frequenza}, ylabel={A\textsubscript{dB}}, 
+            xtick={0,1,2,3,4}, xticklabels={$10^0$, $10^1$, $10^2$, $10^3$, $10^4$}]
+            \addplot[red, mark=*, only marks] 
+            table[x=x, y=y,y error=error, col sep=comma] {media/bode/bode_adb_logf_2prova.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode del modulo}
+    \label{fig:amplitude}
+\end{figure}
+
+% Diagramma di Bode della fase
+\begin{figure}
+    \centering
+    \resizebox{0.80\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Decadi di frequenza}, ylabel={$\Delta\varphi$}, 
+            xtick={0,1,2,3,4}, xticklabels={$10^0$, $10^1$, $10^2$, $10^3$, $10^4$}]
+            \addplot[red, mark=*, only marks]
+            table[x=x, y=y,y error=error, col sep=comma] {media/bode/bode_fi_logf_2prova_deg.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode della fase}
+    \label{fig:phase}
+\end{figure}
+
+
 \FloatBarrier
 \clearpage
