@@ -495,7 +495,7 @@ Partendo da una frequenza di 100Hz, abbiamo misurato la resistenza (R) e reattan
 \FloatBarrier
 
 
-Se rappresentiamo le precedenti misure in modulo e fase avremo i seguenti grafici:
+Se rappresentiamo le precedenti misure in modulo e fase avremo i grafici nelle figure ~\ref{fig:modulo} e ~\ref{fig:fase}.
 %Mancano i due grafici relativi a questa tabella%
 %\begin{figure}[ht]
 %    \centering
@@ -510,6 +510,41 @@ Se rappresentiamo le precedenti misure in modulo e fase avremo i seguenti grafic
 %    \caption{Grafico della fase}
 %    \label{fig:grafico_fase}
 %\end{figure}
+
+% Diagramma di Bode del modulo
+\begin{figure}[h]
+    \centering
+    \resizebox{1\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Frequenza [Hz]}, ylabel={|Z| [$\Omega$]},  ytick= {1.463000001, 1.462800001, 1.462500092, 1.462208964, 1.464405852},
+             yticklabels= {1.4630, 1.4628, 1.4625, 1.4622, 1.4644}],
+            \addplot[red, mark=*]
+            table[x=x, y=y, col sep=comma] {media/bode/bode_modulo_1prova.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode del modulo di Z}
+    \label{fig:modulo}
+\end{figure}
+
+% Diagramma di Bode della fase
+\begin{figure}[h]
+    \centering
+    \resizebox{1\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Frequenza [Hz]}, ylabel={Fase [rad]},
+            height=15cm, width=10cm
+            ]
+            \addplot[red, mark=*]
+            table[x=x, y=y, col sep=comma] {media/bode/bode_fase_1prova.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode della fase di Z}
+    \label{fig:fase}
+\end{figure}
 
 Dai grafici precedenti si può notare che alle alte frequenze è necessario considerare gli effetti parassiti della resistenza reale, che tendono ad aumentare il valore nominale della resistenza linearmente con la frequenza.
 
