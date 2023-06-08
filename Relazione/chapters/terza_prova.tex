@@ -82,7 +82,7 @@ Il circuito nella configurazione “a catena chiusa” è stato realizzato diret
 \end{figure}
 \FloatBarrier
 
-Al fine di abilitare la configurazione catena chiusa dell'amplificatore operazionale sono stati utilizzati dei Jumper (tratti spessi in verde) che sono stati posizionati come indicato in Figura.
+Al fine di abilitare la configurazione catena chiusa dell'amplificatore operazionale sono stati utilizzati dei Jumper (tratti spessi in verde) che sono stati posizionati come indicato in figura.
 \FloatBarrier
 Nel circuito di interesse, la resistenza \(R_6\) (tra ingresso invertente dell’amplificatore ed il pin di uscita) ed \(R_{12}\) (tra ingresso invertente dell’amplificatore ed ingresso dell’amplificatore) determinano il guadagno teorico in catena chiusa dell’amplificatore, che vale:
 
@@ -96,7 +96,13 @@ Invece, la frequenza di taglio teorica \(f_{c_{teorica}}\), si ricava dalla rela
 Di seguito è riportata la strumentazione utilizzata per la realizzazione del set-up di questa esperienza di laboratorio.
 
 \subsection*{\textbf{PCB}}
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{media/PCB_attacco3pin.png}
+    \caption{PCB con attacco a 3 pin per l'alimentazione duale dell'integrato}
+    \label{fig:PCB_3pin}
+\end{figure}
+\FloatBarrier
 \subsection*{\textbf{Oscilloscopio Agilent HP 54600B}}
 \begin{figure}[h]
     \centering
@@ -139,14 +145,14 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
         \item Uscita del generatore di funzioni Agilent HP 54600B all'ingresso (INPUT) del circuito integrato
         \item  Segnale di ingresso all'operazionale (OUTPUT 1) è stato collegato al canale 1 dell'oscilloscopio
         \item  Segnale di uscita dall'operazionale (OUTPUT 2) è stato collegato al canale 2 dell'oscilloscopio
-        \item Uscita COM dell'alimentatore da banco HP E3631A all'ingresso, del circuito integrato, che si trova in altro a destra, facendo riferimento a Figura \ref{fig:pcb_bnc}
+        \item Uscita COM dell'alimentatore da banco HP E3631A all'ingresso, del circuito integrato, che si trova in altro a destra, facendo riferimento a Figura \ref{fig:PCB_3pin}
     \end{itemize}
     \item Al fine di controllare il corretto funzionamento dell'amplificatore si è impostato sul generatore un segnale di ingresso sinusoidale alla frequenza di $100Hz$ e si è visto come il segnale d'uscita fosse sfasato ed amplificato di all'incirca $20dB$.  
 \end{itemize}
 \begin{figure}[h]
         \centering
         \includegraphics{PCB_bnc.png}
-        \caption{Ingressi/Uscite del filtro RC}
+        \caption{Ingressi/Uscite dell'integrato}
         \label{fig:pcb_bnc}
     \end{figure}
 \FloatBarrier
@@ -235,7 +241,7 @@ Di seguito una tabella con i risultati delle misurazioni effettuate:
         
     \end{tabular}
 \end{table}
-
+\FloatBarrier
 
 % scrivere le formuke usate per ricavare incertezze ib ase ai datasheet
 % piccolo excursus su cosa sono quei valori
