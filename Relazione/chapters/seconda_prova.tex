@@ -2,6 +2,7 @@
 \label{chap:seconda_prova}
 
 \section*{Obiettivo}
+\label{sec:ob_second}
 L'obiettivo della seconda esperienza di laboratorio è quello di effettuare la compensazione in frequenza di una sonda e poi di ricavare i diagrammi di Bode di un filtro passabasso passivo RC, i valori di \emph{attenuazione} e \emph{sfasamento} con le relative \emph{incertezze} mediante valutazioni di tipo B.
 
 \section{Compensazione in frequenza di una sonda}
@@ -20,6 +21,8 @@ Per questo motivo è necessario effettuare la \textbf{compensazione in frequenza
 
 \subsection*{}
 Per poter effettuare la compensazione, abbiamo collegato il connettore BNC della sonda al canale 1 dell'oscilloscopio. Abbiamo poi sollevato il cappuccio della sonda e l'abbiamo collegata all'occhiello presente nella parte inferiore del dispositivo, che risulta essere la sorgente di onda quadra di ampiezza 5V e frequenza 1.2KHz generata dall'oscilloscopio stesso.
+
+Abbiamo poi premuto il tasto \textbf{Autoscale} per visualizzare il segnale sullo schermo.
 
 Poichè la sonda fornisce un'attenuazione pari a 10, premendo sul tasto 1 della sezione verticale, è possibile impostare il valore di \emph{Probe} su 10, mediante il tasto presente sotto lo schermo, in modo che la lettura sia riferita all'attenuazione implicita della sonda.
 
@@ -81,9 +84,9 @@ Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'eserc
 \subsection*{Oscilloscopio Agilent Hp 54600B}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth, height=9cm]{oscill.png}
-    \caption{Oscilloscopio Agilent Hp 54600B}
-    \label{fig:oscill}
+    \includegraphics[width=0.8\linewidth, height=7cm]{oscilloscopio.png}
+    \caption{Oscilloscopio Agilent HP 54600B}
+    \label{fig:enter-label}
 \end{figure}
 \FloatBarrier
 
@@ -95,8 +98,16 @@ Il PCB (Printed Circuit Board) è una scheda elettronica fornita durante l'eserc
     \label{fig:gen_fun}
 \end{figure}
 \FloatBarrier
+\clearpage
 
 \subsection*{Cavi di connessione (BNC-BNC)}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{media/cavoBNC.png}
+    \caption{Cavo di connessione BNC-BNC}
+    \label{fig:enter-label}
+\end{figure}
+\FloatBarrier
 \clearpage
 
 \subsection{Configurazione della strumentazione per la misurazione}
@@ -124,7 +135,7 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
     \end{figure}
     \FloatBarrier
 
-    \item Avviato il generatore di funzioni impostando una frequenza iniziale di 100kHz mediante il tasto \emph{Freq} e impostato una forma d'onda sinusoidale di ampiezza pari a 5 V.
+    \item Avviato il generatore di funzioni impostando una frequenza iniziale di 100kHz mediante il tasto \emph{Freq} e successivamente impostato una forma d'onda sinusoidale di ampiezza pari a 5 V mediante il tasto \emph{Ampl}.
     
     \'E importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disattamento di impedenza tra l'oscilloscpio ed il generatore di funzioni. In particolare, in corrispondenza della tensione picco-picco di 5 V impostata per l'ingresso del filtro, verrà visualizzata una tensione picco-picco di 10 V sul display dell'oscilloscopio.
     \item Avviato l'oscilloscopio su cui visualizzare il segnale d'ingresso del filtro $V_i$ sul canale 1, e il segnale di uscita del filtro $V_o$ sul canale 2.
@@ -172,18 +183,17 @@ Per riuscire a ricavare i diagrammi di Bode dell'attenuazione A del filtro RC, �
 
 Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
 \begin{enumerate}
-    \item Impostato il valore della frequenza del segnale di ingresso del filtro  sul generatore di funzioni, premendo prima il pulsante \emph{Freq} e poi impostando la frequenza desisderata.
+    \item Impostato il valore della frequenza del segnale di ingresso del filtro  sul generatore di funzioni, premendo prima il pulsante \emph{Freq} e poi impostando la frequenza desisderata \footnote{Per misurazioni effettuate a frequenze molto basse, intorno ai pochi Hz, per visualizzare corretamente il segnale è stato utile premere il tasto \textbf{Mode} della sezione Trigger, e impostare tramite il tasto presente sotto lo schermo, la modalità \textbf{Normal}.} \footnote{Per misurazioni effettuate a frequenze molto elevate, per ridurre il rumore sul segnale è stato utile premere sul tasto \textbf{Display}, posto sopra la sezione verticale, per impostare tramite il pulsante apposito sotto lo schermo la modalità \textbf{Average}.} .
     \item Regolato i valori di $K_{V_i}$ e $K_{V_o}$ mediante le manopole poste nella parte superiore della sezione verticale, in modo da coprire quanto più possibile lo schermo senza tagliare la forma d'onda. In questo modo le misure eseguite sono più accurate e viene ridotta l'incertezza di misura.
-    \item Regolato il valore di $K_t$ mediante l'apposita manopola posta nella sezione orizzontale per migliorare la visualizzazione dei segnali.
+    \item Regolato il valore di $K_t$ mediante l'apposita manopola posta nella sezione orizzontale per la visualizzazione di almeno un periodo dei segnali.
     \item Premuto il pulsante \emph{Voltage}, situato nella sezione \emph{Measure} e selezionato per ognuno dei due segnali il tipo di misura, cioè tensione picco-picco $V_{p-p}$, mediante gli appositi pulsanti posizionati sotto lo schermo.
     In questo modo i valori di tensione picco-picco di entrambi i segnali vengono automaticamente calcolati dall'oscilloscpio e visualizzati nella parte inferiore dello schermo.
-    \item Premuto il pulsante \emph{Cursors} e selezionato i cursori verticali $t_1$ e $t_2$, dagli appositi pulsanti posti sotto lo schermo. Ciascun cursore , mediante la manopola presente sotto la sezione \emph{Measure}, è stato poi collocato in corrispondenza dei punti in cui il corrispondente segnale passava per lo zero. Il valore $\Delta t$  calcolato dall'oscilloscopio è poi visualizzato nella parte inferiore dello schermo. 
+    \item Sistemato il valore di $K_t$ per visualizzare meglio il punto in cui ciascun segnale tagliava l'asse delle ascisse, premuto il pulsante \emph{Cursors} e selezionato i cursori verticali $t_1$ e $t_2$, dagli appositi pulsanti posti sotto lo schermo. Ciascun cursore , mediante la manopola presente sotto la sezione \emph{Measure}, è stato poi collocato in corrispondenza dei punti in cui il corrispondente segnale passava per lo zero. Il valore $\Delta t$  calcolato dall'oscilloscopio è poi visualizzato nella parte inferiore dello schermo. 
     
 \end{enumerate}
 
-% scrivere le formuke usate per ricavare incertezze ib ase ai datasheet
-% piccolo excursus su cosa sono quei valori
-% mettere tabelle di excel
+
+
 
 \clearpage
 
@@ -406,7 +416,7 @@ Applicando la formula di propagazione dellle incertezze si ottiene l'espressione
 
 \[U_{A_{db}} = \frac{20}{\ln 10} \cdot U_{r,A}\]
 
-Segue la tabella riportante per ogni valore di frequenza: il valore calcolato di $A$ con relativa incertezza (assoluta e relativa) di caso peggiore e il valore in dB di $A$ con relativa incertezza assoluta di caso peggiore
+Segue la tabella riportante per ogni valore di frequenza: il valore calcolato di $A$ con relativa incertezza (assoluta e relativa) di caso peggiore e il valore in dB di $A$ con relativa incertezza (assoluta e relativa) di caso peggiore.
 
 \begin{table}[!ht]
     \centering
@@ -482,5 +492,43 @@ Segue una tabella dove per i diversi valori di frequenza sono indicati i valori 
         10000 & -1,533097 & 0,00648 & 0,00423 & 0,00372 & 0,00243 \\ \hline
     \end{tabular}
 \end{table}
+
+\subsubsection*{Seguono i diagrammi di Bode di modulo e fase }
+
+
+% Diagramma di Bode del modulo
+\begin{figure}[h]
+    \centering
+    \resizebox{0.80\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Decadi di frequenza}, ylabel={A\textsubscript{dB}}, 
+            xtick={0,1,2,3,4}, xticklabels={$10^0$, $10^1$, $10^2$, $10^3$, $10^4$}]
+            \addplot[red, mark=*, only marks] 
+            table[x=x, y=y,y error=error, col sep=comma] {media/bode/bode_adb_logf_2prova.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode del modulo}
+    \label{fig:amplitude}
+\end{figure}
+% Diagramma di Bode della fase
+\begin{figure}[h]
+    \centering
+    \resizebox{0.80\textwidth}{!}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [xlabel={Decadi di frequenza}, ylabel={$\Delta\varphi$}, 
+            xtick={0,1,2,3,4}, xticklabels={$10^0$, $10^1$, $10^2$, $10^3$, $10^4$}]
+            \addplot[red, mark=*, only marks]
+            table[x=x, y=y,y error=error, col sep=comma] {media/bode/bode_fi_logf_2prova_deg.txt};
+        \end{axis}
+    \end{tikzpicture}
+    }%
+    \caption{Diagramma di Bode della fase}
+    \label{fig:phase}
+\end{figure}
+
+
 \FloatBarrier
 \clearpage

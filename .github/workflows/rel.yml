@@ -11,12 +11,13 @@ on:
 
 jobs:
   build:
+    name: Creo la Release
     if: github.event.pull_request.merged == true
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Archive Release
+    - name: Creo la zip Release
       uses: thedoctor0/zip-release@0.7.1
       with:
         type: 'zip'

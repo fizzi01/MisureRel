@@ -1,6 +1,5 @@
-
-
 \documentclass[a4paper, 12pt, notitlepage]{report}
+
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{xfrac}
@@ -27,6 +26,13 @@
 
 \usepackage{xcolor}
 
+% Package per il plot dei diagrammi di Bode
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usepackage{pgfplots}
+
+
 \usepackage{graphicx} % graphics package
 \usepackage{subcaption}
 \graphicspath{ {./media/} } % images folder path
@@ -52,6 +58,8 @@
 }
 
 \usepackage[section]{placeins} % utilizzare /FloatBarrier alla fine della definizione delle figure per non farle scivolare in altre sezioni o altro
+
+\usepackage{wrapfig} %Viene utilizzato per scrivere intorno alle immagini
 
 \renewcommand*\contentsname{Index}
 
@@ -114,8 +122,7 @@
     \small{Mirko Caforio, Alessandro Convertino, Raffaele Crusi, Federico Izzi, Giovanni Pepe, Matteo Rosato, Antonio Scelsi, Ludovico Scurti}
     
     \vspace{1.0cm}
-    \large{??????}
-
+    \Large{Misure di Resistenze e Impedenze}
     
     \vspace{4.0cm}
     

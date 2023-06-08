@@ -1,0 +1,64 @@
+name: Latex Check before Merge
+
+on: 
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'Relazione/**'
+      - 'Relazione'
+
+jobs:
+  preparation:
+    name: Controllo errori
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+    - name: Preparo i file del PR
+      uses: actions/checkout@v3.5.2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+        fetch-depth: 4
+    - name: Inizio la compilazione
+      id: compilation
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: "*.tex"
+        glob_root_file: true
+        working_directory: "Relazione/"
+        args: "-pdf -file-line-error -halt-on-error"
+    - name: check files
+      run: |
+        cd Relazione
+        ls -la
+    - name: Upload della preview
+      if: steps.compilation.outcome == 'success'
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        automatic_release_tag: "PDF-latest"
+        title: "PDF compilato"
+        files: |
+          Relazione/*.pdf
+    
+  log:
+        needs: preparation
+        if: |
+          always() && 
+          needs.preparation.result == 'failure'
+        name: Carico la zip dei file problematici
+        runs-on: ubuntu-latest
+        permissions: write-all
+        steps:
+        - name: Preparo i file
+          uses: actions/checkout@v3.5.2
+          with:
+            ref: ${{ github.event.pull_request.head.sha }}
+            fetch-depth: 4
+        - name: Carico i file
+          uses: actions/upload-artifact@v3
+          with:
+             name: FILE_DA_FIXARE
+             path: Relazione/
+        
