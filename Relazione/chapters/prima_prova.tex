@@ -195,8 +195,7 @@ Abbiamo fatto 10 ripetizioni in modo da ricavare l'incertezza totale, con il con
 \end{figure}
 \FloatBarrier
 
-Il multimetro HP34401A possiede un display a 6 ½ cifre. 
-Per il calcolo della resistenza di valore nominale pari a (1500 ± 7,5) m$\Omega$, impostiamo la portata dello strumento a 100,0000 $\Omega$, lo strumento a 6 ½ cifre ha un campo di misura 
+Per il calcolo della resistenza di valore nominale pari a (1500 ± 7,5) m$\Omega$, impostiamo la risoluzione dello strumento a 6 ½ cifre premendo sul tasto \emph{Shift} e poi sul tasto \emph{Auto/Man}. Successivamente impostiamo la portata dello strumento a 100,0000 $\Omega$ mediante gli appositi pulsanti della sezione \emph{RANGE/DIGITS}. In questo modo lo strumento ha un campo di misura 
 pari a 1/1000000 del valore di fondo scala e quindi il passo di quantizzazione Q sar\'a: 
 \begin{equation}
     Q \equiv \frac{V_{FS}}{CM} \equiv \frac{10^2}{10^6} = 0,0001 \Omega
@@ -206,7 +205,7 @@ Con l'incertezza di quantizzazione $U_q$ pari a:
     U_q \equiv \frac{Q}{CM} \equiv 0,00005 \Omega
 \end{equation}
 
-Quando abbiamo lavorato con il multimetro da banco, abbiamo dapprima lavorato in modalità "2 terminali" (attivata premendo la modalità "$\Omega$", e poi "2W" che ci permette di lavorare a due morsetti).
+Quando abbiamo lavorato con il multimetro da banco, abbiamo dapprima lavorato in modalità "2 terminali" (attivata premendo su  \emph{$\Omega$2W} che ci permette di lavorare a due morsetti).
 
 \begin{figure}[h]
     \centering
@@ -258,7 +257,7 @@ dove U(R) è stato arrotondato per difetto.
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-        \textbf{R letto [$\bm{\Omega}$]} & \textbf{R di Cortocircuito [$\bm{\Omega}$]} & \textbf{R [$\bm{\Omega}$]} & \textbf{Fondo scala} $\bm{[\Omega]}$ & \textbf{Q} $\bm{[\Omega]}$ & $\bm{U_q\ \ [\Omega]}$ & $\bm{U_R}$ \textbf{[$\bm{\Omega}$]} \\ \hline
+        \textbf{V misurata [V]} & \textbf{V di Cortocircuito [V]} & \textbf{V [V]} & \textbf{Fondo scala} $\bm{[\Omega]}$ & \textbf{Q} $\bm{[\Omega]}$ & $\bm{U_q\ \ [\Omega]}$ & $\bm{U_V}$ \textbf{[V]} \\ \hline
         1,648 & 0,133 & 1,515 & 100 & 0,0001 & 0,00005 & 0,0041515 \\ \hline
         1,614 & 0,133 & 1,481 & 100 & 0,0001 & 0,00005 & 0,0041481 \\ \hline
         1,627 & 0,133 & 1,494 & 100 & 0,0001 & 0,00005 & 0,0041494 \\ \hline
@@ -276,7 +275,7 @@ dove U(R) è stato arrotondato per difetto.
 \end{table}
 \FloatBarrier
 
- Sapendo che la resistenza misurata col multimetro è 1,648 $\Omega$, il risultato della misura si esprime come R=(+1,648 $\pm$ 0,005)$\Omega$, abbiamo operato anche con un sistema a quattro morsetti(metodo Kelvin)
+ Sapendo che il primo valore di resistenza misurata col multimetro è 1,648 $\Omega$, il risultato della misura si esprime come R=(+1,648 $\pm$ 0,005)$\Omega$, abbiamo operato anche con un sistema a quattro morsetti(metodo Kelvin)
 
 
 \begin{figure}[h]
@@ -290,7 +289,7 @@ dove U(R) è stato arrotondato per difetto.
 
 
 
-Successivamente, sempre con lo stesso multimetro da banco, abbiamo lavorato in modalità "4 terminali" (attivata sempre premendo la modalità "$\Omega$", e poi successivamente "4W" per lavorare a quattro morsetti).
+Successivamente, sempre con lo stesso multimetro da banco, abbiamo lavorato in modalità "4 terminali" (attivata premendo su \emph{Shift}, e poi successivamente su \emph{$\Omega$2W} per lavorare a quattro morsetti).
 
 \begin{wrapfigure}{l}{0.3\textwidth}
     \centering
@@ -304,7 +303,7 @@ Attraverso la prima coppia di morsetti (Hi, Lo), lo strumento inietta la corrent
 
 Per evitare questo problema, tramite l'altra coppia di morsetti di sensing (Hi, Lo), viene prelevata la tensione su due punti più vicini al resistore. Utilizzando questa configurazione (impostando $\Omega$4W sul pannello frontale del multimetro), le cadute di tensione sulle resistenze di contatto presenti sulle boccole che portano la corrente al resistore in prova possono essere escluse dalla tensione da misurare, garantendo una misurazione più accurata.
 
-Si effettua l'operazione di NULL in modo analogo al caso precedente, misurando un valore di resistenza pari a R = 1,478 $\Delta$. Dalla teoria, questo valore dovrebbe essere più accurato rispetto al caso del multimetro a due morsetti. Utilizzando il modello precedente per il calcolo dell'incertezza, otteniamo:
+Si effettua l'operazione di NULL in modo analogo al caso precedente, misurando un valore di resistenza pari a R = 1,478 $\Omega$. Dalla teoria, questo valore dovrebbe essere più accurato rispetto al caso del multimetro a due morsetti. Utilizzando il modello precedente per il calcolo dell'incertezza, otteniamo:
 
 \begin{equation}
     \left\{\begin{array}{l}
@@ -332,7 +331,7 @@ Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-        \textbf{R letto [$\bm{\Omega}$]} & \textbf{R di Cortocircuito [$\bm{\Omega}$]} & \textbf{R [$\bm{\Omega}$]} & \textbf{Fondo scala} $\bm{[\Omega]}$ & \textbf{Q} $\bm{[\Omega]}$ & $\bm{U_q\ \ [\Omega]}$ & $\bm{U_R}$ \textbf{[$\bm{\Omega}$]} \\ \hline
+        \textbf{V misurata [V]} & \textbf{V di Cortocircuito [V]} & \textbf{V [V]} & \textbf{Fondo scala} $\bm{[\Omega]}$ & \textbf{Q} $\bm{[\Omega]}$ & $\bm{U_q\ \ [\Omega]}$ & $\bm{U_V}$ \textbf{[V]} \\ \hline
         1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & 0,0041474 \\ \hline
         1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & 0,0041474 \\ \hline
         1,478 & 0,004 & 1,474 & 100 & 0,0001 & 0,00005 & 0,0041474 \\ \hline
@@ -431,8 +430,6 @@ L'oggetto in prova viene sottoposto a basse tensioni e correnti durante il test,
 
 Il tempo trascorso tra l'inizio di una misura e l'inizio della successiva è di circa qualche decina di millisecondi e varia in base all'incertezza richiesta. Più piccola è l'incertezza richiesta, maggiore sarà il tempo necessario per la misurazione. Un esempio di valore possibile è 25 ms (short).
 
-L'esercitazione è iniziata reimpostando il dispositivo ai suoi valori predefiniti e collegando il supporto di test al pannello frontale come illustrato nello schema di montaggio.
-
 L'esercitazione è iniziata con il ripristino dei valori predefiniti del dispositivo e il collegamento del supporto di test al pannello frontale come mostrato nello schema di montaggio. Successivamente, possiamo procedere con la calibrazione dello strumento al fine di ridurre al minimo gli errori sistemici che possono influire sulle misurazioni.
 
 Per evitare gli errori di sfasamento causati dalla lunghezza del cavo, abbiamo impostato la lunghezza del cavo a un metro utilizzando il comando corrispondente nel pannello frontale dell'LCR.
@@ -445,7 +442,9 @@ Per evitare gli errori di sfasamento causati dalla lunghezza del cavo, abbiamo i
 \end{figure}
 \FloatBarrier
 
-Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento impostando la frequenza massima dell'LCR. A questa frequenza, eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura.
+Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento
+impostando prima la frequenza dell'LCR a 1KHz, alla quale eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura. Abbiamo poi lasciato i morsetti scollegati, in circuito aperto, premuto sul bulsante di colore blu, poi sul pulsante \emph{4}, su \emph{ENTER} e abbiamo infine atteso il messaggio "Open correction complete" sullo schermo. Abbiamo proseguito cortocircuitando i due morsetti, l'uno con l'altro, premuto il tasto di colore blu, seguito dal testo \emph{5}, dal pulsante \emph{ENTER} e abbiamo atteso la comparsa del messaggio "Short correction complete" sullo schermo.
+ 
 
 
 
@@ -456,9 +455,9 @@ Tramite l'LCR-Meter abbiamo svolto l'ultima parte della nostra prima esperienza.
 
 Di solito, per effettuare misurazioni di impedenza, è necessario stabilire un piano di riferimento sull'ingresso del DUT (Device Under Test) nel pannello frontale. L'LCR ci permette di fare ciò fissando la lunghezza del cavo utilizzato. Tuttavia, è importante cercare di eliminare le impedenze residue causate dalla presenza del Test Fixture nel pannello frontale dello strumento.
 
-Innanzitutto abbiamo calibrato lo strumento per compensare gli errori sistematici introdotti dallo strumento stesso, dando come riferimento due carichi noti (il circuito virtualmente chiuso e aperto), premendo sul tassto blu dello strumento e aspettando la dicitura "short correction complete".
-Per fare la prova, abbiamo avuto la possibilità di impostare vari valori di frequenza a partire da 100Hz, abbiamo impostato un tempo di misura medio ??? e impostato il modello capacità ideale con collegamento parallelo (premendo in successione i tasti CP-D e CP-RP).
-Partiamo con i 100Hz, e misuriamo la resistenza (R) e reattanza (X, nel nostro caso leggermente negativà perché prevale l'effetto induttivo). Abbiamo fatto così per ogni valore della frequenza presente nella seguente tabella.  
+Per fare la prova, abbiamo impostato un tempo di misura medio LONG, premendo sul pulsante \emph{Meas Time} e selezionando LONG.
+Per impostare i parametri da visualizzare per la resistenza abbiamo premuto su \emph{Meas Prmtr}, selezionato il primo parametro R, premuto \emph{ENTER}, selezionato il secondo parametro X e infine premuto nuovamente ENTER.
+Partendo da una frequenza di 100Hz, abbiamo misurato la resistenza (R) e reattanza (X, nel nostro caso leggermente negativà perché prevale l'effetto induttivo). Abbiamo così calcolato tutti i valori al variare della frequenza, come mostrato nella seguente tabella.  
 
 
 \begin{table}[!ht]
@@ -537,8 +536,9 @@ Con l'incertezza di quantizzazione $U_q$ pari a:
 %-------------Capacità----------- %
 \subsection{Capacità}
 \label{sub:c}
-Come ultima parte della prova abbiamo misurato la capacità del condensatore.
-Premiamo in successione "CP" (capacità), "RP" (resistenza parallela) e poi "D" (per il valore della tangente dell'angolo di perdita). Questa procedura è stata ripetuta per tutti i valori di frequenza (partendo da 100kHz, arrivando fino ai 100Hz).
+Come ultima parte della prova abbiamo misurato i valori di un condensatore.
+Per impostare i primi 2 parametri da visualizzare per la capacità abbiamo premuto su \emph{Meas Prmtr}, selezionato Cp, premuto \emph{ENTER}, selezionato Rp e ripremuto \emph{ENTER}. Successivamente per calcolare l'ultimo parametro necessario abbiamo premuto Cp, seguito da \emph{ENTER}, selezionato D e infine ripremuto \emph{ENTER}
+Questa procedura è stata quindi ripetuta per tutti i valori di frequenza (partendo da 100kHz, arrivando fino ai 100Hz).
 
 
 \begin{table}[ht]
