@@ -148,40 +148,53 @@ stimato in errore relativo mediante la seguente espressione:
 \vspace{0.5cm}
 %\begin{wrapfigure}{l}{0.3\textwidth}
 \FloatBarrier
-\begin{figure}[h]
+%\begin{figure}[h]
+\begin{wrapfigure}{r}{0.3\textwidth}
     \centering
-    \includegraphics[width=5cm]{Gameboy_62.jpg}
+    \includegraphics[width=0.25\textwidth]{Gameboy_62.jpg}
     \label{fig:mult_port_nostro}
-\end{figure}
+\end{wrapfigure}
+%\end{figure}
 \FloatBarrier
 %\end{wrapfigure}
     
-
 Quando usiamo il multimetro portatile abbiamo disposto i puntali in maniera pi\'u stabile possibile, applicando una buona pressione per ottenere una misurazione pi\'u fedele possibile,
 Abbiamo fatto 10 ripetizioni in modo da ricavare l'incertezza totale, con il contributo valutato di tipo B relativamente alla specifica di strumento utilizzato.
+\newline
+\newline
+Con i valori ottenuti (\ref{tab:mult_port}) eseguiamo una valutazione di tipo A, dove il risultato di misura sarà dato dalla media delle misure in un range di incertezza pari dalla deviazione standard. Ovviamente poich\'e stiamo utilizzando un numero finito e relativamente piccolo di misure otteniamo solo una stima della media statistica, che idealmente (numero infinito di misure) rappresenta il valore vero del misurando. Quindi calcoliamo la media e la varianza campionarie sfruttando il campione di misure (\ref{tab:mult_port}):
+\begin{align*}
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,61\Omega
+\end{align*}
+\begin{equation*}
+    u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,008\Omega 
+\end{equation*}
+\FloatBarrier
 
 \begin{table}[!ht]
     \centering
+    \caption{Multimetro portatile 974A, fondo scala di 500 $\Omega$}
     \begin{tabular}{|c|c|c|c|}
     \hline
         \textbf{R}$\bm{[\Omega]}$ & \textbf{Q}$\bm{[\Omega]}$ & \textbf{Uq} $\bm{[\Omega]}$ & $\bm{U_r}$ \\ \hline
-        1,62 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,62 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,60 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,60 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,62 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,60 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
-        1,61 & 1,00E-02 & 5,00E-03 & 2,10E-02 \\ \hline
+        1,62 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,61 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,61 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,62 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,60 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,60 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,62 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,61 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,60 & 0,01 & 0,01 & 0,02  \\ \hline
+        1,61 & 0,01 & 0,01 & 0,02 \\ \hline
     \end{tabular}
-    \caption{Multimetro portatile 974A, fondo scala di 500 $\Omega$}
+    
     \label{tab:mult_port}
 \end{table}
 \FloatBarrier
 
-\vspace{4cm}
+
+\vspace{1cm}
 %---------Multimetro da Banco---------%
 \section{Misure di resistenza con multimetro da banco}
 \label{sec:mult}
@@ -226,9 +239,9 @@ Come prima operazione abbiamo cortocircuitato i morsetti, premendo il tasto null
 %\FloatBarrier
 
 \'E importante notare che se la resistenza dei cavi è comparabile o superiore alla resistenza che si desidera misurare, il risultato della misura potrebbe essere influenzato significativamente dal contributo della resistenza dei cavi, dunque per ridurre gli errori sistematici:
-\begin{equation}
+\begin{equation*}
     Risultato = Valore \ \ letto - Valore\ \ NULL
-\end{equation}
+\end{equation*}
 
 \begin{figure}[h]
     \centering
@@ -284,18 +297,19 @@ dove U(R) è stato arrotondato per difetto.
     \caption{Metodo Kelvin a 4 morsetti}
     \label{fig:quattro morsetti}
 \end{figure}
+\FloatBarrier
 
 
-
-
-
-Successivamente, sempre con lo stesso multimetro da banco, abbiamo lavorato in modalità "4 terminali" (attivata premendo su \emph{Shift}, e poi successivamente su \emph{$\Omega$2W} per lavorare a quattro morsetti).
 
 \begin{wrapfigure}{l}{0.3\textwidth}
     \centering
     \includegraphics[width=0.28\textwidth]{4Morsetti_472.jpg}
     \label{fig:4morsetti}
 \end{wrapfigure}
+\FloatBarrier
+Successivamente, sempre con lo stesso multimetro da banco, abbiamo lavorato in modalità "4 terminali" (attivata premendo su \emph{Shift}, e poi successivamente su \emph{$\Omega$2W} per lavorare a quattro morsetti).
+
+
 Anche in questo caso abbiamo nuovamente cortocircuitato i morsetti, premendo nuovamente il tasto null per tarare lo strumento e riavere un valore associato al cortocircuito pi\'u prossimo allo zero possibile in presenza del cortocircuito (nel nostro caso 0,004).
 
 
@@ -322,7 +336,7 @@ Quindi, chiamando P, portata e $V_L$ valore letto (supponiamo di usare il primo 
     U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot P \equiv 0,01\% \cdot 1,478\Omega + 0,004 \% \cdot 100 \Omega \equiv 0,004 \Omega 
 \end{equation*}
 (dove il risultato è stato arrotondato per difetto)
-Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0,005)$\Omega$
+Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0,004)$\Omega$
 
 
 
@@ -350,6 +364,28 @@ Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0
 \FloatBarrier
 
 
+Volendo quantificare gli errori sistematici:
+\begin{equation*}
+    E_{S(2W)} \equiv 1,648 - 1,500 = 0,148 \Omega
+\end{equation*}
+\begin{equation*}
+    E_{S(4W)} \equiv  1,478 - 1,500 = 0,022 \Omega
+\end{equation*}
+che portano alle seguenti accuratezze: 
+\begin{equation*}
+    a_{2W} \equiv 1 - \left| \frac{E_{S(2W)}}{R_{NOMINALE}} \right| \equiv 91\%
+\end{equation*}
+
+\begin{equation*}
+    a_{4W} \equiv 1 - \left| \frac{E_{S(4W)}}{R_{NOMINALE}} \right| \equiv 98,5\%
+\end{equation*}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[height=3cm]{banco_misure.png}
+    \label{fig:range}
+\end{figure}
+\FloatBarrier
 
 Osserviamo questa volta che utilizzando il multimetro da banco a 6 ½ cifre si ottiene una stima più precisa del valore misurato rispetto all'utilizzo del multimetro portatile descritto precedentemente. Questi miglioramenti possono essere attribuiti alla capacità dello strumento da banco di ridurre gli errori sistematici mediante l'implementazione di funzioni adeguate.
 
@@ -357,45 +393,27 @@ Il multimetro da banco a 6 ½ cifre offre una maggiore precisione grazie alla su
 
 Inoltre, lo strumento da banco può offrire un controllo più preciso delle condizioni operative, come la compensazione della resistenza dei cavi o la selezione della modalità di misura più adatta alle specifiche dell'applicazione. Ciò contribuisce ulteriormente a migliorare l'accuratezza complessiva della misurazione.
 
-In conclusione, usando una resistenza con valore nominale di (1500 ± 7,5) m$\Omega$, con il multimetro da banco otteniamo una stima pari a R=(+1,648 $\pm$ 0,005)$\Omega$ per la misurazione a due morsetti, mente otteniamo una stima pari a R=(+1,478 $\pm$ 0,005)$\Omega$ per la misurazione a 4 morsetti.
+E osserviamo cio calcolando l'incertezza valutata di tipo A sfruttando prima il campione di misure ottenuto lavorando con due morsetti (\ref{tab:mult_2w}) :
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[height=3cm]{banco_misure.png}
-    \label{fig:range}
-\end{figure}
+\begin{align*}
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,529\Omega
+\end{align*}
+\begin{equation*}
+    u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,086\Omega 
+\end{equation*}
+\FloatBarrier
 
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee doveva uscire che i 4w stava dentro il range del resistore, non so se dovremmo commentare o no la cosaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-\newline
-Volendo quantificare gli errori sistematici:
-\begin{equation}
-    E_{S(2W)} \equiv 1,648 - 1,500 = 0,148 \Omega
-\end{equation}
-\begin{equation}
-    | E_{S(4W)} | \equiv | 1,478 - 1,500  |= 0,022 \Omega
-\end{equation}
-che portano alle seguenti accuratezze: 
-\begin{equation}
-    a_{2W} \equiv 1 - \left| \frac{E_{S(2W)}}{R_{NOMINALE}} \right| \equiv 91\%
-\end{equation}
+e poi lavorando con quattro morsetti (\ref{tab:mult_4w}):
 
-\begin{equation}
-    a_{4W} \equiv 1 - \left| \frac{E_{S(4W)}}{R_{NOMINALE}} \right| \equiv 98,5\%
-\end{equation}
+\begin{align*}
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,478\Omega
+\end{align*}
+\begin{equation*}
+    u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0\Omega 
+\end{equation*}
+\FloatBarrier
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Concludiamo che, usando una resistenza con valore nominale di (1500 ± 7,5) m$\Omega$, con il multimetro da banco otteniamo una stima pari a R=(+1,529 $\pm$ 0,086)$\Omega$ per la misurazione a due morsetti, mente otteniamo una stima pari a R=(+1,478 $\pm$ 0)$\Omega$ per la misurazione a 4 morsetti.
 
 %----------LCR-----------%
 \section{Misure con LCR-Meter}
