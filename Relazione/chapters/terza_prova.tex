@@ -43,7 +43,7 @@ Pertanto si può determinare la banda passante (B) e la frequenza di taglio teor
 Idealmente, un amplificatore differenziale alimentato con una tensione duale e con ingressi collegati entrambi a massa, dovrebbe fornire in uscita una tensione pari a 0 V. In realtà, invece, esistono sempre delle dissimmetrie interne di funzionamento che danno origine ad una piccola tensione d’uscita, cioè la “tensione di offset”. Pertanto, data la non idealità dell'OP-AMP, i pin 1 e 5 devono essere regolati, facendo riferimento allo schema in Figura \ref{fig:Piedinatura e schema interno del uA741}. Sperimentalmente, l’effetto dell’offset può essere osservato effettuando i seguenti passaggi:
 
 \begin{enumerate}
-    \item Attraverso l'alimentatore da banco HP E3631A (Figura \ref{fig:HPE3631A}) , è stata impostata un'alimentazione di ±12V. Questa operazione, è stata effettuata premendo su Output ON, poi  su +25V e successivamente, effettuando la regolazione con la manopola presente sul generatore, viene impostato il valore +12V. Analogamente si procede nella stessa maniera per impostare il valore -12V, sfruttando il tasto -25V.  Si è poi premuto Output OFF per mantenere il valore di alimentazione in memoria. L'uscita COM dell'alimentatore da banco è stata collegata poi tramite un connettore BNC al circuito integrato. Infine si può premere nuovamente il tasto Output ON. 
+    \item Attraverso l'alimentatore da banco HP E3631A (Figura \ref{fig:HPE3631A}) , è stata impostata un'alimentazione di ±12V. Questa operazione, è stata effettuata premendo su Output ON, poi  su +25V e successivamente, effettuando la regolazione con la manopola presente sul generatore, viene impostato il valore +12V. Analogamente si procede nella stessa maniera per impostare il valore -12V, sfruttando il tasto -25V.  Si è poi premuto Output OFF per mantenere il valore di alimentazione in memoria. L'uscita COM dell'alimentatore da banco è stata collegata poi tramite un connettore a 3 pin al circuito integrato. Infine si può premere nuovamente il tasto Output ON. 
     \item Spegnendo il generatore di funzione a cui è collegato il circuito integrato non si fornisce alcun segnale agli ingressi;
     \item  Sull’oscilloscopio, si visualizza solo il canale al quale è collegato l’uscita dell’amplificatore operazionale.
     \item  Il segnale visualizzato è in continua, con sovrapposto un segnale di rumore (Figura \ref{fig:tensioneOffset}): per questo, è opportuno eseguire una misura mediata della tensione efficace (\textit{Misura RMS}), andando a selezionare prima il tasto \textit{Measure} e successivamente il tasto \textit{RMS}.
@@ -81,7 +81,8 @@ Il circuito nella configurazione “a catena chiusa” è stato realizzato diret
     \label{fig:schemaCatenaChiusa}
 \end{figure}
 \FloatBarrier
-Al fine di abilitare la configurazione catena chiusa dell'amplificatore operazionale sono stati utilizzati dei Jumper (tratti spessi in verde ) che sono stati posizionati come indicato in Figura.
+
+Al fine di abilitare la configurazione catena chiusa dell'amplificatore operazionale sono stati utilizzati dei Jumper (tratti spessi in verde) che sono stati posizionati come indicato in Figura.
 \FloatBarrier
 Nel circuito di interesse, la resistenza \(R_6\) (tra ingresso invertente dell’amplificatore ed il pin di uscita) ed \(R_{12}\) (tra ingresso invertente dell’amplificatore ed ingresso dell’amplificatore) determinano il guadagno teorico in catena chiusa dell’amplificatore, che vale:
 
@@ -140,7 +141,7 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
         \item  Segnale di uscita dall'operazionale (OUTPUT 2) è stato collegato al canale 2 dell'oscilloscopio
         \item Uscita COM dell'alimentatore da banco HP E3631A all'ingresso, del circuito integrato, che si trova in altro a destra, facendo riferimento a Figura \ref{fig:pcb_bnc}
     \end{itemize}
-    \item Al fine di controllare il corretto funzionamento dell'amplificatore abbiamo si è impostato sul generatore un segnale di ingresso sinusoidale alla frequenza di $100Hz$ e si è visto come il segnale d'uscita fosse sfasato ed amplificato di all'incirca $20dB$.  
+    \item Al fine di controllare il corretto funzionamento dell'amplificatore si è impostato sul generatore un segnale di ingresso sinusoidale alla frequenza di $100Hz$ e si è visto come il segnale d'uscita fosse sfasato ed amplificato di all'incirca $20dB$.  
 \end{itemize}
 \begin{figure}[h]
         \centering
@@ -166,7 +167,7 @@ E' importante osservare che l'ampiezza visualizzata sull'oscilloscopio è divers
 
 
 \subsection{Misurazioni}
-\subsubsection{Calcolo della frequenza di taglio sperimentale}
+\subsubsection{Calcolo del guadagno e della frequenza di taglio sperimentali}
 Per la valutazione sperimentale del guadagno, serve effettuare la stima delle tensioni picco-picco \(V_{o,pp}\)
 e \(V_{i, pp}\) attraverso l'utilizzo dell'oscilloscopio. Da queste due stime si è ottenuto:
 
@@ -183,7 +184,7 @@ Infine, è possibile calcolare il valore della tensione di uscita in corrisponde
 taglio, facendo uso della relazione:
 
 \[V_o=A_{-3dB} \cdot V_i=2,91V_{pp}\]
-Per la valutazione sperimentale della frequenza di taglio, si impostano i due cursori orizzontali dell’oscilloscopio in corrispondenza di questo valore di tensione. Si procede quindi a variare la frequenza del segnale fino a che il segnale in uscita visualizzato sull’oscilloscopio non risulta tangente ai due cursori orizzontali. In corrispondenza della frequenza di taglio, si può notare che il segnale in uscita è distorto (segnale triangolare) e che il valore di frequenza trovato è diverso dal valore teorico. Questo succede perché si sta lavorando con un segnale di ingresso con ampiezza massima. Per evitare questo effetto, è necessario ridurre l’ampiezza del segnale, ricalcolare il nuovo valore di attenuazione a 3dB e, quindi, stimare la frequenza di taglio. In questo caso, si è trovato che \(f_c=33kHz\).
+Per la valutazione sperimentale della frequenza di taglio, si impostano i due cursori orizzontali dell’oscilloscopio in corrispondenza di questo valore di tensione. Si procede quindi a variare la frequenza del segnale tramite il generatore di funzioni fino a che il segnale in uscita visualizzato sull’oscilloscopio non risulta tangente ai due cursori orizzontali. In corrispondenza della frequenza di taglio, si può notare che il segnale in uscita è distorto (segnale triangolare) e che il valore di frequenza trovato è diverso dal valore teorico. Questo succede perché si sta lavorando con un segnale di ingresso con ampiezza massima. Per evitare questo effetto, è necessario ridurre l’ampiezza del segnale, ricalcolare il nuovo valore di attenuazione a 3dB e, quindi, stimare la frequenza di taglio. In questo caso, si è trovato che \(f_c=33kHz\).
 \clearpage
 \subsubsection{Misure di tensione picco-picco}
 
