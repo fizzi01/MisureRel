@@ -16,13 +16,7 @@ A tale scopo ci è stato dato un resistore dal valore nominale di 1,5 $\Omega$ (
     \label{fig:resistore}
 \end{figure}
 \FloatBarrier
-
-
-
-
-
-
-
+\clearpage
 
 
 
@@ -81,7 +75,7 @@ Su cui definiamo un errore totale sulla misura del tipo:
 
 Attraverso una serie di passaggi otteniamo l'incertezza come:
 \begin{equation}
-    |E_t| \equiv |y_q - x| \equiv | \Delta G_x + O + inl(x) + e_q(g(x)) | \leq 
+    |E_t| = |y_q - x| = | \Delta G_x + O + inl(x) + e_q(g(x)) | \leq 
 \end{equation}
 applichiamo una disuguaglianza triangolare
 \begin{equation*}
@@ -89,7 +83,7 @@ applichiamo una disuguaglianza triangolare
 \end{equation*}
 applichiamo una disuguaglianza errore-incertezza
 \begin{equation*}
-    \leq U_G|x| + U_o + U_{inl} + U_q \cong U_G|y_q| + U_o + U_{inl} +U_q \equiv U_{tot}
+    \leq U_G|x| + U_o + U_{inl} + U_q \cong U_G|y_q| + U_o + U_{inl} +U_q = U_{tot}
 \end{equation*}
 
 Dove, ipotizzando di unire l'incertezza di non linearità integrale nell'incertezza di portata, posso scrivere $U_g$ (incertezza di guadagno), $U_o$ (incertezza di portata dell'offset) e $U_q$ (incertezza di quantizzazione) come: 
@@ -104,17 +98,17 @@ Quindi, chiamando Q, passo di quantizzazione e $V_L$ valore letto (supponiamo di
 
 \begin{equation*}
 \begin{array}{l}
-U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot Q \equiv 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \\ \\
-\equiv (0,972 + 20) m\Omega \equiv 0,03 \Omega
+U(R) = U_G \cdot V_L + U_{o+inl+q} \cdot Q = 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \\ \\
+= (0,972 + 20) m\Omega = 0,03 \Omega
 \end{array}
 \end{equation*}
 
 sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) come:
 \begin{equation*}
-    R_M \equiv(1,62 \pm 0,03) \Omega
+    R_M = (1,62 \pm 0,03) \Omega
 \end{equation*}
 \begin{equation*}
-    r(R) \equiv [1,59 \Omega \div 1,65 \Omega]
+    r(R) = [1,59 \Omega \div 1,65 \Omega]
 \end{equation*}
 
 Va notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
@@ -132,18 +126,17 @@ Effettivamente, la misura eseguita utilizzando il multimetro portatile fornisce 
 
 Se vogliamo quantificare l'accuratezza della misura, assumiamo come valore "vero" della grandezza misurata il valore nominale della resistenza. Facendo questa assunzione, possiamo ottenere una stima dell'errore sistematico come differenza tra il risultato della misura e il valore nominale del componente misurato:
 \begin{equation}
-    E_S \equiv 1,62 - 1,50 = 0,12\Omega
+    E_S = 1,62 - 1,50 = 0,12\Omega
 \end{equation}
 L’accuratezza relativa “a” di una misura può essere espressa in funzione di tale errore 
 stimato in errore relativo mediante la seguente espressione: 
 \begin{equation}
-     a \equiv 1 - \left| \frac{E_S}{R_{NOMINALE}}\right| \equiv 92\%
+     a = 1 - \left| \frac{E_S}{R_{NOMINALE}}\right| = 92\%
 \end{equation}
-
+\clearpage
 
 \subsection*{La nostra prova}
 \label{sub:nosta_prova_first}
-
 
 \vspace{0.5cm}
 %\begin{wrapfigure}{l}{0.3\textwidth}
@@ -192,9 +185,8 @@ Con i valori ottenuti (\ref{tab:mult_port}) eseguiamo una valutazione di tipo A,
     \label{tab:mult_port}
 \end{table}
 \FloatBarrier
+\clearpage
 
-
-\vspace{1cm}
 %---------Multimetro da Banco---------%
 \section{Misure di resistenza con multimetro da banco}
 \label{sec:mult}
@@ -211,11 +203,11 @@ Con i valori ottenuti (\ref{tab:mult_port}) eseguiamo una valutazione di tipo A,
 Per il calcolo della resistenza di valore nominale pari a (1500 ± 7,5) m$\Omega$, impostiamo la risoluzione dello strumento a 6 ½ cifre premendo sul tasto \emph{Shift} e poi sul tasto \emph{Auto/Man}. Successivamente impostiamo la portata dello strumento a 100,0000 $\Omega$ mediante gli appositi pulsanti della sezione \emph{RANGE/DIGITS}. In questo modo lo strumento ha un campo di misura 
 pari a 1/1000000 del valore di fondo scala e quindi il passo di quantizzazione Q sar\'a: 
 \begin{equation}
-    Q \equiv \frac{V_{FS}}{CM} \equiv \frac{10^2}{10^6} = 0,0001 \Omega
+    Q = \frac{V_{FS}}{CM} = \frac{10^2}{10^6} = 0,0001 \Omega
 \end{equation}
 Con l'incertezza di quantizzazione $U_q$ pari a:
 \begin{equation}
-    U_q \equiv \frac{Q}{CM} \equiv 0,00005 \Omega
+    U_q = \frac{Q}{CM} = 0,00005 \Omega
 \end{equation}
 
 Quando abbiamo lavorato con il multimetro da banco, abbiamo dapprima lavorato in modalità "2 terminali" (attivata premendo su  \emph{$\Omega$2W} che ci permette di lavorare a due morsetti).
@@ -260,7 +252,7 @@ Ragionando come prima, ipotizzando di unire l'incertezza di non linearità integ
 \end{equation}
 Quindi, chiamando P, portata e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
 \begin{equation*}
-    U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot P \equiv 0,01\% \cdot 1,648\Omega + 0,004 \% \cdot 100 \Omega \equiv 0,004 \Omega 
+    U(R) = U_G \cdot V_L + U_{o+inl+q} \cdot P = 0,01\% \cdot 1,648\Omega + 0,004 \% \cdot 100 \Omega = 0,004 \Omega 
 \end{equation*}
 
 dove U(R) è stato arrotondato per difetto.
@@ -333,7 +325,7 @@ Si effettua l'operazione di NULL in modo analogo al caso precedente, misurando u
 Quindi, chiamando P, portata e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
 
 \begin{equation*}
-    U(R) \equiv U_G \cdot V_L + U_{o+inl+q} \cdot P \equiv 0,01\% \cdot 1,478\Omega + 0,004 \% \cdot 100 \Omega \equiv 0,004 \Omega 
+    U(R) = U_G \cdot V_L + U_{o+inl+q} \cdot P = 0,01\% \cdot 1,478\Omega + 0,004 \% \cdot 100 \Omega = 0,004 \Omega 
 \end{equation*}
 (dove il risultato è stato arrotondato per difetto)
 Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0,004)$\Omega$
@@ -366,19 +358,17 @@ Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0
 
 Volendo quantificare gli errori sistematici:
 \begin{equation*}
-    E_{S(2W)} \equiv 1,648 - 1,500 = 0,148 \Omega
+    E_{S(2W)} = 1,529 - 1,500 = 0,029 \Omega
 \end{equation*}
 \begin{equation*}
-    E_{S(4W)} \equiv  1,478 - 1,500 = 0,022 \Omega
+   | E_{S(4W)} | = | 1,478 - 1,500 | = 0,022 \Omega
 \end{equation*}
 che portano alle seguenti accuratezze: 
-\begin{equation*}
-    a_{2W} \equiv 1 - \left| \frac{E_{S(2W)}}{R_{NOMINALE}} \right| \equiv 91\%
-\end{equation*}
-
-\begin{equation*}
-    a_{4W} \equiv 1 - \left| \frac{E_{S(4W)}}{R_{NOMINALE}} \right| \equiv 98,5\%
-\end{equation*}
+\begin{align*}
+a_{2W} = 1 - \left| \frac{E_{S(2W)}}{R_{NOMINALE}} \right| = 98\%
+   &&   
+a_{4W} = 1 - \left| \frac{E_{S(4W)}}{R_{NOMINALE}} \right| = 98,5\%
+\end{align*}
 
 \begin{figure}[h]
     \centering
@@ -396,24 +386,19 @@ Inoltre, lo strumento da banco può offrire un controllo più preciso delle cond
 E osserviamo cio calcolando l'incertezza valutata di tipo A sfruttando prima il campione di misure ottenuto lavorando con due morsetti (\ref{tab:mult_2w}) :
 
 \begin{align*}
-    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,529\Omega
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,529\Omega  &&  u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,086\Omega 
 \end{align*}
-\begin{equation*}
-    u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,086\Omega 
-\end{equation*}
 \FloatBarrier
 
 e poi lavorando con quattro morsetti (\ref{tab:mult_4w}):
 
 \begin{align*}
-    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,478\Omega
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,478\Omega && u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0\Omega 
 \end{align*}
-\begin{equation*}
-    u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0\Omega 
-\end{equation*}
 \FloatBarrier
 
 Concludiamo che, usando una resistenza con valore nominale di (1500 ± 7,5) m$\Omega$, con il multimetro da banco otteniamo una stima pari a R=(+1,529 $\pm$ 0,086)$\Omega$ per la misurazione a due morsetti, mente otteniamo una stima pari a R=(+1,478 $\pm$ 0)$\Omega$ per la misurazione a 4 morsetti.
+\clearpage
 
 %----------LCR-----------%
 \section{Misure con LCR-Meter}
@@ -463,8 +448,6 @@ Per evitare gli errori di sfasamento causati dalla lunghezza del cavo, abbiamo i
 Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento
 impostando prima la frequenza dell'LCR a 1KHz, alla quale eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura. Abbiamo poi lasciato i morsetti scollegati, in circuito aperto, premuto sul bulsante di colore blu, poi sul pulsante \emph{4}, su \emph{ENTER} e abbiamo infine atteso il messaggio "Open correction complete" sullo schermo. Abbiamo proseguito cortocircuitando i due morsetti, l'uno con l'altro, premuto il tasto di colore blu, seguito dal testo \emph{5}, dal pulsante \emph{ENTER} e abbiamo atteso la comparsa del messaggio "Short correction complete" sullo schermo.
  
-
-
 
 \subsection{Impedenze}
 \label{sub:z}
@@ -527,6 +510,8 @@ Se rappresentiamo le precedenti misure in modulo e fase avremo i grafici nelle f
     \caption{Diagramma di Bode del modulo di Z}
     \label{fig:modulo}
 \end{figure}
+\FloatBarrier
+\clearpage
 
 % Diagramma di Bode della fase
 \begin{figure}[h]
@@ -545,6 +530,8 @@ Se rappresentiamo le precedenti misure in modulo e fase avremo i grafici nelle f
     \caption{Diagramma di Bode della fase di Z}
     \label{fig:fase}
 \end{figure}
+\FloatBarrier
+\clearpage
 
 Dai grafici precedenti si può notare che alle alte frequenze è necessario considerare gli effetti parassiti della resistenza reale, che tendono ad aumentare il valore nominale della resistenza linearmente con la frequenza.
 
@@ -568,11 +555,11 @@ R e di X per cui, consultando le tabelle di incertezza fornite dal costruttore, 
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 \textbf{A}      & \textbf{B}      & \textbf{C} & \textbf{D [$\bm{\Omega}$]} & \textbf{E [$\bm{\Omega}$]}  & $\bm{Z_s \ \ [\Omega]}$ & $\bm{Z_x \ \ [\Omega]}$ & $\bm{U_z}$ \textbf{(Ae)} \\ \hline
-0,005  & 0,0009 & 1 & 0,01      & 2,80E+08  & 1          & 1,4630     & 0,0125  \\ \hline
-0,005  & 0,0009 & 1 & 0,01      & 2,80E+08  & 1          & 1,4628     & 0,0125  \\ \hline
-0,004  & 0,0003 & 1 & 0,0165    & 2,80E+07  & 1          & 1,4625     & 0,0155  \\ \hline
-0,004  & 0,0003 & 1 & 0,075     & 2,80E+06  & 1          & 1,4622     & 0,0555  \\ \hline
-0,0097 & 0,0011 & 1 & 0,75      & 2,80E+05  & 1          & 1,4635     & 0,5229  \\ \hline
+0,005  & 0,0009 & 1 & 0,01      & 280.000.000,00  & 1          & 1,4630     & 0,0125  \\ \hline
+0,005  & 0,0009 & 1 & 0,01      & 280.000.000,00  & 1          & 1,4628     & 0,0125  \\ \hline
+0,004  & 0,0003 & 1 & 0,0165    & 28.000.000,00  & 1          & 1,4625     & 0,0155  \\ \hline
+0,004  & 0,0003 & 1 & 0,075     & 2.800.000,00  & 1          & 1,4622     & 0,0555  \\ \hline
+0,0097 & 0,0011 & 1 & 0,75      & 280.000,00  & 1          & 1,4635     & 0,5229  \\ \hline
 \end{tabular}
 \caption{Tabella di incertezza fornita dal costruttore, con $U_z$ l'incertezza}
 \label{tab:lcr_z_sheet}
@@ -583,7 +570,7 @@ Con l'incertezza di quantizzazione $U_q$ pari a:
 \begin{equation}
     U_q = \frac{Q}{CM} = 0,00005 \Omega
 \end{equation}
-
+\clearpage
 
 
 %-------------Capacità----------- %
@@ -596,18 +583,17 @@ Questa procedura è stata quindi ripetuta per tutti i valori di frequenza (parte
 
 \begin{table}[ht]
 \centering
-\resizebox{\textwidth}{!}{%
+%\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
-\hline
-\rowcolor[HTML]{CFE2F3} 
-\textit{Frequenza} {[}Hz{]} & Cp {[F]} & Rp {[}$\Omega${]} & D  \\ \hline
+\hline 
+\textit{\textbf{Frequenza [Hz]}} & \textbf{Cp [F]} & \textbf{Rp [\bm{$\Omega$}]} & \textbf{D}  \\ \hline
 100Hz                       & 6,98E-09    & 1,27E+08     & 0,0018     \\ \hline
 120Hz                       & 6,88E-09    & 1,33E+08     & 0,0017      \\ \hline
 1kHz                        & 6,96E-09    & 5,42E+06     & 0,0039      \\ \hline
 10kHz                       & 6,89E-09    & 2,60E+05     & 0,0095      \\ \hline
 100kHz                      & 6,70E-09    & 1,87E+04     & 0,0147      \\ \hline
 \end{tabular}%
-}
+%}
 \caption{LCR, misura della capacità}
 \label{tab:lcr_c}
 \end{table}
@@ -622,15 +608,17 @@ Per il calcolo dell’incertezza dobbiamo applicare le seguenti formule:
 \end{split}
 \end{equation}
 
-dove $|Z_X|$ è il valore dell'impedenza Z ottenuta convertendo il valore della capacità parallelo (Cp) per mezzo del seguente diagramma di conversione:
+dove $|Z_X|$ è il valore dell'impedenza Z ottenuta convertendo il valore della capacità parallelo (Cp) per mezzo del seguente diagramma di conversione \ref{fig:diag_conv_Cp}
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \includegraphics{media/diagramma_conversione_Cp.png}
+    \includegraphics[height=20cm, width=12cm]{media/diagramma_conversione_Cp.png}
     \caption{Diagramma di conversione}
     \label{fig:diag_conv_Cp}
 \end{figure}
 \FloatBarrier
+\clearpage
 
 Consultando le tabelle di incertezza fornite dal costruttore avremo:
 
@@ -639,13 +627,12 @@ Consultando le tabelle di incertezza fornite dal costruttore avremo:
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\rowcolor[HTML]{CFE2F3} 
-A      & B      & C & D {[}$\Omega${]} & E {[}$\Omega${]} & Zs {[}$\Omega${]} & Zx {\tiny(Cp convertito)}  {[}$\Omega${]} & Uz (Ae) \\ \hline
-0,0048  & 0,00055 & 1 & 0,01      & 2,80E+08  & 100000          & 228054,8849     & 0,0069  \\ \hline
-0,0048  & 0,00055 & 1 & 0,01      & 2,80E+08  & 100000          & 192858,9781     & 0,0065  \\ \hline
-0,0011  & 0,0002 & 1 & 0,0165    & 2,80E+07  & 10000          & 22880,2391     & 0,0024  \\ \hline
-0,0016  & 0,0002 & 1 & 0,075     & 2,80E+06  & 1000          & 2311,4843     & 0,0029  \\ \hline
-0,0112 & 0,0011 & 1 & 0,75      & 2,80E+05  & 100          & 237,4632     & 0,0178  \\ \hline
+\textbf{A}      & \textbf{B}      & \textbf{C} & \textbf{D [$\bm{\Omega}$]} & \textbf{E [$\bm{\Omega}$]} & \textbf{Zs [$\bm{\Omega}$]} & \textbf{Zx} {\tiny(Cp convertito)}  \textbf{[$\bm{\Omega}$]} & \textbf{Uz (Ae)} \\ \hline
+0,0048  & 0,00055 & 1 & 0,01      & 280.000.000,00  & 100000          & 228054,8849     & 0,0069  \\ \hline
+0,0048  & 0,00055 & 1 & 0,01      & 280.000.000,00  & 100000          & 192858,9781     & 0,0065  \\ \hline
+0,0011  & 0,0002 & 1 & 0,0165    & 28.000.000,00  & 10000          & 22880,2391     & 0,0024  \\ \hline
+0,0016  & 0,0002 & 1 & 0,075     & 2.800.000,00  & 1000          & 2311,4843     & 0,0029  \\ \hline
+0,0112 & 0,0011 & 1 & 0,75      & 280.000,00  & 100          & 237,4632     & 0,0178  \\ \hline
 \end{tabular}%
 }
 \caption{Tabella di incertezza fornita dal costruttore, con Uz l'incertezza}
@@ -656,10 +643,10 @@ A      & B      & C & D {[}$\Omega${]} & E {[}$\Omega${]} & Zs {[}$\Omega${]} & 
 L’incertezza della resistenza parallelo, invece, si calcola come:
 
 \begin{equation}
-        U_{R_P} = \pm \frac{RP_X \times D_e}{D_X \mp D_e}  \\
+        U_{R_P} = \pm \frac{Rp_X \times D_e}{D_X \mp D_e}  \\
 \end{equation}
 
-dove $RP_X$ indica il valore misurato della resistenza parallelo in $\Omega$, $D_e$ è l’incertezza di 
+dove $Rp_X$ indica il valore misurato della resistenza parallelo in $\Omega$, $D_e$ è l’incertezza di 
 $D$, mentre $D_X$ è il valore misurato di $D$.
 
 L’incertezza dell’angolo di perdita, $D_e$, si calcola come:
@@ -679,18 +666,17 @@ Nella seguente tabella è riassunto quanto detto precedentemente:
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
 \hline
-\rowcolor[HTML]{CFE2F3} 
-RPx {[$\Omega$]} & De  & Dx  & U(Rp) \\ \hline
-1,27E+08                    & 0,00006868827448    & 0,0018     & 5,06E+06    \\ \hline
-1,33E+08                    & 0,00006549558296    & 0,0017    & 5,32E+06      \\ \hline
-5,42E+06                    & 0,00002375477324    & 0,0039     & 3,32E+04      \\ \hline
-2,60E+05                    & 0,00002920273675    & 0,0095     & 8,00E+02      \\ \hline
-1,87E+04                    & 0,0001781856214    & 0,0147     & 2,29E+02      \\ \hline
+\textbf{ Rp$\bm{_X}$ [$\bm{\Omega}$]} & \textbf{De}  & \textbf{Dx}  & \textbf{U(Rp)} \\ \hline
+1,27E+08                    & 0,000069    & 0,0018     & 5.056.466,99    \\ \hline
+1,33E+08                    & 0,000065    & 0,0017    & 5.317.770,16      \\ \hline
+5,42E+06                    & 0,000024    & 0,0039     & 33.193,91      \\ \hline
+2,60E+05                    & 0,000029    & 0,0095     & 800,46      \\ \hline
+1,87E+04                    & 0,000178    & 0,0147     & 229,45      \\ \hline
 \end{tabular}%
 }
 \caption{LCR, misura della resistenza}
 \label{tab:lcr_c_RPx}
 \end{table}
 \FloatBarrier
-
+\clearpage
 
