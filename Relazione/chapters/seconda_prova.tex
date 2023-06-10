@@ -17,18 +17,18 @@ Le sonde costituiscono un componente fondamentale per poter prelevare un segnale
 
 La sonda può essere schematizzata in maniera semplificata come un parallelo di una resistenza e una capacità variabile. L'oscilloscopio d'altra parte ha una certa capacità intrinseca in parallelo ad una resistenza di ingresso. Tale capacità in regime AC può essere un problema, in quanto all'aumentare della frequenza inizia ad agire come un filtro passa-basso.
 
-Per questo motivo è necessario effettuare la \textbf{compensazione in frequenza della sonda}, cioè impostare il valore della capacità variabile della sonda per andare a compensare gli effeti della capacità di ingresso dell'oscilloscopio, quindi da rendere il sistema sonda+oscilloscopio indipendente dalla frequenza.
+Per questo motivo è necessario effettuare la \textbf{compensazione in frequenza della sonda}, cioè impostare il valore della capacità variabile della sonda per andare a compensare gli effetti della capacità di ingresso dell'oscilloscopio, quindi da rendere il sistema sonda+oscilloscopio indipendente dalla frequenza.
 
 \subsection*{}
 Per poter effettuare la compensazione, abbiamo collegato il connettore BNC della sonda al canale 1 dell'oscilloscopio. Abbiamo poi sollevato il cappuccio della sonda e l'abbiamo collegata all'occhiello presente nella parte inferiore del dispositivo, che risulta essere la sorgente di onda quadra di ampiezza 5V e frequenza 1.2KHz generata dall'oscilloscopio stesso.
 
 Abbiamo poi premuto il tasto \textbf{Autoscale} per visualizzare il segnale sullo schermo.
 
-Poichè la sonda fornisce un'attenuazione pari a 10, premendo sul tasto 1 della sezione verticale, è possibile impostare il valore di \emph{Probe} su 10, mediante il tasto presente sotto lo schermo, in modo che la lettura sia riferita all'attenuazione implicita della sonda.
+Poiché la sonda fornisce un'attenuazione pari a 10, premendo sul tasto 1 della sezione verticale, è possibile impostare il valore di \emph{Probe} su 10, mediante il tasto presente sotto lo schermo, in modo che la lettura sia riferita all'attenuazione implicita della sonda.
 
 Fatto ciò abbiamo sistemato i valori di $K_v$ e $K_t$ per visualizzare circa 2 periodi e in modo ottimale sullo schermo l'onda quadra.
 
-Abbiamo infine utilizzato un cacciavite in prossimità del corpo della sonda, per regolare la capacità variabile, finchè il segnale visualizzato non è apparso quanto più rettangolare possibile rispetto alla condizione iniziale in cui erano presenti delle sovra-elongazioni dovute alla sovracompensazione.
+Abbiamo infine utilizzato un cacciavite in prossimità del corpo della sonda, per regolare la capacità variabile, finché il segnale visualizzato non è apparso quanto più rettangolare possibile rispetto alla condizione iniziale in cui erano presenti delle sovra-elongazioni dovute alla sovracompensazione.
 
 
 \clearpage
@@ -137,9 +137,9 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
 
     \item Avviato il generatore di funzioni impostando una frequenza iniziale di 100kHz mediante il tasto \emph{Freq} e successivamente impostato una forma d'onda sinusoidale di ampiezza pari a 5 V mediante il tasto \emph{Ampl}.
     
-    \'E importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disattamento di impedenza tra l'oscilloscpio ed il generatore di funzioni. In particolare, in corrispondenza della tensione picco-picco di 5 V impostata per l'ingresso del filtro, verrà visualizzata una tensione picco-picco di 10 V sul display dell'oscilloscopio.
+    \'E importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disadattamento di impedenza tra l'oscilloscopio ed il generatore di funzioni. In particolare, in corrispondenza della tensione picco-picco di 5 V impostata per l'ingresso del filtro, verrà visualizzata una tensione picco-picco di 10 V sul display dell'oscilloscopio.
     \item Avviato l'oscilloscopio su cui visualizzare il segnale d'ingresso del filtro $V_i$ sul canale 1, e il segnale di uscita del filtro $V_o$ sul canale 2.
-    Poichè abbiamo utilizzato cavi BNC-BNC e non sonde, abbiamo impostato il valore di \emph{Probe} a 1 mediante l'apposito pulsante posto sotto lo schermo.
+    Poiché abbiamo utilizzato cavi BNC-BNC e non sonde, abbiamo impostato il valore di \emph{Probe} a 1 mediante l'apposito pulsante posto sotto lo schermo.
     Per migliorare la visualizzazione di entrambi i segnali, abbiamo premuto il pulsante \emph{Auto-Scale}, che permette all'oscilloscopio di visualizzare entrambi i segnali, uno per ognuno della due metà dello schermo.
     
     Ai fini delle misurazioni da effettuare, abbiamo impostato entrambe le forme d'onda sulla linea di 0 V secondo la seguente procedura per entrambi i canali:
@@ -160,34 +160,34 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
 
 Come definito nel paragrafo introduttivo sul filtro RC (\ref{sec:filtroRC}), la frequenza di taglio teorica è pari a
 \[f=\frac{1}{2\pi RC}= \frac{1}{2\pi \cdot10^4 \cdot 47 \cdot10^{-9}} = 338,627 Hz\]
-Questa tuttavia non sarà mai pari a quella effettiva, pertanto abbiamo ricavato sperimentalmente la frequenza di taglio effettiva. Poichè il segnale in ingresso era pari a 5 V, visualizzati 10V sull'oscilloscopio, la frequenza di taglio è quella frequenza in corrispondenza della quale l'uscita $V_{o}$ del filtro è pari a 
+Questa tuttavia non sarà mai pari a quella effettiva, pertanto abbiamo ricavato sperimentalmente la frequenza di taglio effettiva. Poiché il segnale in ingresso era pari a 5 V, visualizzati 10V sull'oscilloscopio, la frequenza di taglio è quella frequenza in corrispondenza della quale l'uscita $V_{o}$ del filtro è pari a 
 \[\frac{10}{\sqrt{2}} = 7,07 V\]
 
-Abbiamo allora premuto prima sul pulsante \emph{Cursors}, selezionato il cursore $V_1$ posizionandolo per mezzo della mapanopola ad un valore di 3,5 V, 
+Abbiamo allora premuto prima sul pulsante \emph{Cursors}, selezionato il cursore $V_1$ posizionandolo per mezzo della manopola ad un valore di 3,5 V, 
 e il cursore $V_2$ posizionandolo ad un valore di -3,5 V. In questo modo la distanza tra i due cursori era pari a 7 V.
 
-Andando quindi ad operare sul genereatore di funzioni, abbiamo modificato la frequenza del segnale in ingresso al filtro finché il segnale di uscita (canale 2) non appariva esattamente tangente ai due cursori precedentemente posizionati.
+Andando quindi ad operare sul generatore di funzioni, abbiamo modificato la frequenza del segnale in ingresso al filtro finché il segnale di uscita (canale 2) non appariva esattamente tangente ai due cursori precedentemente posizionati.
 La frequenza per cui tale condizione è soddisfatta corrisponde alla frequenza di taglio reale del filtro che è pari a 
 \[f_{sperimentale} = 338,63Hz\]
 
 In base al datasheet del generatore di funzioni, il valore dell'incertezza relativa di caso peggiore per misure di frequenza è di 20 ppm (parti per milione), cioè 
 \[U_{r,f} = 20 ppm\]
-L'incertezza di caso peggiore sarà pari a
+L'incertezza assoluta di caso peggiore sarà pari a
 \[U_f = 338 Hz\cdot U_{r,f} = 338,63Hz \cdot 20 \cdot 10^{-6} = 6,773\cdot10^{-3}Hz\]
 
 
 \clearpage
 \subsubsection{Misure di tensione picco-picco e $\Delta t$}
 
-Per riuscire a ricavare i diagrammi di Bode dell'attenuazione A del filtro RC, è stato necessario ripetere la stessa procedura di misura, lasciando invariate le condizioni operative, per un totale di 17 diversi valori di frequenza.
+Per riuscire a ricavare i valori necessari a graficare i diagrammi di Bode dell'attenuazione A del filtro RC, è stato necessario ripetere la stessa procedura di misura, lasciando invariate le condizioni operative, per un totale di 17 diversi valori di frequenza.
 
 Per ogni misurazione abbiamo quindi eseguito i seguenti passi:
 \begin{enumerate}
-    \item Impostato il valore della frequenza del segnale di ingresso del filtro  sul generatore di funzioni, premendo prima il pulsante \emph{Freq} e poi impostando la frequenza desisderata \footnote{Per misurazioni effettuate a frequenze molto basse, intorno ai pochi Hz, per visualizzare corretamente il segnale è stato utile premere il tasto \textbf{Mode} della sezione Trigger, e impostare tramite il tasto presente sotto lo schermo, la modalità \textbf{Normal}.} \footnote{Per misurazioni effettuate a frequenze molto elevate, per ridurre il rumore sul segnale è stato utile premere sul tasto \textbf{Display}, posto sopra la sezione verticale, per impostare tramite il pulsante apposito sotto lo schermo la modalità \textbf{Average}.} .
+    \item Impostato il valore della frequenza del segnale di ingresso del filtro  sul generatore di funzioni, premendo prima il pulsante \emph{Freq} e poi impostando la frequenza desiderata \footnote{Per misurazioni effettuate a frequenze molto basse, intorno ai pochi Hz, per visualizzare correttamente il segnale è stato utile premere il tasto \textbf{Mode} della sezione Trigger, e impostare tramite il tasto presente sotto lo schermo, la modalità \textbf{Normal}.} \footnote{Per misurazioni effettuate a frequenze molto elevate, per ridurre il rumore sul segnale è stato utile premere sul tasto \textbf{Display}, posto sopra la sezione verticale, per impostare tramite il pulsante apposito sotto lo schermo la modalità \textbf{Average}.} .
     \item Regolato i valori di $K_{V_i}$ e $K_{V_o}$ mediante le manopole poste nella parte superiore della sezione verticale, in modo da coprire quanto più possibile lo schermo senza tagliare la forma d'onda. In questo modo le misure eseguite sono più accurate e viene ridotta l'incertezza di misura.
     \item Regolato il valore di $K_t$ mediante l'apposita manopola posta nella sezione orizzontale per la visualizzazione di almeno un periodo dei segnali.
     \item Premuto il pulsante \emph{Voltage}, situato nella sezione \emph{Measure} e selezionato per ognuno dei due segnali il tipo di misura, cioè tensione picco-picco $V_{p-p}$, mediante gli appositi pulsanti posizionati sotto lo schermo.
-    In questo modo i valori di tensione picco-picco di entrambi i segnali vengono automaticamente calcolati dall'oscilloscpio e visualizzati nella parte inferiore dello schermo.
+    In questo modo i valori di tensione picco-picco di entrambi i segnali vengono automaticamente calcolati dall'oscilloscopio e visualizzati nella parte inferiore dello schermo.
     \item Sistemato il valore di $K_t$ per visualizzare meglio il punto in cui ciascun segnale tagliava l'asse delle ascisse, premuto il pulsante \emph{Cursors} e selezionato i cursori verticali $t_1$ e $t_2$, dagli appositi pulsanti posti sotto lo schermo. Ciascun cursore , mediante la manopola presente sotto la sezione \emph{Measure}, è stato poi collocato in corrispondenza dei punti in cui il corrispondente segnale passava per lo zero. Il valore $\Delta t$  calcolato dall'oscilloscopio è poi visualizzato nella parte inferiore dello schermo. 
     
 \end{enumerate}
@@ -206,13 +206,13 @@ Le misure dirette effettuate durante l'esperienza di laboratorio sono le seguent
 \begin{itemize}
     \item \textbf{tensione picco-picco V}
     \item \textbf{distanza temporale $\Delta t$}  fra i segnali sinusoidali $V_i$ e $V_o$
-    \item \textbf{freqeunza f} dei segnali $V_i$ e $V_o$ 
+    \item \textbf{frequenza f} dei segnali $V_i$ e $V_o$ 
 \end{itemize}
 
 
 \subsubsection*{Incertezza associata alle misure di tensione picco-picco V}
 
-Dalle specifiche metrologiche di ampiezza dell'oscilloscopio, poichè abbiamo utilizzato i due cursori orizzontali per le misure, consideriamo la \textbf{Dual cursor accuracy}, pari a 
+Dalle specifiche metrologiche di ampiezza dell'oscilloscopio, poiché abbiamo utilizzato i due cursori orizzontali per le misure, consideriamo la \textbf{Dual cursor accuracy}, pari a 
 \[vertical \ accuracy \pm 0.4\% \ of full scale\]
 
 dove \textbf{vertical accuracy} per l'oscilloscopio Agilent HP 54600B è pari a 1.9\%, mentre \textbf{full scale} è il fondo scala del dispositivo ed è pari a $y_{FS} = 8 \cdot k_v$, dove 8 sono le divisioni verticali e $k_v$ è la \emph{vertical sensitivity} espressa in V/div.
@@ -220,7 +220,7 @@ dove \textbf{vertical accuracy} per l'oscilloscopio Agilent HP 54600B è pari a 
 La \emph{Dual cursor accuracy} sopra riportata deriva dalla formula generale dell'incertezza per una differenza 
 \[U(V_1 - V_2) = U_G|V_1 - V_2| + 2U_{inl} + 2U{q}\]
 
-Nel nostro caso, l'incertezza di non linearità integrale $U_{inl}$, è stata conglobata nel termine 1.9\% insieme a $U_G$ incertezza di guadagno. L'incertezza di quantizzazione $2U_q$ è invece pari al termine $\pm 0.4\% \cdot y_{FS}$. L'incertezza di offset $U_O$ non è presente poichè nel caso di differenze di misure l'errore di offset si compensa.
+Nel nostro caso, l'incertezza di non linearità integrale $U_{inl}$, è stata conglobata nel termine 1.9\% insieme a $U_G$ incertezza di guadagno. L'incertezza di quantizzazione $2U_q$ è invece pari al termine $\pm 0.4\% \cdot y_{FS}$. L'incertezza di offset $U_O$ non è presente poiché nel caso di differenze di misure l'errore di offset si compensa.
 
 Indicato quindi con $V$ il valore di tensione picco-picco letto, l'\textbf{incertezza di caso peggiore} associata a $V$ è data dalla seguente formula:
 
@@ -295,13 +295,13 @@ Le specifiche metrologiche della base dei tempi dell'oscilloscopio forniscono la
 
 \[\pm0.01\% \pm0.2\% \ of full scale \pm 200 \ ps\]
 
-Possiamo dare un'interpretazione dell'espressione a partire dalla formula dell'incertezza sulla differennza di misure di tempo:
+Possiamo dare un'interpretazione dell'espressione a partire dalla formula dell'incertezza sulla differenza di misure di tempo:
 \[U(T_1 - T_2) = U_S |T_1 - T_2| + 2U_{tbd} + 2U_{T_c}\]
 
 $U_S$ incertezza sulla velocità di sweep, equivale al coefficiente $\pm0.01\%$.
 $2U_{tbd}$ incertezza di distorsione della base dei tempi è pari al valore $\pm200 \ ps$.
 $2U_{T_c}$ incertezza di risoluzione, equivale al termine $\pm0.2\% \ of full scale$, dove full scale è il valore di fondoscala pari a $\tau _{FS}  = 10 \cdot k_t$.
-Infine, poichè si parla di differenze di misure, l'incertezza di ritardo del trigger $U_D$ è trascurabile.
+Infine, poiché si parla di differenze di misure, l'incertezza di ritardo del trigger $U_D$ è trascurabile.
 
 Indicato con $\Delta t$ il valore di distanza temporale tra i segnali $V_i$ e $V_o$, l'\textbf{incertezza assoluta di caso peggiore} associata a $\Delta t$ è data dalla seguente formula:
 
@@ -462,7 +462,7 @@ Per le misure di sfasamento, abbiamo provveduto a calcolare anche l'incertezza s
 \[u_{\Delta \varphi} = \Delta\varphi \cdot \sqrt{\frac{U_{r,f}^2}{3}+ \frac{U_{r,\Delta t}^2}{3}}\]
 
 da cui\textbf{ l'incertezza standard relativa}:
-\[\sqrt{\frac{U_{r,f}^2}{3}+ \frac{U_{r,\Delta t}^2}{3}}\]
+\[u_{r,\Delta \varphi} = \sqrt{\frac{U_{r,f}^2}{3}+ \frac{U_{r,\Delta t}^2}{3}}\]
 
 Segue una tabella dove per i diversi valori di frequenza sono indicati i valori di $\Delta\varphi$, di incertezza (assoluta e relativa) di caso peggiore e di incertezza standard (assoluta e relativa).
 

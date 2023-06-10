@@ -32,7 +32,7 @@ A tale scopo ci è stato dato un resistore dal valore nominale di 1,5 $\Omega$ (
 \end{figure}
 \FloatBarrier
 
-Il multimetro HP 974A è dotato di un display a 4 ½ cifre, il quale rappresenta uno strumento con 4 cifre principali e un'ulteriore cifra riservata per indicare il segno e, eventualmente, il valore della cifra più significativa della misurazione. Per calcolare la resistenza con un valore nominale dichiarato dal produttore pari a (1500 ± 7,5) m$\Omega$, abbiamo utilizzato il pulsante "RANGE" per impostare il valore di fondo scala, ovvero il limite superiore che il multimetro può "misurare", a 500 $\Omega$. Dato che lo strumento ha un campo di misura pari a 1/50000 del valore di fondo scala, il passo di quantizzazione, indicato come "Q", è pari a
+Il multimetro HP 974A è dotato di un display a 4 ½ cifre, il quale rappresenta uno strumento con 4 cifre principali e un'ulteriore cifra riservata per indicare il segno e, eventualmente, il valore della cifra più significativa della misurazione. Per calcolare la resistenza con un valore nominale dichiarato dal produttore pari a (1500 ± 75) m$\Omega$, abbiamo utilizzato il pulsante "RANGE" per impostare il valore di fondo scala, ovvero il limite superiore che il multimetro può "misurare", a 500 $\Omega$. Dato che lo strumento ha un campo di misura pari a 1/50000 del valore di fondo scala, il passo di quantizzazione, indicato come "Q", è pari a
 \begin{equation}
     Q = \frac{V_{F_S}}{50000} = \frac{500}{50000} = 10 m\Omega
 \end{equation}
@@ -75,7 +75,7 @@ Su cui definiamo un errore totale sulla misura del tipo:
 
 Attraverso una serie di passaggi otteniamo l'incertezza come:
 \begin{equation}
-    |E_t| = |y_q - x| = | \Delta G_x + O + inl(x) + e_q(g(x)) | \leq 
+    |E_t| = |y_q - x| = | \Delta Gx + O + inl(x) + e_q(g(x)) | \leq 
 \end{equation}
 applichiamo una disuguaglianza triangolare
 \begin{equation*}
@@ -99,19 +99,21 @@ Quindi, chiamando Q, passo di quantizzazione e $V_L$ valore letto (supponiamo di
 \begin{equation*}
 \begin{array}{l}
 U(R) = U_G \cdot V_L + U_{o+inl+q} \cdot Q = 0,06\% \cdot 1,62\Omega + 2 \cdot 0,01 \Omega \\ \\
-= (0,972 + 20) m\Omega = 0,03 \Omega
+= (0,972 + 20) m\Omega = 0,02 \Omega
 \end{array}
 \end{equation*}
 
-sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) come:
+sapendo che possiamo esprimere la resistenza misurata $R_M$ e il range della resistenza r(R) per la prima misurazione effettuata come:
 \begin{equation*}
-    R_M = (1,62 \pm 0,03) \Omega
+    R_M = (1,62 \pm 0,02) \Omega
 \end{equation*}
 \begin{equation*}
-    r(R) = [1,59 \Omega \div 1,65 \Omega]
+    r(R) = [1,60 \Omega \div 1,64 \Omega]
 \end{equation*}
 
 Va notato che l'inclusione dell'errore di non linearit\'a integrale nel secondo termine dell'incertezza fornita dal produttore ( proporzionale alla portata) rende tale termine non solamente un errore di offset puro, ma include anche l'errore di quantizzazione. Pertanto, nel caso di differenze tra misurazioni, non possiamo semplicemente sottrarre l'errore di offset.
+
+\begin{comment}
 Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandola con la (2.9) che i due range di valori non sono compatibili.
 
 \begin{figure}[h]
@@ -121,10 +123,12 @@ Notiamo, usando la resistenza nominale di $(1500 \pm 7,5) m\Omega$ e graficandol
     \label{fig:range}
 \end{figure}
 \FloatBarrier
+\end{comment}
 
-Effettivamente, la misura eseguita utilizzando il multimetro portatile fornisce una stima non corretta poiché include errori casuali a causa della singola misurazione anziché una media di più valori letti. Inoltre, lo strumento non consente la compensazione degli errori sistematici poiché non dispone di funzioni di calibrazione. Infine, non si è tenuto conto degli errori dovuti alle resistenze di contatto tra i cavi, i puntali e il resistore. Il contributo di tutti questi effetti influisce sul risultato finale della misura.
+\vspace{5mm}
+La misura eseguita utilizzando il multimetro portatile fornisce una stima non corretta del valore della resistenza. Inoltre, lo strumento non consente la compensazione degli errori sistematici poiché non dispone di funzioni di calibrazione. Infine, non si è tenuto conto degli errori dovuti alle resistenze di contatto tra i cavi, i puntali e il resistore. Il contributo di tutti questi effetti influisce sul risultato finale della misura.
 
-Se vogliamo quantificare l'accuratezza della misura, assumiamo come valore "vero" della grandezza misurata il valore nominale della resistenza. Facendo questa assunzione, possiamo ottenere una stima dell'errore sistematico come differenza tra il risultato della misura e il valore nominale del componente misurato:
+Se vogliamo quantificare l'accuratezza della prima misura, assumiamo come valore "vero" della grandezza misurata il valore nominale della resistenza. Facendo questa assunzione, possiamo ottenere una stima dell'errore sistematico come differenza tra il risultato della misura e il valore nominale del componente misurato:
 \begin{equation}
     E_S = 1,62 - 1,50 = 0,12\Omega
 \end{equation}
@@ -246,7 +250,7 @@ Avendo impostato un valore di fondo scala pari a 100,0000 $\Omega$, in un ambien
 Ragionando come prima, ipotizzando di unire l'incertezza di non linearità integrale nell'incertezza di portata, posso scrivere $U_g$ (incertezza di guadagno), $U_o$ (incertezza di portata dell'offset) e $U_q$ (incertezza di quantizzazione) come: 
 \begin{equation}
 \left\{\begin{array}{l}
-| \Delta G \cdot y_q | \leq U_G |y_q| \ , \ con U_g=0,01\% \\ 
+| \Delta G \cdot y_q | \leq U_G |y_q| \ , \ con \ U_g=0,01\% \\ 
 | O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q} \ , con \ U_{o+inl+q}=0,004\%
 \end{array}\right.
 \end{equation}
@@ -279,8 +283,7 @@ dove U(R) è stato arrotondato per difetto.
     \label{tab:mult_2w}
 \end{table}
 \FloatBarrier
-
- Sapendo che il primo valore di resistenza misurata col multimetro è 1,648 $\Omega$, il risultato della misura si esprime come R=(+1,648 $\pm$ 0,005)$\Omega$, abbiamo operato anche con un sistema a quattro morsetti(metodo Kelvin)
+ Per il primo valore di resistenza misurata col multimetro è 1,648 $\Omega$, il risultato della misura si esprime come R=(+1,648 $\pm$ 0,004)$\Omega$.
 
 
 \begin{figure}[h]
@@ -370,12 +373,14 @@ a_{2W} = 1 - \left| \frac{E_{S(2W)}}{R_{NOMINALE}} \right| = 98\%
 a_{4W} = 1 - \left| \frac{E_{S(4W)}}{R_{NOMINALE}} \right| = 98,5\%
 \end{align*}
 
+\begin{comment}
 \begin{figure}[h]
     \centering
     \includegraphics[height=3cm]{banco_misure.png}
     \label{fig:range}
 \end{figure}
 \FloatBarrier
+\end{comment}
 
 Osserviamo questa volta che utilizzando il multimetro da banco a 6 ½ cifre si ottiene una stima più precisa del valore misurato rispetto all'utilizzo del multimetro portatile descritto precedentemente. Questi miglioramenti possono essere attribuiti alla capacità dello strumento da banco di ridurre gli errori sistematici mediante l'implementazione di funzioni adeguate.
 
@@ -383,7 +388,7 @@ Il multimetro da banco a 6 ½ cifre offre una maggiore precisione grazie alla su
 
 Inoltre, lo strumento da banco può offrire un controllo più preciso delle condizioni operative, come la compensazione della resistenza dei cavi o la selezione della modalità di misura più adatta alle specifiche dell'applicazione. Ciò contribuisce ulteriormente a migliorare l'accuratezza complessiva della misurazione.
 
-E osserviamo cio calcolando l'incertezza valutata di tipo A sfruttando prima il campione di misure ottenuto lavorando con due morsetti (\ref{tab:mult_2w}) :
+E osserviamo ciò calcolando l'incertezza valutata di tipo A sfruttando prima il campione di misure ottenuto lavorando con due morsetti (\ref{tab:mult_2w}) :
 
 \begin{align*}
     \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,529\Omega  &&  u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,086\Omega 
