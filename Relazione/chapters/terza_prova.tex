@@ -108,7 +108,7 @@ Di seguito è riportata la strumentazione utilizzata per la realizzazione del se
     \centering
     \includegraphics[width=0.8\linewidth, height=7cm]{oscilloscopio.png}
     \caption{Oscilloscopio Agilent HP 54600B}
-    \label{fig:enter-label}
+    \label{fig:Agilent HP 54600B}
 \end{figure}
 \FloatBarrier
 \subsection*{\textbf{Generatore di funzioni HP 33120A}}
@@ -142,7 +142,9 @@ Di seguito è riportata la strumentazione utilizzata per la realizzazione del se
 \subsection{Configurazione della strumentazione per le misurazioni}
 Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tutte le strumentazioni a disposizione. Abbiamo dunque:
 \begin{itemize}
-    \item Collegato i cavi di connessione secondo la seguente configurazione:
+
+    \item Collegato i 3 cavi di connessione BNC-BNC e il cavo che permette l'alimentazione dell'integrato secondo la seguente configurazione:
+
     \begin{itemize}
         \item Uscita del generatore di funzioni Agilent HP 54600B all'ingresso (INPUT) del circuito integrato
         \item  Segnale di ingresso all'operazionale (OUTPUT 1) è stato collegato al canale 1 dell'oscilloscopio
@@ -177,7 +179,11 @@ E' importante osservare che l'ampiezza visualizzata sull'oscilloscopio è divers
 \subsection{Misurazioni}
 \subsubsection{Calcolo del guadagno e della frequenza di taglio sperimentali}
 Per la valutazione sperimentale del guadagno, serve effettuare la stima delle tensioni picco-picco \(V_{o,pp}\)
-e \(V_{i, pp}\) attraverso l'utilizzo dell'oscilloscopio. Da queste due stime si è ottenuto:
+e \(V_{i, pp}\) attraverso l'utilizzo dell'oscilloscopio. 
+Per effettuare ciò, serve impostare il valore della frequenza del segnale d'ingresso dell'integrato sul
+generatore di funzioni HP 33120A andando a premere prima il pulsante \textit{Freq} e poi impostando la frequenza da utilizzare, per queste due valutazione è stata scelta \(f=100Hz\). C'è da ricordare che il circuito in questione, è sempre alimentato con una tensione di alimentazione duale pari a ±12V, grazie all'alimentatore da banco HP E3631A precedentemente settato, come scritto nella sottosezione \textbf{\textit{"Tensione di offset e compensazione"}} .  Successivamente, serve regolare opportunamente i valori di KVi e KVo mediante le manopole poste nella sezione verticale dell'oscilloscopio HP 54600B (Figura \ref{fig:Agilent HP 54600B}), in modo da portare il più possibile il segnale visualizzato a schermo, verso il valore di fondo scala. In questo modo, le misure eseguite sono più accurate e viene ridotta l’incertezza di misura. Infine, si va a regolare il valore di Kt mediante l’apposita manopola posta nella sezione orizzontale, sempre dell'oscilloscopio HP 54600B, per avere la visualizzazione di almeno un periodo del segnale di interesse. 
+Dopo aver fatto queste regolazioni, si può premere il pulsante \textit{Voltage}, situato nella sezione \textit{Measure} e selezionare per ognuno dei due segnali il tipo di misura, cioè tensione picco-picco \(V_{pp}\), mediante gli appositi pulsanti posizionati sotto lo schermo dell'oscilloscopio. In questo modo i valori di tensione picco-picco di entrambi i segnali vengono automaticamente calcolati dall’oscilloscopio e visualizzati nella parte inferiore dello schermo.
+Da queste due stime fornite dall'oscilloscopio, si è ottenuto:
 
 \[V_{o,pp}=4,125V\]
 
@@ -192,7 +198,7 @@ Infine, è possibile calcolare il valore della tensione di uscita in corrisponde
 taglio, facendo uso della relazione:
 
 \[V_o=A_{-3dB} \cdot V_i=2,91V_{pp}\]
-Per la valutazione sperimentale della frequenza di taglio, si impostano i due cursori orizzontali dell’oscilloscopio in corrispondenza di questo valore di tensione. Si procede quindi a variare la frequenza del segnale tramite il generatore di funzioni fino a che il segnale in uscita visualizzato sull’oscilloscopio non risulta tangente ai due cursori orizzontali. In corrispondenza della frequenza di taglio, si può notare che il segnale in uscita è distorto (segnale triangolare) e che il valore di frequenza trovato è diverso dal valore teorico. Questo succede perché si sta lavorando con un segnale di ingresso con ampiezza massima. Per evitare questo effetto, è necessario ridurre l’ampiezza del segnale, ricalcolare il nuovo valore di attenuazione a 3dB e, quindi, stimare la frequenza di taglio. In questo caso, si è trovato che \(f_c=33kHz\).
+Per la valutazione sperimentale della frequenza di taglio, si impostano i due cursori orizzontali dell’oscilloscopio in corrispondenza del valore di tensione \(V_o\) sopra calcolato. Si procede quindi a variare la frequenza del segnale tramite il generatore di funzioni, fino a che il segnale in uscita visualizzato sull’oscilloscopio non risulta tangente ai due cursori orizzontali. In corrispondenza della frequenza di taglio, si può notare che il segnale in uscita è distorto (segnale triangolare) e che il valore di frequenza trovato è diverso dal valore teorico. Questo succede perché si sta lavorando con un segnale di ingresso con ampiezza massima. Per evitare questo effetto, è necessario ridurre l’ampiezza del segnale, ricalcolare il nuovo valore di attenuazione a 3dB e, quindi, stimare la frequenza di taglio. In questo caso, si è trovato che \(f_c=33kHz\).
 \clearpage
 \subsubsection{Misure di tensione picco-picco}
 
