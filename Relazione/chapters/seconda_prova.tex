@@ -36,7 +36,7 @@ Abbiamo infine utilizzato un cacciavite in prossimità del corpo della sonda, pe
 Nel seguente paragrafo verrà descritto in breve il filtro RC e le sue caratteristiche. Seguirà una presentazione della strumentazione utilizzata, la descrizione della configurazione dei dispositivi e la procedura di misura.
 
 \subsection{Filtro RC}
-Il filtro RC è un sistema che effettua sul suo segnale di ingresso una funzione di attenuazione in quanto filtro passivo, cioè composto da componenti passivi quali un condensatore e un resistore in serie.
+Il filtro RC è un sistema che effettua sul segnale di ingresso una funzione di attenuazione in quanto filtro passivo, cioè composto da componenti passivi quali un condensatore e un resistore in serie.
 
 \begin{figure}[h]
     \centering
@@ -50,7 +50,7 @@ Esso è un filtro passa basso che cioè permette il passaggio delle frequenze al
 
 \[A=\frac{V_o}{V_i}=\frac{1}{1+j\omega RC}\]
 
-La frequenza di taglio del filtro è definita come la frequenza alla quale la potenza del segnale in uscita dal filtro è pari alla metà della potenza del segnale in ingresso ad esso. Oppure è definita come la frequenza alla quale la tensione disponibile in uscita è $1/\sqrt{2}$ la tensione di ingresso disponibile in banda passante.
+La frequenza di taglio del filtro è definita come la frequenza alla quale la potenza del segnale in uscita dal filtro è pari alla metà della potenza del segnale in ingresso ad esso. Oppure è definita come la frequenza alla quale la tensione disponibile in uscita è $1/\sqrt{2}$ della tensione di ingresso disponibile in banda passante.
 
 La frequenza di taglio \emph{teorica} si calcola uguagliando il modulo dell'attenuazione $A$ al valore $1/\sqrt{2}$
 
@@ -137,7 +137,7 @@ Prima di iniziare ad effettuare le misurazioni del caso, abbiamo configurato tut
 
     \item Avviato il generatore di funzioni impostando una frequenza iniziale di 100kHz mediante il tasto \emph{Freq} e successivamente impostato una forma d'onda sinusoidale di ampiezza pari a 5 V mediante il tasto \emph{Ampl}.
     
-    \'E importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disadattamento di impedenza tra l'oscilloscopio ed il generatore di funzioni. In particolare, in corrispondenza della tensione picco-picco di 5 V impostata per l'ingresso del filtro, verrà visualizzata una tensione picco-picco di 10 V sul display dell'oscilloscopio.
+    \'E importante osservare che l'ampiezza visualizzata sull'oscilloscopio è diversa da quella impostata sul generatore di funzioni a causa del disadattamento di impedenza tra i due strumenti. In particolare, in corrispondenza della tensione picco-picco di 5 V impostata sul generatore di funzioni per l'ingresso del filtro, verrà visualizzata una tensione picco-picco di 10 V sul display dell'oscilloscopio.
     \item Avviato l'oscilloscopio su cui visualizzare il segnale d'ingresso del filtro $V_i$ sul canale 1, e il segnale di uscita del filtro $V_o$ sul canale 2.
     Poiché abbiamo utilizzato cavi BNC-BNC e non sonde, abbiamo impostato il valore di \emph{Probe} a 1 mediante l'apposito pulsante posto sotto lo schermo.
     Per migliorare la visualizzazione di entrambi i segnali, abbiamo premuto il pulsante \emph{Auto-Scale}, che permette all'oscilloscopio di visualizzare entrambi i segnali, uno per ognuno della due metà dello schermo.
