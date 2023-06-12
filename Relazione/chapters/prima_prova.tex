@@ -155,16 +155,16 @@ stimato in errore relativo mediante la seguente espressione:
 \FloatBarrier
 %\end{wrapfigure}
     
-Quando usiamo il multimetro portatile abbiamo disposto i puntali in maniera pi\'u stabile possibile, applicando una buona pressione per ottenere una misurazione pi\'u fedele possibile,
+Quando usiamo il multimetro portatile abbiamo disposto i puntali in maniera pi\'u stabile possibile, applicando una buona pressione per ottenere una misurazione pi\'u fedele possibile.
 Abbiamo fatto 10 ripetizioni in modo da ricavare l'incertezza totale, con il contributo valutato di tipo B relativamente alla specifica di strumento utilizzato.
 \newline
 \newline
-Con i valori ottenuti (\ref{tab:mult_port}) eseguiamo una valutazione di tipo A, dove il risultato di misura sarà dato dalla media delle misure in un range di incertezza pari dalla deviazione standard. Ovviamente poich\'e stiamo utilizzando un numero finito e relativamente piccolo di misure otteniamo solo una stima della media statistica, che idealmente (numero infinito di misure) rappresenta il valore vero del misurando. Quindi calcoliamo la media e la varianza campionarie sfruttando il campione di misure (\ref{tab:mult_port}):
+Con i valori ottenuti (\ref{tab:mult_port}) eseguiamo una valutazione di tipo A, dove il risultato di misura sarà dato dalla media delle misure in un range di incertezza pari dalla deviazione standard. Ovviamente poich\'e stiamo utilizzando un numero finito e relativamente piccolo di misure otteniamo solo una stima della media statistica, che idealmente (numero infinito di misure) rappresenta il valore vero del misurando. Quindi calcoliamo la media e la varianza campionarie sfruttando il campione di N = 10 misure (\ref{tab:mult_port}):
 \begin{align*}
-    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,61\Omega
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{N}R_{i}=1,61\Omega
 \end{align*}
 \begin{equation*}
-    u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,008\Omega 
+    u_{10}=\sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(R_i-\mu_{10})^{2}}=0,008\Omega 
 \end{equation*}
 \FloatBarrier
 
@@ -204,7 +204,7 @@ Con i valori ottenuti (\ref{tab:mult_port}) eseguiamo una valutazione di tipo A,
 \end{figure}
 \FloatBarrier
 
-Per il calcolo della resistenza di valore nominale pari a (1500 ± 7,5) m$\Omega$, impostiamo la risoluzione dello strumento a 6 ½ cifre premendo sul tasto \emph{Shift} e poi sul tasto \emph{Auto/Man}. Successivamente impostiamo la portata dello strumento a 100,0000 $\Omega$ mediante gli appositi pulsanti della sezione \emph{RANGE/DIGITS}. In questo modo lo strumento ha un campo di misura 
+Per il calcolo della resistenza di valore nominale pari a (1500 ± 7,5) m$\Omega$, impostiamo la risoluzione dello strumento a 6 ½ cifre premendo sul tasto \emph{Shift} e poi sul tasto \emph{Auto/Man}. Successivamente impostiamo la portata dello strumento a 100,0000 $\Omega$ mediante gli appositi pulsanti della sezione \emph{RANGE}. In questo modo lo strumento ha un campo di misura 
 pari a 1/1000000 del valore di fondo scala e quindi il passo di quantizzazione Q sar\'a: 
 \begin{equation}
     Q = \frac{V_{FS}}{CM} = \frac{10^2}{10^6} = 0,0001 \Omega
@@ -316,8 +316,8 @@ Si effettua l'operazione di NULL in modo analogo al caso precedente, misurando u
 
 \begin{equation}
     \left\{\begin{array}{l}
-| \Delta G \cdot y_q | \leq U_G |y_q|,    con U_g=0,01\%
-\\ | O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q}, con U_{o+inl+q}=0,004\%
+| \Delta G \cdot y_q | \leq U_G |y_q|, \ con \ U_g=0,01\%
+\\ | O + inl(x) + e_q(g(x)) | \leq U_{o+inl+q}, \ con \ U_{o+inl+q}=0,004\%
 \end{array}\right.
 \end{equation}
 
@@ -328,10 +328,10 @@ Si effettua l'operazione di NULL in modo analogo al caso precedente, misurando u
 Quindi, chiamando P, portata e $V_L$ valore letto (supponiamo di usare il primo valore letto nella tabella \label{mult_port}):
 
 \begin{equation*}
-    U(R) = U_G \cdot V_L + U_{o+inl+q} \cdot P = 0,01\% \cdot 1,478\Omega + 0,004 \% \cdot 100 \Omega = 0,004 \Omega 
+    U(R) = U_G \cdot V_L + U_{o+inl+q} \cdot P = 0,01\% \cdot 1,478\Omega + 0,004 \% \cdot 100 \Omega = 0,0042 \Omega 
 \end{equation*}
 (dove il risultato è stato arrotondato per difetto)
-Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0,004)$\Omega$
+Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0,0042)$\Omega$
 
 
 
@@ -357,14 +357,31 @@ Notiamo che l’incertezza in questo caso non è cambiata, con R=(+1,478 $\pm$ 0
     \label{tab:mult_4w}
 \end{table}
 \FloatBarrier
+\clearpage
 
+Calcoliamo l'incertezza valutata di tipo A sfruttando prima il campione di misure ottenuto lavorando con due morsetti (\ref{tab:mult_2w}) :
 
+\begin{align*}
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,529\Omega  &&  u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,086\Omega 
+\end{align*}
+\FloatBarrier
+
+e poi lavorando con quattro morsetti (\ref{tab:mult_4w}):
+
+\begin{align*}
+    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,478\Omega && u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0\Omega 
+\end{align*}
+\FloatBarrier
+
+Concludiamo che, usando una resistenza con valore nominale di (1500 ± 7,5) m$\Omega$, con il multimetro da banco otteniamo una stima pari a R=(+1,529 $\pm$ 0,086)$\Omega$ per la misurazione a due morsetti, mente otteniamo una stima pari a R=(+1,478 $\pm$ 0)$\Omega$ per la misurazione a 4 morsetti.
+
+\vspace{5mm}
 Volendo quantificare gli errori sistematici:
 \begin{equation*}
     E_{S(2W)} = 1,529 - 1,500 = 0,029 \Omega
 \end{equation*}
 \begin{equation*}
-   | E_{S(4W)} | = | 1,478 - 1,500 | = 0,022 \Omega
+    E_{S(4W)} = 1,478 - 1,500 = -0,022 \Omega
 \end{equation*}
 che portano alle seguenti accuratezze: 
 \begin{align*}
@@ -388,21 +405,7 @@ Il multimetro da banco a 6 ½ cifre offre una maggiore precisione grazie alla su
 
 Inoltre, lo strumento da banco può offrire un controllo più preciso delle condizioni operative, come la compensazione della resistenza dei cavi o la selezione della modalità di misura più adatta alle specifiche dell'applicazione. Ciò contribuisce ulteriormente a migliorare l'accuratezza complessiva della misurazione.
 
-E osserviamo ciò calcolando l'incertezza valutata di tipo A sfruttando prima il campione di misure ottenuto lavorando con due morsetti (\ref{tab:mult_2w}) :
 
-\begin{align*}
-    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,529\Omega  &&  u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0,086\Omega 
-\end{align*}
-\FloatBarrier
-
-e poi lavorando con quattro morsetti (\ref{tab:mult_4w}):
-
-\begin{align*}
-    \mu_{10}=\frac{1}{N}\sum_{i=1}^{10}R_{i}=1,478\Omega && u_{10}=\sqrt{\frac{1}{9}\sum_{i=1}^{10}(R_i-\mu_{10})^{2}}=0\Omega 
-\end{align*}
-\FloatBarrier
-
-Concludiamo che, usando una resistenza con valore nominale di (1500 ± 7,5) m$\Omega$, con il multimetro da banco otteniamo una stima pari a R=(+1,529 $\pm$ 0,086)$\Omega$ per la misurazione a due morsetti, mente otteniamo una stima pari a R=(+1,478 $\pm$ 0)$\Omega$ per la misurazione a 4 morsetti.
 \clearpage
 
 %----------LCR-----------%
@@ -450,16 +453,13 @@ Per evitare gli errori di sfasamento causati dalla lunghezza del cavo, abbiamo i
 \end{figure}
 \FloatBarrier
 
-Successivamente, abbiamo proceduto con la correzione OPEN/SHORT dello strumento
-impostando prima la frequenza dell'LCR a 1KHz, alla quale eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura. Abbiamo poi lasciato i morsetti scollegati, in circuito aperto, premuto sul bulsante di colore blu, poi sul pulsante \emph{4}, su \emph{ENTER} e abbiamo infine atteso il messaggio "Open correction complete" sullo schermo. Abbiamo proseguito cortocircuitando i due morsetti, l'uno con l'altro, premuto il tasto di colore blu, seguito dal testo \emph{5}, dal pulsante \emph{ENTER} e abbiamo atteso la comparsa del messaggio "Short correction complete" sullo schermo.
+Inoltre è importante cercare di eliminare le impedenze residue causate dalla presenza del Test Fixture nel pannello frontale dello strumento, perciò proceduto con la correzione OPEN/SHORT dello strumento impostando prima la frequenza dell'LCR a 1KHz, alla quale eventuali variazioni delle condizioni operative dello strumento, come temperatura e umidità, potrebbero influire negativamente sull'incertezza della misura. Abbiamo poi lasciato i morsetti scollegati, in circuito aperto, premuto sul bulsante di colore blu, poi sul pulsante \emph{4}, su \emph{ENTER} e abbiamo infine atteso il messaggio "Open correction complete" sullo schermo. Abbiamo proseguito cortocircuitando i due morsetti, l'uno con l'altro, premuto il tasto di colore blu, seguito dal testo \emph{5}, dal pulsante \emph{ENTER} e abbiamo atteso la comparsa del messaggio "Short correction complete" sullo schermo.
  
 
 \subsection{Impedenze}
 \label{sub:z}
 
 Tramite l'LCR-Meter abbiamo svolto l'ultima parte della nostra prima esperienza.
-
-Di solito, per effettuare misurazioni di impedenza, è necessario stabilire un piano di riferimento sull'ingresso del DUT (Device Under Test) nel pannello frontale. L'LCR ci permette di fare ciò fissando la lunghezza del cavo utilizzato. Tuttavia, è importante cercare di eliminare le impedenze residue causate dalla presenza del Test Fixture nel pannello frontale dello strumento.
 
 Per fare la prova, abbiamo impostato un tempo di misura medio LONG, premendo sul pulsante \emph{Meas Time} e selezionando LONG.
 Per impostare i parametri da visualizzare per la resistenza abbiamo premuto su \emph{Meas Prmtr}, selezionato il primo parametro R, premuto \emph{ENTER}, selezionato il secondo parametro X e infine premuto nuovamente ENTER.
@@ -550,8 +550,7 @@ Per il calcolo dell'incertezza delle misure di resistenza e reattanza riportate 
     A_e = A + \frac{BCZ_S}{|Z_X|} + \frac{D}{|Z_X|} + \frac{|Z_X|}{E} \hspace{0,8cm} con \hspace{0,2cm} |Z_X| \leq 100\Omega
 \end{equation}
 
-dove $Z_X$ è il valore misurato dell’impedenza Z. L’incertezza di $|Z|$ è uguale a quella di 
-R e di X per cui, consultando le tabelle di incertezza fornite dal costruttore, avremo:
+dove $Z_X$ è il valore misurato dell’impedenza Z. Consultando le tabelle di incertezza fornite dal costruttore, avremo:
 
 
 %TABELLA INCERTEZZA IMPEDENZA%
@@ -560,21 +559,17 @@ R e di X per cui, consultando le tabelle di incertezza fornite dal costruttore, 
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
 \textbf{A}      & \textbf{B}      & \textbf{C} & \textbf{D [$\bm{\Omega}$]} & \textbf{E [$\bm{\Omega}$]}  & $\bm{Z_s \ \ [\Omega]}$ & $\bm{Z_x \ \ [\Omega]}$ & $\bm{U_z}$ \textbf{(Ae)} \\ \hline
-0,005  & 0,0009 & 1 & 0,01      & 280.000.000,00  & 1          & 1,4630     & 0,0125  \\ \hline
-0,005  & 0,0009 & 1 & 0,01      & 280.000.000,00  & 1          & 1,4628     & 0,0125  \\ \hline
-0,004  & 0,0003 & 1 & 0,0165    & 28.000.000,00  & 1          & 1,4625     & 0,0155  \\ \hline
-0,004  & 0,0003 & 1 & 0,075     & 2.800.000,00  & 1          & 1,4622     & 0,0555  \\ \hline
-0,0097 & 0,0011 & 1 & 0,75      & 280.000,00  & 1          & 1,4635     & 0,5229  \\ \hline
+0,005  & 0,0009 & 1 & 0,01      & 280.000.000,00  & 1          & 1,4630     & 0,013  \\ \hline
+0,005  & 0,0009 & 1 & 0,01      & 280.000.000,00  & 1          & 1,4628     & 0,013  \\ \hline
+0,004  & 0,0003 & 1 & 0,0165    & 28.000.000,00  & 1          & 1,4625     & 0,016  \\ \hline
+0,004  & 0,0003 & 1 & 0,075     & 2.800.000,00  & 1          & 1,4622     & 0,056  \\ \hline
+0,0097 & 0,0011 & 1 & 0,75      & 280.000,00  & 1          & 1,4635     & 0,52  \\ \hline
 \end{tabular}
 \caption{Tabella di incertezza fornita dal costruttore, con $U_z$ l'incertezza}
 \label{tab:lcr_z_sheet}
 \end{table}
 \FloatBarrier
 
-Con l'incertezza di quantizzazione $U_q$ pari a:
-\begin{equation}
-    U_q = \frac{Q}{CM} = 0,00005 \Omega
-\end{equation}
 \clearpage
 
 
@@ -682,6 +677,7 @@ Nella seguente tabella è riassunto quanto detto precedentemente:
 \caption{LCR, misura della resistenza}
 \label{tab:lcr_c_RPx}
 \end{table}
+
 \FloatBarrier
 \clearpage
 
